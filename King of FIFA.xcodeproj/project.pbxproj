@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */; };
+		94A447632427ED24009FFFAF /* Torneo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447622427ED24009FFFAF /* Torneo.swift */; };
+		94A447652427EE56009FFFAF /* Jugador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447642427EE56009FFFAF /* Jugador.swift */; };
+		94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */; };
 		94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8D2426874000730B6A /* AppDelegate.swift */; };
 		94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8F2426874000730B6A /* SceneDelegate.swift */; };
-		94F5DC922426874000730B6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC912426874000730B6A /* ViewController.swift */; };
 		94F5DC952426874100730B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC932426874000730B6A /* Main.storyboard */; };
 		94F5DC972426874500730B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC962426874500730B6A /* Assets.xcassets */; };
 		94F5DC9A2426874500730B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC982426874500730B6A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumJugadoresViewController.swift; sourceTree = "<group>"; };
+		94A447622427ED24009FFFAF /* Torneo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torneo.swift; sourceTree = "<group>"; };
+		94A447642427EE56009FFFAF /* Jugador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jugador.swift; sourceTree = "<group>"; };
+		94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesTorneoViewController.swift; sourceTree = "<group>"; };
 		94F5DC8A2426874000730B6A /* King of FIFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King of FIFA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F5DC8D2426874000730B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F5DC8F2426874000730B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94F5DC912426874000730B6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94F5DC942426874000730B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94F5DC962426874500730B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94F5DC992426874500730B6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94A447612427ECF2009FFFAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94A447622427ED24009FFFAF /* Torneo.swift */,
+				94A447642427EE56009FFFAF /* Jugador.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94A4476824294D6A009FFFAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */,
+				94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */,
+				94F5DC8F2426874000730B6A /* SceneDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		94F5DC812426874000730B6A = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				94F5DC8D2426874000730B6A /* AppDelegate.swift */,
-				94F5DC8F2426874000730B6A /* SceneDelegate.swift */,
-				94F5DC912426874000730B6A /* ViewController.swift */,
+				94A4476824294D6A009FFFAF /* Controllers */,
+				94A447612427ECF2009FFFAF /* Models */,
 				94F5DC932426874000730B6A /* Main.storyboard */,
 				94F5DC962426874500730B6A /* Assets.xcassets */,
 				94F5DC982426874500730B6A /* LaunchScreen.storyboard */,
@@ -138,7 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F5DC922426874000730B6A /* ViewController.swift in Sources */,
+				94A447652427EE56009FFFAF /* Jugador.swift in Sources */,
+				94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */,
+				94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */,
+				94A447632427ED24009FFFAF /* Torneo.swift in Sources */,
 				94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */,
 				94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */,
 			);

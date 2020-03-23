@@ -1,24 +1,310 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VuX-go-fPE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Num Jugadores View Controller-->
+        <scene sceneID="Ifh-78-b7y">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="618-Ir-LUq" customClass="NumJugadoresViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="de8-Wd-RY3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="f7w-SU-auR">
+                                <rect key="frame" x="58" y="143" width="298" height="538"/>
+                                <subviews>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOb-oU-aXi">
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="0ng-0r-hUD"/>
+                                            <constraint firstAttribute="width" constant="298" id="2DE-SU-XeS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="4 jugadores">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="botonJugadores:" destination="618-Ir-LUq" eventType="touchUpInside" id="auD-zD-Ar2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G60-Uc-KqI">
+                                        <rect key="frame" x="0.0" y="117" width="298" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="298" id="0En-Ng-qG6"/>
+                                            <constraint firstAttribute="height" constant="70" id="DSh-kc-hBa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="8 jugadores">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="botonJugadores:" destination="618-Ir-LUq" eventType="touchUpInside" id="0CG-db-rKD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC0-BJ-hSy">
+                                        <rect key="frame" x="0.0" y="234" width="298" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="agS-84-XKm"/>
+                                            <constraint firstAttribute="width" constant="298" id="lNC-2x-FRA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="16 jugadores">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="botonJugadores:" destination="618-Ir-LUq" eventType="touchUpInside" id="nNX-Xb-ioy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-z7-wd2">
+                                        <rect key="frame" x="0.0" y="351" width="298" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="298" id="MnJ-f2-Cvt"/>
+                                            <constraint firstAttribute="height" constant="70" id="Qde-Yw-BGs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="32 jugadores">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="botonJugadores:" destination="618-Ir-LUq" eventType="touchUpInside" id="jXT-mX-sAf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thi-LS-IWg">
+                                        <rect key="frame" x="0.0" y="468" width="298" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="5fg-YM-hUN"/>
+                                            <constraint firstAttribute="width" constant="298" id="shg-ww-rAo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Mundialito">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="botonJugadores:" destination="618-Ir-LUq" eventType="touchUpInside" id="xqS-Eh-f5p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f7w-SU-auR" firstAttribute="top" secondItem="HeX-u2-Z3t" secondAttribute="top" constant="55" id="Lth-BP-KSu"/>
+                            <constraint firstItem="f7w-SU-auR" firstAttribute="centerX" secondItem="de8-Wd-RY3" secondAttribute="centerX" id="UrS-rq-uDT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HeX-u2-Z3t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QLU-hJ-dkd"/>
+                    <connections>
+                        <segue destination="Y6j-aG-b0G" kind="show" identifier="MasOpciones" id="atj-h8-Rdm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoj-9l-YMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166.6666666666667" y="178.79464285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pM0-8S-gbj">
+            <objects>
+                <viewController id="e3Q-ji-UlU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ssB-t2-aWO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="zS1-Qd-Abc">
+                                <rect key="frame" x="58" y="359.5" width="298" height="177"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w87-Ho-RZx">
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="66"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Crear Torneo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="618-Ir-LUq" kind="show" id="fJO-nE-FHL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-cR-w1z">
+                                        <rect key="frame" x="0.0" y="111" width="298" height="66"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Unirse a Torneo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zS1-Qd-Abc" firstAttribute="centerY" secondItem="ssB-t2-aWO" secondAttribute="centerY" id="bnm-Z3-Xcu"/>
+                            <constraint firstItem="zS1-Qd-Abc" firstAttribute="centerX" secondItem="ssB-t2-aWO" secondAttribute="centerX" id="iRq-dW-XMa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3bK-0y-wAF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uvh-Wy-S66"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pE-az-NHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.97101449275362" y="178.79464285714286"/>
+        </scene>
+        <!--Tus torneos-->
+        <scene sceneID="X3d-mk-ve0">
+            <objects>
+                <viewController id="k22-D8-pBx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpg-sM-DUA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Tm1-mH-6zj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tus torneos" id="uIY-kH-1Jd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-aD-WKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1391" y="870"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ki8-Zy-IKy">
+            <objects>
+                <tabBarController id="VuX-go-fPE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aL8-Za-h6F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6Fw-XF-ocb" kind="relationship" relationship="viewControllers" id="9Vh-01-49j"/>
+                        <segue destination="k22-D8-pBx" kind="relationship" relationship="viewControllers" id="9jg-2f-CZo"/>
+                        <segue destination="6TR-CE-gfY" kind="relationship" relationship="viewControllers" id="U6J-LP-bRd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCh-Hp-b5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2010" y="48"/>
+        </scene>
+        <!--Amigos-->
+        <scene sceneID="rlI-1M-4EA">
+            <objects>
+                <viewController id="6TR-CE-gfY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsS-vI-Jux">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xj2-QS-dgw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Amigos" id="QWq-Dn-kdn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fo3-p6-0Ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2451" y="877"/>
+        </scene>
+        <!--Nuevo Torneo-->
+        <scene sceneID="F1l-a0-TsV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Fw-XF-ocb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nuevo Torneo" id="xWK-XB-b8z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Akm-N7-RbG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e3Q-ji-UlU" kind="relationship" relationship="rootViewController" id="KUA-Xf-8dH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUv-J3-2NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752.17391304347836" y="178.79464285714286"/>
+        </scene>
+        <!--Opciones Torneo View Controller-->
+        <scene sceneID="qhd-hz-AtA">
+            <objects>
+                <viewController id="Y6j-aG-b0G" customClass="OpcionesTorneoViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aIx-OE-lqb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-pj-Pxt">
+                                <rect key="frame" x="54" y="371" width="306" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Ida y vuelta"/>
+                                    <segment title="Unico Partido"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="selecIdaYVuelta:" destination="Y6j-aG-b0G" eventType="valueChanged" id="YBk-bN-WuW"/>
+                                    <action selector="selecIdaYVuelta:" destination="QXd-0l-nF7" eventType="valueChanged" id="rW7-cn-xeO"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CPq-sj-W45">
+                                <rect key="frame" x="54" y="492" width="306" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Online"/>
+                                    <segment title="Offline"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selecOnline:" destination="QXd-0l-nF7" eventType="valueChanged" id="qx9-aI-X94"/>
+                                    <action selector="selecOnline:" destination="Y6j-aG-b0G" eventType="valueChanged" id="qyI-bg-oLZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-NC-9se">
+                                <rect key="frame" x="269" y="739" width="125" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="iRZ-ze-ZVc"/>
+                                    <constraint firstAttribute="height" constant="48" id="lkb-H8-x0w"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Kl-9O-5tC" firstAttribute="trailing" secondItem="zhb-NC-9se" secondAttribute="trailing" constant="20" id="Gjj-zj-pck"/>
+                            <constraint firstItem="7Kl-9O-5tC" firstAttribute="bottom" secondItem="zhb-NC-9se" secondAttribute="bottom" constant="26" id="rH7-2e-qDe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Kl-9O-5tC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DVd-2b-VGx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1V0-wv-MVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="QXd-0l-nF7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2118.840579710145" y="178.79464285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wxe-lK-SzE">
+            <objects>
+                <viewController id="37o-c3-Ill" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbb-x8-n1N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NpT-Zu-E72"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHD-32-C6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2968" y="187"/>
         </scene>
     </scenes>
 </document>
