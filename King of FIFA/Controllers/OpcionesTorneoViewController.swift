@@ -33,23 +33,24 @@ class OpcionesTorneoViewController: UIViewController {
         if(sender.selectedSegmentIndex == 0)
         {
             torneo.setOnline(b: true)
-            print("Online = \(torneo.getOnline())")
         }
         else
         {
             torneo.setOnline(b: false)
-            print("Ida y vuelta = \(torneo.getIdaYVuelta())")
         }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? DatosJugadorViewController{
+            viewController.torneo = torneo
+        }
     }
-    */
 
 }
+

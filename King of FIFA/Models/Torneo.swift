@@ -10,7 +10,7 @@ import Foundation
 
 class Torneo {
     private var numJugadores: Int
-    private var jugardores = [Jugador]()
+    private var jugadores = [Jugador]()
     private var online: Bool
     private var idaYVuelta: Bool
     private var nombre: String
@@ -56,5 +56,24 @@ class Torneo {
     public func setOnline(b: Bool)
     {
         online = b
+    }
+    
+    public func addJugador(jugador: Jugador)
+    {
+        jugadores.append(jugador)
+    }
+    
+    public func printTorneo()
+    {
+        print("Torneo: \(nombre)\n")
+        print("Num Jugadores: \(numJugadores)\n")
+        print("Online: \(online)\n")
+        print("Ida Y Vuelta: \(idaYVuelta)\n")
+        print("Torneo: \(nombre)\n")
+        print("Torneo: \(nombre)\n")
+        print("Jugadores: \(jugadores.count)\n")
+        for x in 0...numJugadores-1{
+            print("\(jugadores[x].toString())")
+        }
     }
 }
