@@ -8,11 +8,14 @@
 
 import UIKit
 
-class OpcionesTorneoViewController: UIViewController {
+class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
     var torneo = Torneo()
+    
+    @IBOutlet weak var nombre: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nombre.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -20,7 +23,6 @@ class OpcionesTorneoViewController: UIViewController {
         if(sender.selectedSegmentIndex == 0)
         {
             torneo.setIdaYVuelta(b: true)
-            
         }
         else
         {
@@ -39,7 +41,15 @@ class OpcionesTorneoViewController: UIViewController {
             torneo.setOnline(b: false)
         }
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     // MARK: - Navigation
 
@@ -48,6 +58,7 @@ class OpcionesTorneoViewController: UIViewController {
     // Get the new view controller using segue.destination.
     // Pass the selected object to the new view controller.
         if let viewController = segue.destination as? DatosJugadorViewController{
+            torneo.setNombre(s: nombre.text ?? "default")
             viewController.torneo = torneo
         }
     }

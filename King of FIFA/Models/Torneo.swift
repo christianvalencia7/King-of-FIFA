@@ -58,6 +58,16 @@ class Torneo {
         online = b
     }
     
+    public func setNombre(s: String)
+    {
+        nombre = s
+    }
+    
+    public func getNombre() -> String
+    {
+        return nombre
+    }
+    
     public func addJugador(jugador: Jugador)
     {
         jugadores.append(jugador)
@@ -69,9 +79,7 @@ class Torneo {
         print("Num Jugadores: \(numJugadores)\n")
         print("Online: \(online)\n")
         print("Ida Y Vuelta: \(idaYVuelta)\n")
-        print("Torneo: \(nombre)\n")
-        print("Torneo: \(nombre)\n")
-        print("Jugadores: \(jugadores.count)\n")
+        print("Jugadores:\n")
         for x in 0...numJugadores-1{
             print("\(jugadores[x].toString())")
         }

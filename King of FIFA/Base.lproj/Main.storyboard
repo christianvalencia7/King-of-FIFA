@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="f7w-SU-auR">
-                                <rect key="frame" x="58" y="143" width="298" height="538"/>
+                                <rect key="frame" x="58" y="99" width="298" height="538"/>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOb-oU-aXi">
                                         <rect key="frame" x="0.0" y="0.0" width="298" height="70"/>
@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="1166.6666666666667" y="178.79464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Crear Torneo View Controller-->
         <scene sceneID="pM0-8S-gbj">
             <objects>
-                <viewController id="e3Q-ji-UlU" sceneMemberID="viewController">
+                <viewController id="e3Q-ji-UlU" customClass="CrearTorneoViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ssB-t2-aWO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,15 +169,17 @@
                         <viewLayoutGuide key="safeArea" id="Tm1-mH-6zj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tus torneos" id="uIY-kH-1Jd"/>
+                    <navigationItem key="navigationItem" id="97i-W7-5bn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-aD-WKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="870"/>
+            <point key="canvasLocation" x="157" y="1022"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ki8-Zy-IKy">
             <objects>
                 <tabBarController id="VuX-go-fPE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2CM-Bb-Kva"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aL8-Za-h6F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -212,11 +214,11 @@
         <!--Nuevo Torneo-->
         <scene sceneID="F1l-a0-TsV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Fw-XF-ocb" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUv-J3-2NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6Fw-XF-ocb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nuevo Torneo" id="xWK-XB-b8z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Akm-N7-RbG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -224,7 +226,6 @@
                         <segue destination="e3Q-ji-UlU" kind="relationship" relationship="rootViewController" id="KUA-Xf-8dH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TUv-J3-2NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-752.17391304347836" y="178.79464285714286"/>
         </scene>
@@ -236,9 +237,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-pj-Pxt">
-                                <rect key="frame" x="54" y="371" width="306" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-pj-Pxt">
+                                <rect key="frame" x="54" y="343" width="306" height="32"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Ida y vuelta"/>
@@ -250,9 +250,40 @@
                                     <action selector="selecIdaYVuelta:" destination="QXd-0l-nF7" eventType="valueChanged" id="rW7-cn-xeO"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CPq-sj-W45">
-                                <rect key="frame" x="54" y="492" width="306" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-NC-9se">
+                                <rect key="frame" x="269" y="739" width="125" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="6xR-a2-CSJ"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="37o-c3-Ill" kind="show" identifier="Datos" id="8eu-kt-CUQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre Torneo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYe-gy-tKC">
+                                <rect key="frame" x="54" y="140" width="304" height="54"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="oTm-3k-vlt"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-4V-8bo">
+                                <rect key="frame" x="56" y="214" width="302" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="endEdit:" destination="37o-c3-Ill" eventType="editingDidEnd" id="cR6-zE-f9k"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CPq-sj-W45">
+                                <rect key="frame" x="54" y="429" width="306" height="32"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Online"/>
@@ -263,30 +294,31 @@
                                     <action selector="selecOnline:" destination="Y6j-aG-b0G" eventType="valueChanged" id="qyI-bg-oLZ"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-NC-9se">
-                                <rect key="frame" x="269" y="739" width="125" height="48"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="iRZ-ze-ZVc"/>
-                                    <constraint firstAttribute="height" constant="48" id="lkb-H8-x0w"/>
-                                </constraints>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="37o-c3-Ill" kind="show" identifier="Datos" id="8eu-kt-CUQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7Kl-9O-5tC" firstAttribute="trailing" secondItem="zhb-NC-9se" secondAttribute="trailing" constant="20" id="Gjj-zj-pck"/>
-                            <constraint firstItem="7Kl-9O-5tC" firstAttribute="bottom" secondItem="zhb-NC-9se" secondAttribute="bottom" constant="26" id="rH7-2e-qDe"/>
+                            <constraint firstItem="iYe-gy-tKC" firstAttribute="leading" secondItem="7Kl-9O-5tC" secondAttribute="leading" constant="54" id="0GO-tz-IJd"/>
+                            <constraint firstItem="iYe-gy-tKC" firstAttribute="top" secondItem="7Kl-9O-5tC" secondAttribute="top" constant="96" id="2hH-kh-zHw"/>
+                            <constraint firstItem="ip1-4V-8bo" firstAttribute="centerX" secondItem="aIx-OE-lqb" secondAttribute="centerX" id="5aR-2Z-dgC"/>
+                            <constraint firstItem="qpO-pj-Pxt" firstAttribute="trailing" secondItem="CPq-sj-W45" secondAttribute="trailing" id="5ho-Us-ZCu"/>
+                            <constraint firstItem="iYe-gy-tKC" firstAttribute="trailing" secondItem="ip1-4V-8bo" secondAttribute="trailing" id="6ku-b4-lMZ"/>
+                            <constraint firstItem="CPq-sj-W45" firstAttribute="top" secondItem="qpO-pj-Pxt" secondAttribute="bottom" constant="55" id="8Fz-Xk-DmL"/>
+                            <constraint firstItem="ip1-4V-8bo" firstAttribute="leading" secondItem="7Kl-9O-5tC" secondAttribute="leading" constant="56" id="I76-1v-f03"/>
+                            <constraint firstItem="7Kl-9O-5tC" firstAttribute="bottom" secondItem="zhb-NC-9se" secondAttribute="bottom" constant="26" id="PVO-t3-0eU"/>
+                            <constraint firstItem="qpO-pj-Pxt" firstAttribute="top" secondItem="ip1-4V-8bo" secondAttribute="bottom" constant="75" id="Ryi-81-97f"/>
+                            <constraint firstItem="ip1-4V-8bo" firstAttribute="top" secondItem="iYe-gy-tKC" secondAttribute="bottom" constant="20" id="VhQ-iN-UZh"/>
+                            <constraint firstItem="qpO-pj-Pxt" firstAttribute="leading" secondItem="CPq-sj-W45" secondAttribute="leading" id="X46-KV-9P6"/>
+                            <constraint firstItem="ip1-4V-8bo" firstAttribute="centerX" secondItem="qpO-pj-Pxt" secondAttribute="centerX" id="bi2-Yf-dCF"/>
+                            <constraint firstItem="zhb-NC-9se" firstAttribute="trailing" secondItem="aIx-OE-lqb" secondAttribute="trailingMargin" id="ejz-xn-FjY"/>
+                            <constraint firstItem="iYe-gy-tKC" firstAttribute="leading" secondItem="qpO-pj-Pxt" secondAttribute="leading" id="ifP-w8-XHm"/>
+                            <constraint firstItem="zhb-NC-9se" firstAttribute="leading" secondItem="7Kl-9O-5tC" secondAttribute="leading" constant="269" id="qch-AZ-fIL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Kl-9O-5tC"/>
                     </view>
                     <navigationItem key="navigationItem" id="DVd-2b-VGx"/>
+                    <connections>
+                        <outlet property="nombre" destination="ip1-4V-8bo" id="TnW-Qn-9KI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1V0-wv-MVH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="QXd-0l-nF7" userLabel="Exit" sceneMemberID="exit"/>
@@ -391,21 +423,102 @@
             </objects>
             <point key="canvasLocation" x="2967" y="179"/>
         </scene>
-        <!--View Controller-->
+        <!--Torneo Creado View Controller-->
         <scene sceneID="z7G-ka-GEB">
             <objects>
-                <viewController id="BDG-QE-f36" sceneMemberID="viewController">
+                <viewController id="BDG-QE-f36" customClass="TorneoCreadoViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Dr-tm-I8c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre Torneo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVy-Sk-i4n">
+                                <rect key="frame" x="49" y="112" width="316" height="46"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ9-sG-7Vc">
+                                <rect key="frame" x="269" y="740" width="125" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="878-mY-R24"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Listo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="siguiente:" destination="37o-c3-Ill" eventType="touchUpInside" id="Y4r-pY-yUb"/>
+                                    <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSeguefromTorneoCreado:" id="sYM-Oz-Vf7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Torneo de 4 jugadores" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-tr-suu">
+                                <rect key="frame" x="50" y="342" width="314" height="45.5"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="CNu-9Z-gvw"/>
+                                    <constraint firstAttribute="height" constant="45.5" id="drh-Tv-nv4"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Online" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrU-S6-ClV">
+                                <rect key="frame" x="50" y="426" width="314" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="7kF-kv-E5d"/>
+                                    <constraint firstAttribute="height" constant="45" id="hos-95-BfF"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ida y vuelta" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-CD-UsX">
+                                <rect key="frame" x="50" y="510" width="314" height="46.5"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="NAa-ii-Fr9"/>
+                                    <constraint firstAttribute="height" constant="46.5" id="ROd-gd-jEM"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="Y9A-CD-UsX" secondAttribute="centerX" id="5sd-I8-sCc"/>
+                            <constraint firstItem="Y9A-CD-UsX" firstAttribute="top" secondItem="lrU-S6-ClV" secondAttribute="bottom" constant="39" id="F4l-BL-hEY"/>
+                            <constraint firstItem="DZ9-sG-7Vc" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="269" id="IBE-fT-dpj"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="top" secondItem="3FO-yd-3Av" secondAttribute="top" constant="68" id="KCD-r9-GcZ"/>
+                            <constraint firstItem="DZ9-sG-7Vc" firstAttribute="trailing" secondItem="1Dr-tm-I8c" secondAttribute="trailingMargin" id="Nfx-7E-G8k"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="lrU-S6-ClV" secondAttribute="centerX" id="OHh-hK-y8Z"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="49" id="YL3-pC-fi1"/>
+                            <constraint firstItem="xHt-tr-suu" firstAttribute="top" secondItem="ZVy-Sk-i4n" secondAttribute="bottom" constant="184" id="Zkz-oh-Q1m"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="50" id="aWS-ta-3MW"/>
+                            <constraint firstItem="xHt-tr-suu" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="50" id="evz-vV-YcA"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="xHt-tr-suu" secondAttribute="centerX" id="h2B-ba-FQ9"/>
+                            <constraint firstItem="Y9A-CD-UsX" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="50" id="hV4-aZ-kZw"/>
+                            <constraint firstItem="3FO-yd-3Av" firstAttribute="bottom" secondItem="DZ9-sG-7Vc" secondAttribute="bottom" constant="25" id="pvb-RF-7A7"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="top" secondItem="xHt-tr-suu" secondAttribute="bottom" constant="38.5" id="roO-Eb-C0b"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="1Dr-tm-I8c" secondAttribute="centerX" id="u1u-k6-8Z3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3FO-yd-3Av"/>
                     </view>
                     <navigationItem key="navigationItem" id="OlW-Yz-wUd"/>
+                    <connections>
+                        <outlet property="idaYVuelta" destination="Y9A-CD-UsX" id="rLf-VF-Vh5"/>
+                        <outlet property="nombreTorneo" destination="ZVy-Sk-i4n" id="5b1-5O-tIG"/>
+                        <outlet property="numJugadores" destination="xHt-tr-suu" id="05D-CI-vTr"/>
+                        <outlet property="online" destination="lrU-S6-ClV" id="5La-Zr-2hC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWI-Cw-V2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IS7-26-BST" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3874" y="179"/>
+            <point key="canvasLocation" x="3873.913043478261" y="178.79464285714286"/>
         </scene>
     </scenes>
 </document>

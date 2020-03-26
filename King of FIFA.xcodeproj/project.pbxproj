@@ -12,6 +12,8 @@
 		94A447652427EE56009FFFAF /* Jugador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447642427EE56009FFFAF /* Jugador.swift */; };
 		94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */; };
 		94A4476A242AE5DB009FFFAF /* DatosJugadorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44769242AE5DB009FFFAF /* DatosJugadorViewController.swift */; };
+		94A4476C242C397F009FFFAF /* TorneoCreadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4476B242C397F009FFFAF /* TorneoCreadoViewController.swift */; };
+		94A4476E242C3C9B009FFFAF /* CrearTorneoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */; };
 		94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8D2426874000730B6A /* AppDelegate.swift */; };
 		94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8F2426874000730B6A /* SceneDelegate.swift */; };
 		94F5DC952426874100730B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC932426874000730B6A /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		94A447642427EE56009FFFAF /* Jugador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jugador.swift; sourceTree = "<group>"; };
 		94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesTorneoViewController.swift; sourceTree = "<group>"; };
 		94A44769242AE5DB009FFFAF /* DatosJugadorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosJugadorViewController.swift; sourceTree = "<group>"; };
+		94A4476B242C397F009FFFAF /* TorneoCreadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneoCreadoViewController.swift; sourceTree = "<group>"; };
+		94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTorneoViewController.swift; sourceTree = "<group>"; };
 		94F5DC8A2426874000730B6A /* King of FIFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King of FIFA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F5DC8D2426874000730B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F5DC8F2426874000730B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */,
+				94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */,
+				94A4476B242C397F009FFFAF /* TorneoCreadoViewController.swift */,
 				94A44769242AE5DB009FFFAF /* DatosJugadorViewController.swift */,
 				94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */,
 				94F5DC8F2426874000730B6A /* SceneDelegate.swift */,
@@ -172,7 +178,9 @@
 				94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */,
 				94A447632427ED24009FFFAF /* Torneo.swift in Sources */,
 				94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */,
+				94A4476C242C397F009FFFAF /* TorneoCreadoViewController.swift in Sources */,
 				94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */,
+				94A4476E242C3C9B009FFFAF /* CrearTorneoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
