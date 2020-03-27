@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
-class Partido {
+//aaaaaa
+class Partido: NSObject{
     var jugador1: Jugador
     var jugador2: Jugador
     var goles1: Int = 0
@@ -30,5 +30,9 @@ class Partido {
     {
         if goles1 > goles2 {return jugador2}
         return jugador1
+    }
+    
+    public func toString() -> String{
+        return "\(jugador1.nombre) vs \(jugador2.nombre)"
     }
 }

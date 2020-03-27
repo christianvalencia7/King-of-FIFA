@@ -52,6 +52,8 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
         count = count + 1
         if count >= torneo.getNum() {
             torneo.printTorneo()
+            torneo.crearPartidos()
+            torneo.printPartidos()
             performSegue(withIdentifier: "Next", sender: nil)
         }
         updateView()

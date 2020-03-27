@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Jugador{
+class Jugador: NSObject{
     var nombre: String
     var userID: String
     var equipo: String
