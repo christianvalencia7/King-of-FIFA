@@ -11,6 +11,7 @@ import Foundation
 class Torneo {
     private var numJugadores: Int
     private var jugadores = [Jugador]()
+    
     private var online: Bool
     private var idaYVuelta: Bool
     private var nombre: String
