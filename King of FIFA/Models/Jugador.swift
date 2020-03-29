@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import os.log
 
-class Jugador: NSObject{
+class Jugador: NSObject, NSCoding{
     var nombre: String
     var userID: String
     var equipo: String
@@ -20,8 +21,38 @@ class Jugador: NSObject{
         equipo = e
     }
     
+    //MARK: Types
+    struct PropertyKey {
+        static let userID = "userID"
+        static let equipo = "equipo"
+        static let nombre = "nombre"
+    }
     public func toString() -> String
     {
         return "Nombre: \(nombre), UserID: \(userID), Equipo: \(equipo)\n"
+    }
+    
+    //MARK: NSCoding
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(nombre, forKey: PropertyKey.nombre)
+        aCoder.encode(userID, forKey: PropertyKey.userID)
+        aCoder.encode(equipo, forKey: PropertyKey.equipo)
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        guard let nombre = aDecoder.decodeObject(forKey: PropertyKey.nombre) as? String else {
+            os_log("Unable to decode nombre jugador", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let userID = aDecoder.decodeObject(forKey: PropertyKey.userID) as? String else {
+            os_log("Unable to decode userID", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let equipo = aDecoder.decodeObject(forKey: PropertyKey.equipo) as? String else {
+            os_log("Unable to decode equipo", log: OSLog.default, type: .debug)
+            return nil
+        }
+        
+        self.init(n: nombre, u: userID, e: equipo)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import os.log
 
-class Torneo: NSObject, NSCoding {
+class Torneo: NSObject, NSCoding{
     var id = UUID()
     var numJugadores: Int
     var jugadores = [Jugador]()
@@ -127,9 +127,12 @@ class Torneo: NSObject, NSCoding {
         print("Online: \(online)\n")
         print("Ida Y Vuelta: \(idaYVuelta)\n")
         print("Jugadores:\n")
-        for x in 0...numJugadores-1{
-            print("\(jugadores[x].toString())")
+        if jugadores.count > 0{
+            for x in 0...jugadores.count - 1{
+                print("\(jugadores[x].toString())")
+            }
         }
+        print("Partidos: \(partidos.count)\n")
     }
     
     //MARK: NSCoding
@@ -145,15 +148,25 @@ class Torneo: NSObject, NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard let id = aDecoder.decodeObject(forKey: PropertyKey.id) as? UUID else {
-            os_log("Unable to decode the Torneo.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the torneo id.", log: OSLog.default, type: .debug)
             return nil
         }
-        let numJugadores = (aDecoder.decodeObject(forKey: PropertyKey.numJugadores) as? Int)!
-        let jugadores = (aDecoder.decodeObject(forKey: PropertyKey.jugadores) as? [Jugador])!
-        let partidos = (aDecoder.decodeObject(forKey: PropertyKey.partidos) as? [Partido])!
-        let online = (aDecoder.decodeObject(forKey: PropertyKey.online) as? Bool)!
-        let idaYVuelta = (aDecoder.decodeObject(forKey: PropertyKey.idaYVuelta) as? Bool)!
-        let nombre = (aDecoder.decodeObject(forKey: PropertyKey.nombre) as? String)!
+        guard let jugadores = aDecoder.decodeObject(forKey: PropertyKey.jugadores) as? [Jugador] else {
+            os_log("Unable to decode the jugadores.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let partidos = aDecoder.decodeObject(forKey: PropertyKey.partidos) as? [Partido] else {
+            os_log("Unable to decode the partidos.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let nombre = aDecoder.decodeObject(forKey: PropertyKey.nombre) as? String else {
+            os_log("Unable to decode the Torneo nombre.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        
+        let numJugadores = aDecoder.decodeInteger(forKey: PropertyKey.numJugadores)
+        let online = aDecoder.decodeBool(forKey: PropertyKey.online)
+        let idaYVuelta = aDecoder.decodeBool(forKey: PropertyKey.idaYVuelta)
         
         self.init(id: id, n: numJugadores, j:jugadores, p:partidos, o:online, i: idaYVuelta, nom: nombre)
     }

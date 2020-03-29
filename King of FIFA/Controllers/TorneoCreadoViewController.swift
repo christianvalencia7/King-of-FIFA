@@ -23,18 +23,7 @@ class TorneoCreadoViewController: UIViewController {
         numJugadores.text = "Torneo de \(torneo.getNum()) jugadores"
         online.text = torneo.getOnline() ? "Online" : "Offline"
         idaYVuelta.text = torneo.getIdaYVuelta() ? "Modo: ida y vuelta" : "Modo: único partido"
-        saveTorneo();
         // Do any additional setup after loading the view.
-    }
-    
-    private func saveTorneo() {
-        do{
-            let t = try NSKeyedArchiver.archivedData(withRootObject: torneo, requiringSecureCoding: false)
-            try t.write(to: Torneo.ArchiveURL)
-        }
-        catch {
-            print("Couldn't write file")
-        }
     }
     
     /*

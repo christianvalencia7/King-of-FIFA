@@ -158,23 +158,6 @@
             </objects>
             <point key="canvasLocation" x="157.97101449275362" y="178.79464285714286"/>
         </scene>
-        <!--Tus torneos-->
-        <scene sceneID="X3d-mk-ve0">
-            <objects>
-                <viewController id="k22-D8-pBx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bpg-sM-DUA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Tm1-mH-6zj"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Tus torneos" id="uIY-kH-1Jd"/>
-                    <navigationItem key="navigationItem" id="97i-W7-5bn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-aD-WKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="157" y="1022"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ki8-Zy-IKy">
             <objects>
@@ -186,38 +169,57 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6Fw-XF-ocb" kind="relationship" relationship="viewControllers" id="9Vh-01-49j"/>
-                        <segue destination="k22-D8-pBx" kind="relationship" relationship="viewControllers" id="9jg-2f-CZo"/>
-                        <segue destination="6TR-CE-gfY" kind="relationship" relationship="viewControllers" id="U6J-LP-bRd"/>
+                        <segue destination="6Fw-XF-ocb" kind="relationship" relationship="viewControllers" id="hBR-iW-Mj4"/>
+                        <segue destination="Gn2-4N-Fdq" kind="relationship" relationship="viewControllers" id="USV-bH-zJn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCh-Hp-b5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2010" y="48"/>
         </scene>
-        <!--Amigos-->
-        <scene sceneID="rlI-1M-4EA">
+        <!--Torneos-->
+        <scene sceneID="Mw6-32-xtA">
             <objects>
-                <viewController id="6TR-CE-gfY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsS-vI-Jux">
+                <tableViewController id="UkA-aW-hha" customClass="TorneosTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VEc-mX-nvM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="xj2-QS-dgw"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Amigos" id="QWq-Dn-kdn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fo3-p6-0Ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Red" id="wlA-8R-XZN">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wlA-8R-XZN" id="Est-9w-TM7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="UkA-aW-hha" id="obo-5A-0VY"/>
+                            <outlet property="delegate" destination="UkA-aW-hha" id="psD-sM-81d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Torneos" largeTitleDisplayMode="always" id="4NF-OY-9Ea"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGB-ML-Q8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2451" y="877"/>
+            <point key="canvasLocation" x="157.97101449275362" y="989.0625"/>
         </scene>
         <!--Nuevo Torneo-->
         <scene sceneID="F1l-a0-TsV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUv-J3-2NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6Fw-XF-ocb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nuevo Torneo" id="xWK-XB-b8z"/>
+                    <tabBarItem key="tabBarItem" title="Nuevo Torneo" image="plus.app" catalog="system" selectedImage="plus.app" id="xWK-XB-b8z"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="My0-yr-Bag"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Akm-N7-RbG">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -450,7 +452,7 @@
                                 </state>
                                 <connections>
                                     <action selector="siguiente:" destination="37o-c3-Ill" eventType="touchUpInside" id="Y4r-pY-yUb"/>
-                                    <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSeguefromTorneoCreado:" id="sYM-Oz-Vf7"/>
+                                    <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSeguefromTorneoCreadotoTable:" id="9U9-dK-fzD"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Torneo de 4 jugadores" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-tr-suu">
@@ -520,5 +522,28 @@
             </objects>
             <point key="canvasLocation" x="3873.913043478261" y="178.79464285714286"/>
         </scene>
+        <!--Torneos-->
+        <scene sceneID="Sjc-3w-7Wv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gn2-4N-Fdq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Torneos" image="rectangle.3.offgrid" catalog="system" id="OvS-uj-SPg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4MJ-jM-xWi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UkA-aW-hha" kind="relationship" relationship="rootViewController" id="9P7-K2-fBC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbC-2f-Iaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752.17391304347836" y="988.39285714285711"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="plus.app" catalog="system" width="64" height="56"/>
+        <image name="rectangle.3.offgrid" catalog="system" width="64" height="40"/>
+    </resources>
 </document>
