@@ -178,39 +178,191 @@
             <point key="canvasLocation" x="-2010" y="48"/>
         </scene>
         <!--Torneos-->
-        <scene sceneID="Mw6-32-xtA">
+        <scene sceneID="GdR-Qx-h6y">
             <objects>
-                <tableViewController id="UkA-aW-hha" customClass="TorneosTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VEc-mX-nvM">
+                <tableViewController title="Torneos" id="KpW-2O-LCx" customClass="TorneosTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ecF-VW-5S5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="sectionIndexBackgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Red" id="wlA-8R-XZN">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="tjk-Ww-Toh" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wlA-8R-XZN" id="Est-9w-TM7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjk-Ww-Toh" id="zH8-VN-Mae">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="y1h-Ay-Qnr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="y1h-Ay-Qnr" firstAttribute="top" secondItem="zH8-VN-Mae" secondAttribute="top" id="CgE-9s-NXW"/>
+                                        <constraint firstItem="y1h-Ay-Qnr" firstAttribute="leading" secondItem="zH8-VN-Mae" secondAttribute="leading" id="duW-pu-AVZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="y1h-Ay-Qnr" secondAttribute="trailing" id="meH-1f-fBJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="y1h-Ay-Qnr" secondAttribute="bottom" id="qNG-fz-BSS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nombre" destination="y1h-Ay-Qnr" id="Ec2-57-Uki"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="UkA-aW-hha" id="obo-5A-0VY"/>
-                            <outlet property="delegate" destination="UkA-aW-hha" id="psD-sM-81d"/>
+                            <outlet property="dataSource" destination="KpW-2O-LCx" id="CXv-cH-J2c"/>
+                            <outlet property="delegate" destination="KpW-2O-LCx" id="G9B-Ls-Ugz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Torneos" largeTitleDisplayMode="always" id="4NF-OY-9Ea"/>
+                    <navigationItem key="navigationItem" title="Torneos" id="kfd-5q-70R"/>
+                    <connections>
+                        <segue destination="yW1-kS-gxZ" kind="show" identifier="FaseTorneo" id="Nes-4d-7en"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jGB-ML-Q8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnM-kX-MHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.97101449275362" y="989.0625"/>
+            <point key="canvasLocation" x="195.6521739130435" y="987.72321428571422"/>
+        </scene>
+        <!--Fase Torneo Table View Controller-->
+        <scene sceneID="fXT-Xr-Ppl">
+            <objects>
+                <tableViewController id="yW1-kS-gxZ" customClass="FaseTorneoTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mg7-3I-1bd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="Doz-9P-j9Y" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Doz-9P-j9Y" id="wI1-7I-iga">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-qR-sXH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NOn-qR-sXH" firstAttribute="top" secondItem="wI1-7I-iga" secondAttribute="top" id="1yy-iv-u7A"/>
+                                        <constraint firstItem="NOn-qR-sXH" firstAttribute="leading" secondItem="wI1-7I-iga" secondAttribute="leading" id="CbG-jd-bWq"/>
+                                        <constraint firstAttribute="bottom" secondItem="NOn-qR-sXH" secondAttribute="bottom" id="PvT-Md-eWK"/>
+                                        <constraint firstAttribute="trailing" secondItem="NOn-qR-sXH" secondAttribute="trailing" id="vW9-mG-5Lq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nombre" destination="NOn-qR-sXH" id="CHy-7f-lPO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yW1-kS-gxZ" id="Lbe-EJ-GrR"/>
+                            <outlet property="delegate" destination="yW1-kS-gxZ" id="8i1-7a-P6i"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bVd-eg-BHc"/>
+                    <connections>
+                        <segue destination="6Fm-H8-hPy" kind="show" id="hSc-aR-qx6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ec-nd-LdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="990"/>
+        </scene>
+        <!--Marcador View Controller-->
+        <scene sceneID="xKL-em-YuI">
+            <objects>
+                <viewController id="6Fm-H8-hPy" customClass="MarcadorViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41i-Sc-KiV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMe-GD-Oob">
+                                <rect key="frame" x="20" y="165" width="374" height="95"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="N36-6n-ml8"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-kt-5ZW">
+                                <rect key="frame" x="20" y="548" width="374" height="95"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXb-s1-e2X">
+                                <rect key="frame" x="126" y="297" width="163" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="mxL-wd-2ys"/>
+                                </constraints>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0D-cf-phy">
+                                <rect key="frame" x="126" y="430" width="163" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="4F7-zk-6ic"/>
+                                </constraints>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Guardar" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-wK-otj">
+                                <rect key="frame" x="279" y="729" width="115" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3T0-Ai-4rq"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uXb-s1-e2X" firstAttribute="leading" secondItem="Xx6-Iz-2it" secondAttribute="leading" constant="126" id="30w-JR-Tzj"/>
+                            <constraint firstItem="FMe-GD-Oob" firstAttribute="trailing" secondItem="bAy-kt-5ZW" secondAttribute="trailing" id="Aqs-8l-Kbc"/>
+                            <constraint firstItem="FMe-GD-Oob" firstAttribute="leading" secondItem="bAy-kt-5ZW" secondAttribute="leading" id="Aqz-4w-ShV"/>
+                            <constraint firstItem="K0D-cf-phy" firstAttribute="centerX" secondItem="bAy-kt-5ZW" secondAttribute="centerX" id="CKc-HK-lOc"/>
+                            <constraint firstItem="HbQ-wK-otj" firstAttribute="leading" secondItem="Xx6-Iz-2it" secondAttribute="leading" constant="279" id="Ec8-t1-m87"/>
+                            <constraint firstItem="FMe-GD-Oob" firstAttribute="leading" secondItem="41i-Sc-KiV" secondAttribute="leadingMargin" id="I0h-wS-ca1"/>
+                            <constraint firstItem="FMe-GD-Oob" firstAttribute="trailing" secondItem="41i-Sc-KiV" secondAttribute="trailingMargin" id="JBI-iY-AMB"/>
+                            <constraint firstItem="uXb-s1-e2X" firstAttribute="leading" secondItem="K0D-cf-phy" secondAttribute="leading" id="Otg-CT-xQP"/>
+                            <constraint firstItem="Xx6-Iz-2it" firstAttribute="bottom" secondItem="HbQ-wK-otj" secondAttribute="bottom" constant="34" id="UWu-hg-lnY"/>
+                            <constraint firstItem="uXb-s1-e2X" firstAttribute="top" secondItem="FMe-GD-Oob" secondAttribute="bottom" constant="37" id="VkO-iu-pUc"/>
+                            <constraint firstItem="K0D-cf-phy" firstAttribute="top" secondItem="uXb-s1-e2X" secondAttribute="bottom" constant="45" id="bMr-je-2ck"/>
+                            <constraint firstItem="FMe-GD-Oob" firstAttribute="top" secondItem="Xx6-Iz-2it" secondAttribute="top" constant="77" id="cF0-JP-Ye1"/>
+                            <constraint firstItem="bAy-kt-5ZW" firstAttribute="top" secondItem="K0D-cf-phy" secondAttribute="bottom" constant="30" id="eKX-Sc-cZX"/>
+                            <constraint firstItem="HbQ-wK-otj" firstAttribute="top" secondItem="bAy-kt-5ZW" secondAttribute="bottom" constant="86" id="esh-FU-ggd"/>
+                            <constraint firstItem="uXb-s1-e2X" firstAttribute="trailing" secondItem="K0D-cf-phy" secondAttribute="trailing" id="ky8-qT-8lr"/>
+                            <constraint firstItem="bAy-kt-5ZW" firstAttribute="trailing" secondItem="HbQ-wK-otj" secondAttribute="trailing" id="sXQ-Hj-zV3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xx6-Iz-2it"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qgR-FY-hnx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wao-gO-gJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931.8840579710147" y="989.73214285714278"/>
         </scene>
         <!--Nuevo Torneo-->
         <scene sceneID="F1l-a0-TsV">
@@ -534,7 +686,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="UkA-aW-hha" kind="relationship" relationship="rootViewController" id="9P7-K2-fBC"/>
+                        <segue destination="KpW-2O-LCx" kind="relationship" relationship="rootViewController" id="gLt-0J-Gxb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbC-2f-Iaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,7 @@ import UIKit
 class TorneosTableViewController: UITableViewController {
     
     var torneos = [Torneo]()
-    
+    var selectedTorneo = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         //torneos = loadTorneos() ?? Torneo()
@@ -21,10 +21,11 @@ class TorneosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        torneos = loadTorneos() ?? [Torneo]()
     }
     
-    private func loadTorneos() -> Torneo?  {
-        if let torneos = getObject(fileName: "torneos") as? Torneo{
+    private func loadTorneos() -> [Torneo]?  {
+        if let torneos = getObject(fileName: "torneos") as? [Torneo]{
             return torneos
         }
         else{
@@ -97,11 +98,18 @@ class TorneosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Red", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Red", for: indexPath) as! NombreTorneoTableViewCell
         // Configure the cell...
+        
+        cell.nombre.text = "\(torneos[indexPath.row].nombre)"
+        cell.nombre.textColor = UIColor.white
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         selectedTorneo = indexPath.row
+         performSegue(withIdentifier: "FaseTorneo", sender: nil)
     }
     
 
@@ -112,18 +120,18 @@ class TorneosTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+  
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
-            // Delete the row from the data source
+            torneos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -140,14 +148,19 @@ class TorneosTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? FaseTorneoTableViewController {
+            viewController.torneos = torneos
+            viewController.selectedTorneo = selectedTorneo
+        }
+        
     }
-    */
+    
 
 }

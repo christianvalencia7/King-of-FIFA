@@ -17,6 +17,9 @@
 		94A44773242D91F5009FFFAF /* Partido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44771242D9156009FFFAF /* Partido.swift */; };
 		94A44775242E61A7009FFFAF /* TorneosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44774242E61A7009FFFAF /* TorneosTableViewController.swift */; };
 		94A447772430258F009FFFAF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447762430258F009FFFAF /* Storage.swift */; };
+		94A4477B24350E36009FFFAF /* NombreTorneoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4477A24350E36009FFFAF /* NombreTorneoTableViewCell.swift */; };
+		94A4477D2435BDE9009FFFAF /* FaseTorneoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4477C2435BDE9009FFFAF /* FaseTorneoTableViewController.swift */; };
+		94A4477F2436DEC5009FFFAF /* MarcadorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4477E2436DEC5009FFFAF /* MarcadorViewController.swift */; };
 		94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8D2426874000730B6A /* AppDelegate.swift */; };
 		94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8F2426874000730B6A /* SceneDelegate.swift */; };
 		94F5DC952426874100730B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC932426874000730B6A /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		94A44771242D9156009FFFAF /* Partido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partido.swift; sourceTree = "<group>"; };
 		94A44774242E61A7009FFFAF /* TorneosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosTableViewController.swift; sourceTree = "<group>"; };
 		94A447762430258F009FFFAF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		94A4477A24350E36009FFFAF /* NombreTorneoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreTorneoTableViewCell.swift; sourceTree = "<group>"; };
+		94A4477C2435BDE9009FFFAF /* FaseTorneoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseTorneoTableViewController.swift; sourceTree = "<group>"; };
+		94A4477E2436DEC5009FFFAF /* MarcadorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcadorViewController.swift; sourceTree = "<group>"; };
 		94F5DC8A2426874000730B6A /* King of FIFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King of FIFA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F5DC8D2426874000730B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F5DC8F2426874000730B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,9 +76,12 @@
 			children = (
 				94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */,
 				94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */,
+				94A4477C2435BDE9009FFFAF /* FaseTorneoTableViewController.swift */,
 				94A4476B242C397F009FFFAF /* TorneoCreadoViewController.swift */,
 				94A447762430258F009FFFAF /* Storage.swift */,
+				94A4477E2436DEC5009FFFAF /* MarcadorViewController.swift */,
 				94A44774242E61A7009FFFAF /* TorneosTableViewController.swift */,
+				94A4477A24350E36009FFFAF /* NombreTorneoTableViewCell.swift */,
 				94A44769242AE5DB009FFFAF /* DatosJugadorViewController.swift */,
 				94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */,
 				94F5DC8F2426874000730B6A /* SceneDelegate.swift */,
@@ -184,6 +193,7 @@
 				94A4476A242AE5DB009FFFAF /* DatosJugadorViewController.swift in Sources */,
 				94A44773242D91F5009FFFAF /* Partido.swift in Sources */,
 				94A447652427EE56009FFFAF /* Jugador.swift in Sources */,
+				94A4477D2435BDE9009FFFAF /* FaseTorneoTableViewController.swift in Sources */,
 				94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */,
 				94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */,
 				94A447772430258F009FFFAF /* Storage.swift in Sources */,
@@ -192,7 +202,9 @@
 				94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */,
 				94A4476C242C397F009FFFAF /* TorneoCreadoViewController.swift in Sources */,
 				94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */,
+				94A4477F2436DEC5009FFFAF /* MarcadorViewController.swift in Sources */,
 				94A4476E242C3C9B009FFFAF /* CrearTorneoViewController.swift in Sources */,
+				94A4477B24350E36009FFFAF /* NombreTorneoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
