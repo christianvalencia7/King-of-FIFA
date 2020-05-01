@@ -25,6 +25,14 @@ class Partido: NSObject, NSCoding{
         static let goles1 = "goles1"
         static let goles2 = "goles2"
     }
+    override init()
+    {
+        jugador1 = Jugador()
+        jugador2 = Jugador()
+        goles1 = 0
+        goles2 = 0
+        id = UUID()
+    }
     init(j1: Jugador, j2: Jugador, g1: Int, g2: Int, i: UUID)
     {
         jugador1 = j1

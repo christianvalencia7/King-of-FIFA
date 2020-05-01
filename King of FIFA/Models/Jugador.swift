@@ -14,6 +14,13 @@ class Jugador: NSObject, NSCoding{
     var userID: String
     var equipo: String
     
+    override init()
+    {
+        nombre = ""
+        userID = ""
+        equipo = ""
+    }
+    
     init(n: String, u: String, e: String)
     {
         nombre = n

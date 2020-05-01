@@ -12,44 +12,13 @@ class TorneosTableViewController: UITableViewController {
     
     var torneos = [Torneo]()
     var selectedTorneo = 0
+    var newTorneo = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        //torneos = loadTorneos() ?? Torneo()
-        //torneos.printTorneo()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         torneos = loadTorneos() ?? [Torneo]()
-    }
-    
-    private func loadTorneos() -> [Torneo]?  {
-        if let torneos = getObject(fileName: "torneos") as? [Torneo]{
-            return torneos
-        }
-        else{
-            print("TORNEO NOT LOADED")
-            return nil
-        }
-    }
-    
-    func getObject(fileName: String) -> Any? {
-        
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
-        do {
-            let data = try Data(contentsOf: filePath)//6
-            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)//7
-            return object//8
-        } catch {
-            print("error is: \(error.localizedDescription)")//9
-        }
-        return nil
-    }
-    
-    func getDirectoryPath() -> URL {
-        let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return arrayPaths[0]
     }
     
     // MARK: - Table view data source
@@ -73,28 +42,7 @@ class TorneosTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
     
-            saveTorneo()
-    }
-    
-    private func saveTorneo() {
-
-        if(!saveObject(fileName: "torneos", object: torneos))
-        {
-                print("TORNEO NOT SAVED")
-        }
-    }
-    
-    func saveObject(fileName: String, object: Any) -> Bool {
-        
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//1
-        do {
-            let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)//2
-            try data.write(to: filePath)//3
-            return true
-        } catch {
-            print("error is: \(error.localizedDescription)")//4
-        }
-        return false
+            
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -156,11 +104,53 @@ class TorneosTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if let viewController = segue.destination as? FaseTorneoTableViewController {
-            viewController.torneos = torneos
+            viewController.torneo = torneos[selectedTorneo]
             viewController.selectedTorneo = selectedTorneo
         }
         
     }
     
+    //FILE MANAGMENT
+    
+    private func loadTorneos() -> [Torneo]?  {
+           if let torneos = getObject(fileName: "torneos") as? [Torneo]{
+               return torneos
+           }
+           else{
+               print("TORNEO NOT LOADED")
+               return nil
+           }
+       }
+    
+    func getObject(fileName: String) -> Any? {
+        var ts = [Any]()
+        let filePath2 = self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true)
+        var components = [String]()
+        
+        do{
+            if FileManager.default.fileExists(atPath: filePath2.path){
+                components = try FileManager.default.contentsOfDirectory(atPath: filePath2.path)
+                print("Components = \(components)")
+                var i = 0
+                while i < components.count{
+                    
+                        let component = components[i]
+                        i = i + 1
+                        let data = try Data(contentsOf: filePath2.appendingPathComponent(component))
+                        let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+                        ts.append(object!)
+                }
+            }
+        }
+        catch {print("1error is: \(error.localizedDescription)")}
+        return ts
+    }
+    
+    func getDirectoryPath() -> URL {
+        let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return arrayPaths[0]
+    }
 
 }
+
+

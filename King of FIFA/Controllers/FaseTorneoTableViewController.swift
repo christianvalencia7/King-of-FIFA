@@ -10,13 +10,12 @@ import UIKit
 
 class FaseTorneoTableViewController: UITableViewController {
     
-    var torneos = [Torneo]()
-    var selectedTorneo = 0
     var torneo = Torneo()
+    var selectedTorneo = 0
+    var selectedPartido = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        torneo = torneos[selectedTorneo]
         let numPartidos = torneo.partidos.count
         var fase = ""
         if numPartidos == 1 { fase = "Final"}
@@ -26,12 +25,13 @@ class FaseTorneoTableViewController: UITableViewController {
         if numPartidos == 16 { fase = "16avos de final"}
         if numPartidos == 32 { fase = "32avos de final"}
         self.navigationItem.title = fase
+        self.navigationItem.prompt = torneo.nombre
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -55,6 +55,11 @@ class FaseTorneoTableViewController: UITableViewController {
         cell.nombre.textColor = UIColor.white
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         selectedPartido = indexPath.row
+         performSegue(withIdentifier: "CambiarMarcador", sender: nil)
     }
     
 
@@ -93,14 +98,48 @@ class FaseTorneoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? MarcadorViewController {
+            viewController.torneo = torneo
+            viewController.selectedTorneo = selectedTorneo
+            viewController.selectedPartido = selectedPartido
+        }
+        
     }
-    */
+    
+    private func loadTorneos() -> [Torneo]?  {
+        if let torneos = getObject(fileName: "torneos") as? [Torneo]{
+            return torneos
+        }
+        else{
+            print("TORNEO NOT LOADED")
+            return nil
+        }
+    }
+    
+    func getObject(fileName: String) -> Any? {
+        
+        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
+        do {
+            let data = try Data(contentsOf: filePath)//6
+            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)//7
+            return object//8
+        } catch {
+            print("error is: \(error.localizedDescription)")//9
+        }
+        return nil
+    }
+    
+    func getDirectoryPath() -> URL {
+        let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return arrayPaths[0]
+    }
+    
 
 }

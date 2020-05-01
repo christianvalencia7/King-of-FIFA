@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94032516245BA7BD007337B6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94032515245BA7BC007337B6 /* File.swift */; };
 		94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */; };
 		94A447632427ED24009FFFAF /* Torneo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447622427ED24009FFFAF /* Torneo.swift */; };
 		94A447652427EE56009FFFAF /* Jugador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447642427EE56009FFFAF /* Jugador.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94032515245BA7BC007337B6 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumJugadoresViewController.swift; sourceTree = "<group>"; };
 		94A447622427ED24009FFFAF /* Torneo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torneo.swift; sourceTree = "<group>"; };
 		94A447642427EE56009FFFAF /* Jugador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jugador.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				94F5DC962426874500730B6A /* Assets.xcassets */,
 				94F5DC982426874500730B6A /* LaunchScreen.storyboard */,
 				94F5DC9B2426874500730B6A /* Info.plist */,
+				94032515245BA7BC007337B6 /* File.swift */,
 			);
 			path = "King of FIFA";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				94A447652427EE56009FFFAF /* Jugador.swift in Sources */,
 				94A4477D2435BDE9009FFFAF /* FaseTorneoTableViewController.swift in Sources */,
 				94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */,
+				94032516245BA7BD007337B6 /* File.swift in Sources */,
 				94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */,
 				94A447772430258F009FFFAF /* Storage.swift in Sources */,
 				94A447632427ED24009FFFAF /* Torneo.swift in Sources */,

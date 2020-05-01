@@ -15,8 +15,11 @@ class CrearTorneoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func unwindSeguefromTorneoCreado(_ sender: UIStoryboardSegue)
+    @IBAction func unwindSeguefromTorneoCreadotoCrear(_ sender: UIStoryboardSegue)
     {
+        if let sourceViewController = sender.source as? TorneoCreadoViewController {
+            
+        }
            
     }
 
