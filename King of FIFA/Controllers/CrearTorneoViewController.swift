@@ -17,9 +17,6 @@ class CrearTorneoViewController: UIViewController {
     }
     @IBAction func unwindSeguefromTorneoCreadotoCrear(_ sender: UIStoryboardSegue)
     {
-        if let sourceViewController = sender.source as? TorneoCreadoViewController {
-            
-        }
            
     }
 

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="f7w-SU-auR">
-                                <rect key="frame" x="58" y="99" width="298" height="538"/>
+                                <rect key="frame" x="58" y="143" width="298" height="538"/>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOb-oU-aXi">
                                         <rect key="frame" x="0.0" y="0.0" width="298" height="70"/>
@@ -130,9 +130,6 @@
                                         <state key="normal" title="Crear Torneo">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="618-Ir-LUq" kind="show" id="fJO-nE-FHL"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-cR-w1z">
                                         <rect key="frame" x="0.0" y="111" width="298" height="66"/>
@@ -191,14 +188,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="tjk-Ww-Toh" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjk-Ww-Toh" id="zH8-VN-Mae">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="y1h-Ay-Qnr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -223,7 +220,13 @@
                             <outlet property="delegate" destination="KpW-2O-LCx" id="G9B-Ls-Ugz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Torneos" id="kfd-5q-70R"/>
+                    <navigationItem key="navigationItem" title="Torneos" id="kfd-5q-70R">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="caf-Qj-eYk">
+                            <connections>
+                                <segue destination="618-Ir-LUq" kind="show" id="c3H-nJ-21a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="yW1-kS-gxZ" kind="show" identifier="FaseTorneo" id="Nes-4d-7en"/>
                     </connections>
@@ -404,7 +407,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpO-pj-Pxt">
-                                <rect key="frame" x="54" y="344" width="306" height="32"/>
+                                <rect key="frame" x="54" y="388" width="306" height="32"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Ida y vuelta"/>
@@ -431,7 +434,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre Torneo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYe-gy-tKC">
-                                <rect key="frame" x="54" y="140" width="304" height="54"/>
+                                <rect key="frame" x="54" y="184" width="304" height="54"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="oTm-3k-vlt"/>
@@ -441,7 +444,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-4V-8bo">
-                                <rect key="frame" x="56" y="214" width="302" height="55"/>
+                                <rect key="frame" x="56" y="258" width="302" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -449,7 +452,7 @@
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CPq-sj-W45">
-                                <rect key="frame" x="54" y="430" width="306" height="32"/>
+                                <rect key="frame" x="54" y="474" width="306" height="32"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Online"/>
@@ -598,7 +601,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre Torneo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVy-Sk-i4n">
-                                <rect key="frame" x="49" y="112" width="316" height="46"/>
+                                <rect key="frame" x="49" y="156" width="316" height="46"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZVy-Sk-i4n" secondAttribute="height" multiplier="158:23" id="Dg3-ij-puN"/>
@@ -621,7 +624,7 @@
                                 <connections>
                                     <action selector="goBack:" destination="BDG-QE-f36" eventType="touchUpInside" id="50d-RI-h1l"/>
                                     <action selector="siguiente:" destination="37o-c3-Ill" eventType="touchUpInside" id="Y4r-pY-yUb"/>
-                                    <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSeguefromTorneoCreadotoCrear:" id="h8S-9Q-cYZ"/>
+                                    <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSeguefromTorneoCreadotoTable:" id="MQs-GS-0PO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Torneo de 4 jugadores" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-tr-suu">
@@ -707,6 +710,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="rectangle.3.offgrid" catalog="system" width="128" height="80"/>
     </resources>
