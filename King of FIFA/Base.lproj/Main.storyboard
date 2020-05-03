@@ -245,14 +245,14 @@
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="Doz-9P-j9Y" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Doz-9P-j9Y" id="wI1-7I-iga">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador1 vs Jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-qR-sXH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -277,7 +277,13 @@
                             <outlet property="delegate" destination="yW1-kS-gxZ" id="8i1-7a-P6i"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bVd-eg-BHc"/>
+                    <navigationItem key="navigationItem" id="bVd-eg-BHc">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente Fase" id="e9k-jc-Dd8">
+                            <connections>
+                                <action selector="siguienteFase:" destination="yW1-kS-gxZ" id="HpL-ME-h8u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="6Fm-H8-hPy" kind="show" identifier="CambiarMarcador" id="hSc-aR-qx6"/>
                     </connections>
@@ -344,6 +350,7 @@
                                 <state key="normal" title="Guardar"/>
                                 <connections>
                                     <action selector="guardarMarcador:" destination="6Fm-H8-hPy" eventType="touchUpInside" id="N2P-2e-Vdv"/>
+                                    <segue destination="3nA-xM-Iux" kind="unwind" unwindAction="unwindSeguefromMarcador:" id="wpk-iU-Cuc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -376,6 +383,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wao-gO-gJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3nA-xM-Iux" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="989.73214285714278"/>
         </scene>

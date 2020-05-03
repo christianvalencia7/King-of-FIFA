@@ -71,7 +71,7 @@ class FaseTorneoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -81,7 +81,7 @@ class FaseTorneoTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -113,26 +113,90 @@ class FaseTorneoTableViewController: UITableViewController {
         
     }
     
-    private func loadTorneos() -> [Torneo]?  {
-        if let torneos = getObject(fileName: "torneos") as? [Torneo]{
-            return torneos
+    @IBAction func siguienteFase(_ sender: UIBarButtonItem) {
+        let partidos = torneo.partidos
+        var empate = 0
+        for p in partidos {
+            if p.goles1 == p.goles2{
+                empate = empate + 1
+            }
         }
-        else{
-            print("TORNEO NOT LOADED")
-            return nil
+        //Check if there is a draw
+        if empate > 0 {
+            let alertController = UIAlertController(title: "No puede haber empate", message: "En caso de empate jugar tiempos extra, penales u otro partido de desempate", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }
+            
+        //If there isn't a draw continue to next stage
+        else {
+            for p in partidos{
+                torneo.jugadores.append(p.getGanador())
+                torneo.partidos.remove(at: 0)
+                //let indexPath = IndexPath(row: 0, section: 0)
+               // tableView.deleteRows(at: [indexPath], with: .fade)
+                //print("HELLO")
+            }
+            torneo.crearPartidos()
+            tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+            
+            var fase = ""
+            let numPartidos = torneo.partidos.count
+            if numPartidos == 1 { fase = "Final"}
+            if numPartidos == 2 { fase = "Semifinal"}
+            if numPartidos == 4 { fase = "Cuartos de final"}
+            if numPartidos == 8 { fase = "Octavos de final"}
+            if numPartidos == 16 { fase = "16avos de final"}
+            if numPartidos == 32 { fase = "32avos de final"}
+            self.navigationItem.title = fase
+            
+            if numPartidos == 0
+            {
+                let alertController = UIAlertController(title: "FIN DEL TORNEO", message: "El ganador es \(torneo.jugadores[0].nombre)", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+        
     }
     
+    @IBAction func unwindSeguefromMarcador(_ sender: UIStoryboardSegue)
+    {
+            //torneo = loadTorneo(torneo: torneo)!
+//          if let sourceViewController = sender.source as? TorneoCreadoViewController {
+//                let torneo = sourceViewController.torneo
+//                let newIndexPath = selectedPartido
+//                let indexPath: IndexPath = IndexPath(row: selectedPartido, section: 0)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
+//                tableView.insertRows(at: [indexPath], with: .automatic)
+//          }
+    
+            
+    }
+    
+    //FILE MANAGMENT
+    private func loadTorneo(torneo: Torneo) -> Torneo?  {
+           if let torneos = getObject(fileName: "\(torneo.id)") as? Torneo{
+               return torneos
+           }
+           else{
+               print("TORNEO NOT LOADED")
+               return nil
+           }
+       }
+    
     func getObject(fileName: String) -> Any? {
-        
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
-        do {
-            let data = try Data(contentsOf: filePath)//6
-            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)//7
-            return object//8
-        } catch {
-            print("error is: \(error.localizedDescription)")//9
+        let filePath2 = self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true)
+    
+        do{
+            if FileManager.default.fileExists(atPath: filePath2.path){
+                let data = try Data(contentsOf: filePath2.appendingPathComponent(fileName))
+                let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+                return object
+            }
         }
+        catch {print("1error is: \(error.localizedDescription)")}
         return nil
     }
     

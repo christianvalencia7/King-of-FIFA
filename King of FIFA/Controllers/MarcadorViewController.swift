@@ -29,6 +29,8 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
         jugador2.text = partido.jugador2.nombre
         marcador1.delegate = self
         marcador2.delegate = self
+        marcador1.text = "\(torneo.partidos[selectedPartido].goles1)"
+        marcador2.text = "\(torneo.partidos[selectedPartido].goles2)"
        
     }
     
@@ -42,9 +44,8 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
         else
         {
             partido.goles1 = Int(marcador1.text ?? "1") ?? 1
-            partido.goles2 = Int(marcador1.text ?? "0") ?? 0
+            partido.goles2 = Int(marcador2.text ?? "0") ?? 0
             saveTorneo(torneo: torneo)
-            
         }
     }
     
@@ -58,64 +59,56 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? FaseTorneoTableViewController {
+            viewController.torneo = torneo
+            viewController.selectedTorneo = selectedTorneo
+            viewController.selectedPartido = selectedPartido
+        }
     }
-    */
     
+    
+    //FILE MANAGMENT
     private func saveTorneo(torneo: Torneo) {
 
-        if(!saveObject(fileName: "torneo_\(torneo.id)", object: torneo))
+        if(!saveObject(fileName: "\(torneo.id)", object: torneo))
         {
                 print("TORNEO NOT SAVED")
         }
     }
     
     func saveObject(fileName: String, object: Any) -> Bool {
-        
-        let f = self.getDirectoryPath().appendingPathComponent("Torneos", isDirectory: true)
+        do{
+            if !FileManager.default.fileExists(atPath: getDirectoryPath().appendingPathComponent("torneos", isDirectory: true).path) {
+                try FileManager.default.createDirectory(at: self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+                print("\(try FileManager.default.contentsOfDirectory(atPath: self.getDirectoryPath().path))")
+            }
+        }
+        catch{print("CATCH")}
+        let f = self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true)
         let filePath = f.appendingPathComponent(fileName)//1
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)//2
             try data.write(to: filePath)//3
             return true
         } catch {
-            print("error is: \(error.localizedDescription)")//4
+            print("2error is: \(error.localizedDescription)")//4
         }
         return false
     }
     
-    private func loadTorneos() -> [Torneo]?  {
-        if let torneos = getObject(fileName: "torneos") as? [Torneo]{
-            return torneos
-        }
-        else{
-            print("TORNEO NOT LOADED")
-            return nil
-        }
-    }
-    
-    func getObject(fileName: String) -> Any? {
-        
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
-        do {
-            let data = try Data(contentsOf: filePath)//6
-            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)//7
-            return object//8
-        } catch {
-            print("error is: \(error.localizedDescription)")//9
-        }
-        return nil
-    }
     
     func getDirectoryPath() -> URL {
         let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return arrayPaths[0]
     }
+        
+    
 
 }
