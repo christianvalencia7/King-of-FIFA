@@ -21,5 +21,6 @@ class FormTextField: UITextField {
         didSet {
             layer.borderWidth = borderWidth
         }
+        
     }
 }
