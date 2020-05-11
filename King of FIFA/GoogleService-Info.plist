@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>994263724100-cm7m0rl0cf26v69u3gs9b24ml5r0eenm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.994263724100-cm7m0rl0cf26v69u3gs9b24ml5r0eenm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCJS9RMiXgyuVTSm8riO3qbbe1YE8aSeWI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>994263724100</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.King-of-FIFA</string>
+	<key>PROJECT_ID</key>
+	<string>king-of-fifa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>king-of-fifa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:994263724100:ios:1a635c6abea4a8f4af8c11</string>
+	<key>DATABASE_URL</key>
+	<string>https://king-of-fifa.firebaseio.com</string>
+</dict>
+</plist>

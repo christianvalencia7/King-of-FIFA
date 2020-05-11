@@ -132,7 +132,6 @@ class TorneosTableViewController: UITableViewController {
         do{
             if FileManager.default.fileExists(atPath: filePath2.path){
                 components = try FileManager.default.contentsOfDirectory(atPath: filePath2.path)
-                print("Components = \(components)")
                 var i = 0
                 while i < components.count{
                     
