@@ -127,65 +127,6 @@
             </objects>
             <point key="canvasLocation" x="2076.8115942028985" y="178.79464285714286"/>
         </scene>
-        <!--Crear Torneo View Controller-->
-        <scene sceneID="pM0-8S-gbj">
-            <objects>
-                <viewController id="e3Q-ji-UlU" customClass="CrearTorneoViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ssB-t2-aWO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="zS1-Qd-Abc">
-                                <rect key="frame" x="50.5" y="372" width="313" height="152"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w87-Ho-RZx">
-                                        <rect key="frame" x="0.0" y="0.0" width="313" height="54"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <state key="normal" title="Nuevo Torneo Online">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbi-cR-w1z">
-                                        <rect key="frame" x="0.0" y="99" width="313" height="53"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <state key="normal" title="Nueva Liga Online">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <state key="disabled">
-                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AAs-T1-DZz" customClass="CustomNavigationBar" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backColor">
-                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="zS1-Qd-Abc" firstAttribute="centerY" secondItem="ssB-t2-aWO" secondAttribute="centerY" id="bnm-Z3-Xcu"/>
-                            <constraint firstItem="zS1-Qd-Abc" firstAttribute="centerX" secondItem="ssB-t2-aWO" secondAttribute="centerX" id="iRq-dW-XMa"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3bK-0y-wAF"/>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem title="Cerrar Sesión" width="407.5" id="Dhy-zS-OGR"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="uvh-Wy-S66"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5pE-az-NHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="238" y="-587"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ki8-Zy-IKy">
             <objects>
@@ -217,14 +158,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="tjk-Ww-Toh" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjk-Ww-Toh" id="zH8-VN-Mae">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="y1h-Ay-Qnr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -274,14 +215,14 @@
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="Doz-9P-j9Y" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Doz-9P-j9Y" id="wI1-7I-iga">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador1 vs Jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-qR-sXH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -527,12 +468,48 @@
                     <connections>
                         <outlet property="emailText" destination="Itx-Jb-tKH" id="N0s-o0-TCu"/>
                         <outlet property="passwordText" destination="y91-9o-Ht2" id="A1o-Jg-X4u"/>
-                        <segue destination="e3Q-ji-UlU" kind="presentation" identifier="toOnline" modalPresentationStyle="currentContext" id="cQ6-eP-RVF"/>
+                        <segue destination="HsK-F3-rLp" kind="presentation" identifier="toOnline" modalPresentationStyle="fullScreen" id="PqY-Hu-OlQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6T-MU-C3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-807.24637681159425" y="-587.27678571428567"/>
+        </scene>
+        <!--Online View Controller-->
+        <scene sceneID="L7n-89-Mwr">
+            <objects>
+                <viewController id="HsK-F3-rLp" customClass="OnlineViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N5y-yu-soA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAP-kG-pbv">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="eZz-f4-k1Z">
+                                        <barButtonItem key="leftBarButtonItem" title="Cerrar Sesion" id="Qig-ea-vDi">
+                                            <connections>
+                                                <action selector="logOut:" destination="HsK-F3-rLp" id="GHb-jv-RkQ"/>
+                                                <segue destination="D1i-yb-eKK" kind="unwind" unwindAction="unwindSeguetoLogIn:" id="0XR-yh-tpX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vAP-kG-pbv" firstAttribute="bottom" secondItem="1rh-hl-NMx" secondAttribute="bottom" id="GQy-mP-uTK"/>
+                            <constraint firstItem="vAP-kG-pbv" firstAttribute="centerX" secondItem="N5y-yu-soA" secondAttribute="centerX" id="KeD-QZ-Yiv"/>
+                            <constraint firstItem="vAP-kG-pbv" firstAttribute="leading" secondItem="1rh-hl-NMx" secondAttribute="leading" id="nb8-E4-iMQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1rh-hl-NMx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWu-UN-WJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="D1i-yb-eKK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="218.84057971014494" y="-587.27678571428567"/>
         </scene>
         <!--Opciones Torneo View Controller-->
         <scene sceneID="qhd-hz-AtA">

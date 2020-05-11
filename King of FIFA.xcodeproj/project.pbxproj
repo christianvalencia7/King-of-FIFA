@@ -18,7 +18,7 @@
 		94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */; };
 		94A4476A242AE5DB009FFFAF /* DatosJugadorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44769242AE5DB009FFFAF /* DatosJugadorViewController.swift */; };
 		94A4476C242C397F009FFFAF /* TorneoCreadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4476B242C397F009FFFAF /* TorneoCreadoViewController.swift */; };
-		94A4476E242C3C9B009FFFAF /* CrearTorneoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */; };
+		94A4476E242C3C9B009FFFAF /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4476D242C3C9B009FFFAF /* OnlineViewController.swift */; };
 		94A44773242D91F5009FFFAF /* Partido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44771242D9156009FFFAF /* Partido.swift */; };
 		94A44775242E61A7009FFFAF /* TorneosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A44774242E61A7009FFFAF /* TorneosTableViewController.swift */; };
 		94A4477B24350E36009FFFAF /* NombreTorneoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4477A24350E36009FFFAF /* NombreTorneoTableViewCell.swift */; };
@@ -46,7 +46,7 @@
 		94A44766242928D5009FFFAF /* OpcionesTorneoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesTorneoViewController.swift; sourceTree = "<group>"; };
 		94A44769242AE5DB009FFFAF /* DatosJugadorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosJugadorViewController.swift; sourceTree = "<group>"; };
 		94A4476B242C397F009FFFAF /* TorneoCreadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneoCreadoViewController.swift; sourceTree = "<group>"; };
-		94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTorneoViewController.swift; sourceTree = "<group>"; };
+		94A4476D242C3C9B009FFFAF /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
 		94A44771242D9156009FFFAF /* Partido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partido.swift; sourceTree = "<group>"; };
 		94A44774242E61A7009FFFAF /* TorneosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosTableViewController.swift; sourceTree = "<group>"; };
 		94A4477A24350E36009FFFAF /* NombreTorneoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreTorneoTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				9403251824609763007337B6 /* Liga */,
-				94A4476D242C3C9B009FFFAF /* CrearTorneoViewController.swift */,
 				94C3395A24676E3900FB16B6 /* Online */,
 				94032517246094AD007337B6 /* Torneo */,
 				94F5DC8F2426874000730B6A /* SceneDelegate.swift */,
@@ -136,6 +135,7 @@
 		94C3395A24676E3900FB16B6 /* Online */ = {
 			isa = PBXGroup;
 			children = (
+				94A4476D242C3C9B009FFFAF /* OnlineViewController.swift */,
 				94C3395B24676E6F00FB16B6 /* LogInViewController.swift */,
 			);
 			path = Online;
@@ -327,7 +327,7 @@
 				94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */,
 				94C3395E2469BE4F00FB16B6 /* CustomNavigationBar.swift in Sources */,
 				94A4477F2436DEC5009FFFAF /* MarcadorViewController.swift in Sources */,
-				94A4476E242C3C9B009FFFAF /* CrearTorneoViewController.swift in Sources */,
+				94A4476E242C3C9B009FFFAF /* OnlineViewController.swift in Sources */,
 				94A4477B24350E36009FFFAF /* NombreTorneoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

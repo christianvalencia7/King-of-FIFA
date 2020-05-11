@@ -7,19 +7,23 @@
 //
 
 import UIKit
-
-class CrearTorneoViewController: UIViewController {
+import Firebase
+class OnlineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func unwindSeguefromTorneoCreadotoCrear(_ sender: UIStoryboardSegue)
-    {
-           
-    }
 
+    @IBAction func logOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            
+        } catch {
+            print("error")
+        }
+    }
     /*
     // MARK: - Navigation
 

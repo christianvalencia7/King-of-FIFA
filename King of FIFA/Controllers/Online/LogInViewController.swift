@@ -40,6 +40,23 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInClicked(_ sender: Any) {
+        if emailText.text != "" && passwordText.text != "" {
+            
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (authdata, error) in
+                if error != nil {
+                    self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Error")
+
+                } else {
+                    self.performSegue(withIdentifier: "toOnline", sender: nil)
+
+                }
+            }
+            
+            
+        } else {
+            makeAlert(titleInput: "Error!", messageInput: "Username/Password?")
+
+        }
     }
     
     func makeAlert(titleInput:String, messageInput:String) {
@@ -47,6 +64,18 @@ class LogInViewController: UIViewController {
                     let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
                     alert.addAction(okButton)
                     self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindSeguetoLogIn(_ sender: UIStoryboardSegue)
+    {
+//           if let sourceViewController = sender.source as? TorneoCreadoViewController {
+//                let torneo = sourceViewController.torneo
+//                let newIndexPath = IndexPath(row: torneos.count, section: 0)
+//                torneos.append(torneo)
+//                tableView.insertRows(at: [newIndexPath], with: .automatic)
+//            }
+    
+            
     }
     
     /*
