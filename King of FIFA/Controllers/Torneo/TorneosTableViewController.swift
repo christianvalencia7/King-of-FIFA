@@ -34,7 +34,7 @@ class TorneosTableViewController: UITableViewController {
         return torneos.count
     }
 
-    @IBAction func unwindSeguefromTorneoCreadotoTable(_ sender: UIStoryboardSegue)
+    @IBAction func unwindSegueToTorneo(_ sender: UIStoryboardSegue)
     {
            if let sourceViewController = sender.source as? TorneoCreadoViewController {
                 let torneo = sourceViewController.torneo

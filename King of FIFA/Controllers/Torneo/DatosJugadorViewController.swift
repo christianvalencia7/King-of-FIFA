@@ -42,7 +42,7 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
            sender.resignFirstResponder()
        }
     
-    @IBAction func siguiente(_ sender: UIButton) {
+    @IBAction func siguiente(_ sender: Any) {
         
         let n: String = nombre.text ?? "Default"
         let u: String = userID.text ?? "Default"
