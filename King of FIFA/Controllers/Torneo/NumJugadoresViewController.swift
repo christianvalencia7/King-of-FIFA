@@ -11,6 +11,7 @@ import UIKit
 class NumJugadoresViewController: UIViewController {
     var torneo = Torneo()
     var selectedNum: Int = 0
+    var online: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class NumJugadoresViewController: UIViewController {
     @IBAction func botonJugadores(_ sender: UIButton) {
         selectedNum = sender.tag
         torneo.setNum(num: selectedNum)
+        torneo.online = online
         performSegue(withIdentifier: "MasOpciones", sender: nil)
     }
     

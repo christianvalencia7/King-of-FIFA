@@ -27,6 +27,7 @@
 		94C3395C24676E6F00FB16B6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3395B24676E6F00FB16B6 /* LogInViewController.swift */; };
 		94C3395E2469BE4F00FB16B6 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3395D2469BE4F00FB16B6 /* CustomNavigationBar.swift */; };
 		94C339602469C2C000FB16B6 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3395F2469C2C000FB16B6 /* CustomSegmentedControl.swift */; };
+		94C33962246C44AC00FB16B6 /* NewOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C33961246C44AC00FB16B6 /* NewOnlineViewController.swift */; };
 		94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8D2426874000730B6A /* AppDelegate.swift */; };
 		94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8F2426874000730B6A /* SceneDelegate.swift */; };
 		94F5DC952426874100730B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC932426874000730B6A /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		94C3395B24676E6F00FB16B6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		94C3395D2469BE4F00FB16B6 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		94C3395F2469C2C000FB16B6 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		94C33961246C44AC00FB16B6 /* NewOnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOnlineViewController.swift; sourceTree = "<group>"; };
 		94F5DC8A2426874000730B6A /* King of FIFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King of FIFA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F5DC8D2426874000730B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F5DC8F2426874000730B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				94A4476D242C3C9B009FFFAF /* OnlineViewController.swift */,
 				94C3395B24676E6F00FB16B6 /* LogInViewController.swift */,
+				94C33961246C44AC00FB16B6 /* NewOnlineViewController.swift */,
 			);
 			path = Online;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */,
 				94C3395E2469BE4F00FB16B6 /* CustomNavigationBar.swift in Sources */,
 				94A4477F2436DEC5009FFFAF /* MarcadorViewController.swift in Sources */,
+				94C33962246C44AC00FB16B6 /* NewOnlineViewController.swift in Sources */,
 				94A4476E242C3C9B009FFFAF /* OnlineViewController.swift in Sources */,
 				94A4477B24350E36009FFFAF /* NombreTorneoTableViewCell.swift in Sources */,
 			);

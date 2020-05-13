@@ -75,6 +75,7 @@ class TorneosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+            deleteTorneo(torneo: torneos[indexPath.row])
             torneos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -145,6 +146,32 @@ class TorneosTableViewController: UITableViewController {
         }
         catch {print("1error is: \(error.localizedDescription)")}
         return ts
+    }
+    
+    private func deleteTorneo(torneo: Torneo) {
+
+        if(!deleteObject(fileName: "\(torneo.id)", object: torneo))
+        {
+                print("TORNEO NOT SAVED")
+        }
+    }
+    
+    func deleteObject(fileName: String, object: Any) -> Bool {
+        do{
+            if !FileManager.default.fileExists(atPath: getDirectoryPath().appendingPathComponent("torneos", isDirectory: true).path) {
+                try FileManager.default.createDirectory(at: self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+            }
+        }
+        catch{print("CATCH")}
+        let f = self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true)
+        let filePath = f.appendingPathComponent(fileName)//1
+        do {
+            try FileManager.default.removeItem(atPath: filePath.path)
+            return true
+        } catch {
+            print("7error is: \(error.localizedDescription)")//4
+        }
+        return false
     }
     
     func getDirectoryPath() -> URL {
