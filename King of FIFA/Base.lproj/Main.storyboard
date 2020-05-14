@@ -178,14 +178,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="tjk-Ww-Toh" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjk-Ww-Toh" id="zH8-VN-Mae">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="y1h-Ay-Qnr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -235,14 +235,14 @@
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="Doz-9P-j9Y" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Doz-9P-j9Y" id="wI1-7I-iga">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador1 vs Jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-qR-sXH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -281,6 +281,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ec-nd-LdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1068" y="990"/>
+        </scene>
+        <!--Numero de Jugadores-->
+        <scene sceneID="zjH-EZ-Et1">
+            <objects>
+                <viewController id="8jl-FB-Dj7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TwB-wM-iov">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-K2-ecW" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="20" y="412" width="97" height="72"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="gNX-Yw-ozG"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugadores" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-gc-lfn">
+                                <rect key="frame" x="117" y="412" width="277" height="72"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="top" secondItem="Jhw-gc-lfn" secondAttribute="top" id="5bT-fq-TwJ"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="centerY" secondItem="TwB-wM-iov" secondAttribute="centerY" id="DT8-Eo-iCL"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="top" secondItem="4mm-YH-4QT" secondAttribute="top" constant="324" id="Ssh-82-5wB"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="bottom" secondItem="Jhw-gc-lfn" secondAttribute="bottom" id="g1W-iC-MEC"/>
+                            <constraint firstItem="Jhw-gc-lfn" firstAttribute="trailing" secondItem="TwB-wM-iov" secondAttribute="trailingMargin" id="iff-mH-Ofu"/>
+                            <constraint firstItem="Jhw-gc-lfn" firstAttribute="leading" secondItem="ugx-K2-ecW" secondAttribute="trailing" id="rYU-DM-DV0"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="leading" secondItem="TwB-wM-iov" secondAttribute="leadingMargin" id="s8S-JQ-irF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4mm-YH-4QT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Numero de Jugadores" largeTitleDisplayMode="always" id="Jkj-8H-8VL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50s-4I-Qbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="1946.6517857142856"/>
         </scene>
         <!--Marcador View Controller-->
         <scene sceneID="xKL-em-YuI">
@@ -656,10 +708,77 @@
                         <viewLayoutGuide key="safeArea" id="aKE-jz-d30"/>
                     </view>
                     <navigationItem key="navigationItem" id="v2e-es-KO7"/>
+                    <connections>
+                        <segue destination="O2E-Ur-DCK" kind="show" id="lxJ-Sa-3iC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZ4-ve-meG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2163.768115942029" y="-587.27678571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="brs-TB-QqP">
+            <objects>
+                <viewController id="O2E-Ur-DCK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46B-0h-LTf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-Zb-u32">
+                                <rect key="frame" x="20" y="264" width="373" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Ingresar datos manualmente">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="38" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-Sm-Xug">
+                                <rect key="frame" x="21" y="465" width="373" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Usar código">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2e-pG-nxt">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Fex-iF-0HB">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="RfN-SA-2s1">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q9w-Wy-sdb">
+                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Cancelar"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="XlR-Pm-fAt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d6Q-2h-JXy"/>
+                    <connections>
+                        <segue destination="618-Ir-LUq" kind="show" id="Htg-iY-gfr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTW-eH-o6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060.8695652173915" y="-587.27678571428567"/>
         </scene>
         <!--Opciones Torneo View Controller-->
         <scene sceneID="qhd-hz-AtA">
@@ -1044,7 +1163,7 @@
             </objects>
             <point key="canvasLocation" x="-752.17391304347836" y="988.39285714285711"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ligas-->
         <scene sceneID="nlv-eO-YwB">
             <objects>
                 <tableViewController id="mN9-kr-BSD" sceneMemberID="viewController">
@@ -1054,13 +1173,32 @@
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="6N2-Eu-0uZ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="52"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="0Pd-jX-PLA" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6N2-Eu-0uZ" id="1VD-K3-wgC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Pd-jX-PLA" id="WfA-Q9-Hhh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nueva Liga" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-Ws-SkS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VXO-Ws-SkS" firstAttribute="top" secondItem="WfA-Q9-Hhh" secondAttribute="top" id="IeZ-BA-1ZB"/>
+                                        <constraint firstItem="VXO-Ws-SkS" firstAttribute="leading" secondItem="WfA-Q9-Hhh" secondAttribute="leading" id="KFt-8E-Tf5"/>
+                                        <constraint firstAttribute="bottom" secondItem="VXO-Ws-SkS" secondAttribute="bottom" id="gt0-3g-hXZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="VXO-Ws-SkS" secondAttribute="trailing" id="xMF-ox-Uwg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nombre" destination="VXO-Ws-SkS" id="FTG-Mh-vXF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1068,11 +1206,17 @@
                             <outlet property="delegate" destination="mN9-kr-BSD" id="LEt-ju-0P0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WIL-KS-2av"/>
+                    <navigationItem key="navigationItem" title="Ligas" id="WIL-KS-2av">
+                        <barButtonItem key="rightBarButtonItem" title="NewLiga" image="plus" catalog="system" id="OK2-oR-hGC">
+                            <connections>
+                                <segue destination="8jl-FB-Dj7" kind="show" id="efm-oZ-gba"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8L0-o0-qeD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237.68115942028987" y="2299.5535714285711"/>
+            <point key="canvasLocation" x="238" y="2620"/>
         </scene>
         <!--Ligas-->
         <scene sceneID="pEe-mG-cI5">
@@ -1091,13 +1235,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8c-hR-GtW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-752" y="2300"/>
+            <point key="canvasLocation" x="-752" y="2620"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MWi-vZ-aCN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qye-yb-qnJ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="tSg-iB-R2E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R4L-XH-vaB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1129,122 +1274,10 @@
             </objects>
             <point key="canvasLocation" x="218.84057971014494" y="-587.27678571428567"/>
         </scene>
-        <!--Num Jugadores View Controller-->
-        <scene sceneID="gc3-vd-7Wh">
-            <objects>
-                <viewController id="oNu-4m-mI0" customClass="NumJugadoresViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ll0-nw-nxl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="b74-Xi-FBy">
-                                <rect key="frame" x="58" y="156" width="298" height="585"/>
-                                <subviews>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-UD-Y6F">
-                                        <rect key="frame" x="0.0" y="0.0" width="298" height="70"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="298" id="j1g-49-JVC"/>
-                                            <constraint firstAttribute="height" constant="70" id="m4W-iI-8Fn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="4 jugadores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XK-gU-v3J">
-                                        <rect key="frame" x="0.0" y="103" width="298" height="70"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="298" id="4Zf-2r-sOI"/>
-                                            <constraint firstAttribute="height" constant="70" id="XXb-5b-SNh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="8 jugadores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-Ea-hcR">
-                                        <rect key="frame" x="0.0" y="206" width="298" height="70"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="9Py-rw-MHc"/>
-                                            <constraint firstAttribute="width" constant="298" id="k30-el-pxO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="16 jugadores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iM-4I-XbD">
-                                        <rect key="frame" x="0.0" y="309" width="298" height="70"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="maJ-ze-jKj"/>
-                                            <constraint firstAttribute="width" constant="298" id="vJR-Gh-0f1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="32 jugadores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="64" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7m-xF-JnU">
-                                        <rect key="frame" x="0.0" y="412" width="298" height="70"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="DYQ-CX-nWb"/>
-                                            <constraint firstAttribute="width" constant="298" id="Vkc-wO-7Hd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="64 jugadores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="128" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-8V-m0e">
-                                        <rect key="frame" x="0.0" y="515" width="298" height="70"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="298" id="6eH-F5-mef"/>
-                                            <constraint firstAttribute="height" constant="70" id="WSB-kQ-Fg8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="128 jugadores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-sC-OvO">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="ox8-Xv-Qs4">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="zRl-I5-dl1">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IEa-hd-zgg">
-                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Cancelar"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="b74-Xi-FBy" firstAttribute="top" secondItem="WHG-AB-Ync" secondAttribute="top" constant="55" id="2sx-Up-kbd"/>
-                            <constraint firstItem="b74-Xi-FBy" firstAttribute="centerX" secondItem="Ll0-nw-nxl" secondAttribute="centerX" id="Hfu-DY-Pkk"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="WHG-AB-Ync"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="kCq-sc-Udp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hGZ-eT-1fk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3494" y="-587"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Htg-iY-gfr"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="200" height="200"/>
         <image name="calendar" catalog="system" width="128" height="106"/>

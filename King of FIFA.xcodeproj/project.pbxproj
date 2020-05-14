@@ -28,12 +28,32 @@
 		94C3395E2469BE4F00FB16B6 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3395D2469BE4F00FB16B6 /* CustomNavigationBar.swift */; };
 		94C339602469C2C000FB16B6 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3395F2469C2C000FB16B6 /* CustomSegmentedControl.swift */; };
 		94C33962246C44AC00FB16B6 /* NewOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C33961246C44AC00FB16B6 /* NewOnlineViewController.swift */; };
+		94C3396A246CBC6A00FB16B6 /* King_of_FIFATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C33969246CBC6A00FB16B6 /* King_of_FIFATests.swift */; };
+		94C33978246CC57400FB16B6 /* King_of_FIFAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C33977246CC57400FB16B6 /* King_of_FIFAUITests.swift */; };
+		94C33980246CCAC400FB16B6 /* Liga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C3397F246CCAC400FB16B6 /* Liga.swift */; };
 		94F5DC8E2426874000730B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8D2426874000730B6A /* AppDelegate.swift */; };
 		94F5DC902426874000730B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5DC8F2426874000730B6A /* SceneDelegate.swift */; };
 		94F5DC952426874100730B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC932426874000730B6A /* Main.storyboard */; };
 		94F5DC972426874500730B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC962426874500730B6A /* Assets.xcassets */; };
 		94F5DC9A2426874500730B6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F5DC982426874500730B6A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94C3396C246CBC6A00FB16B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94F5DC822426874000730B6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94F5DC892426874000730B6A;
+			remoteInfo = "King of FIFA";
+		};
+		94C3397A246CC57400FB16B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94F5DC822426874000730B6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94F5DC892426874000730B6A;
+			remoteInfo = "King of FIFA";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4DDB21ED21C0D8D0777E6F2A /* Pods-King of FIFA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-King of FIFA.release.xcconfig"; path = "Target Support Files/Pods-King of FIFA/Pods-King of FIFA.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +77,13 @@
 		94C3395D2469BE4F00FB16B6 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		94C3395F2469C2C000FB16B6 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		94C33961246C44AC00FB16B6 /* NewOnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOnlineViewController.swift; sourceTree = "<group>"; };
+		94C33967246CBC6A00FB16B6 /* King of FIFATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "King of FIFATests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C33969246CBC6A00FB16B6 /* King_of_FIFATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_of_FIFATests.swift; sourceTree = "<group>"; };
+		94C3396B246CBC6A00FB16B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C33975246CC57400FB16B6 /* King of FIFAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "King of FIFAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C33977246CC57400FB16B6 /* King_of_FIFAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_of_FIFAUITests.swift; sourceTree = "<group>"; };
+		94C33979246CC57400FB16B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C3397F246CCAC400FB16B6 /* Liga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liga.swift; sourceTree = "<group>"; };
 		94F5DC8A2426874000730B6A /* King of FIFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King of FIFA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F5DC8D2426874000730B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F5DC8F2426874000730B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +96,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		94C33964246CBC6A00FB16B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94C33972246CC57400FB16B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F5DC872426874000730B6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +159,7 @@
 			children = (
 				94A44771242D9156009FFFAF /* Partido.swift */,
 				94A447622427ED24009FFFAF /* Torneo.swift */,
+				94C3397F246CCAC400FB16B6 /* Liga.swift */,
 				94A447642427EE56009FFFAF /* Jugador.swift */,
 			);
 			path = Models;
@@ -144,10 +186,30 @@
 			path = Online;
 			sourceTree = "<group>";
 		};
+		94C33968246CBC6A00FB16B6 /* King of FIFATests */ = {
+			isa = PBXGroup;
+			children = (
+				94C33969246CBC6A00FB16B6 /* King_of_FIFATests.swift */,
+				94C3396B246CBC6A00FB16B6 /* Info.plist */,
+			);
+			path = "King of FIFATests";
+			sourceTree = "<group>";
+		};
+		94C33976246CC57400FB16B6 /* King of FIFAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94C33977246CC57400FB16B6 /* King_of_FIFAUITests.swift */,
+				94C33979246CC57400FB16B6 /* Info.plist */,
+			);
+			path = "King of FIFAUITests";
+			sourceTree = "<group>";
+		};
 		94F5DC812426874000730B6A = {
 			isa = PBXGroup;
 			children = (
 				94F5DC8C2426874000730B6A /* King of FIFA */,
+				94C33968246CBC6A00FB16B6 /* King of FIFATests */,
+				94C33976246CC57400FB16B6 /* King of FIFAUITests */,
 				94F5DC8B2426874000730B6A /* Products */,
 				A585BB3A36A0773F8223F502 /* Pods */,
 				9E934B03ABA51E627C149B94 /* Frameworks */,
@@ -158,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				94F5DC8A2426874000730B6A /* King of FIFA.app */,
+				94C33967246CBC6A00FB16B6 /* King of FIFATests.xctest */,
+				94C33975246CC57400FB16B6 /* King of FIFAUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +263,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		94C33966246CBC6A00FB16B6 /* King of FIFATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94C33970246CBC6A00FB16B6 /* Build configuration list for PBXNativeTarget "King of FIFATests" */;
+			buildPhases = (
+				94C33963246CBC6A00FB16B6 /* Sources */,
+				94C33964246CBC6A00FB16B6 /* Frameworks */,
+				94C33965246CBC6A00FB16B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94C3396D246CBC6A00FB16B6 /* PBXTargetDependency */,
+			);
+			name = "King of FIFATests";
+			productName = "King of FIFATests";
+			productReference = 94C33967246CBC6A00FB16B6 /* King of FIFATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94C33974246CC57400FB16B6 /* King of FIFAUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94C3397C246CC57400FB16B6 /* Build configuration list for PBXNativeTarget "King of FIFAUITests" */;
+			buildPhases = (
+				94C33971246CC57400FB16B6 /* Sources */,
+				94C33972246CC57400FB16B6 /* Frameworks */,
+				94C33973246CC57400FB16B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94C3397B246CC57400FB16B6 /* PBXTargetDependency */,
+			);
+			name = "King of FIFAUITests";
+			productName = "King of FIFAUITests";
+			productReference = 94C33975246CC57400FB16B6 /* King of FIFAUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		94F5DC892426874000730B6A /* King of FIFA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94F5DC9E2426874500730B6A /* Build configuration list for PBXNativeTarget "King of FIFA" */;
@@ -224,10 +324,18 @@
 		94F5DC822426874000730B6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Christian Valencia";
 				TargetAttributes = {
+					94C33966246CBC6A00FB16B6 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 94F5DC892426874000730B6A;
+					};
+					94C33974246CC57400FB16B6 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 94F5DC892426874000730B6A;
+					};
 					94F5DC892426874000730B6A = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -247,11 +355,27 @@
 			projectRoot = "";
 			targets = (
 				94F5DC892426874000730B6A /* King of FIFA */,
+				94C33966246CBC6A00FB16B6 /* King of FIFATests */,
+				94C33974246CC57400FB16B6 /* King of FIFAUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		94C33965246CBC6A00FB16B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94C33973246CC57400FB16B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F5DC882426874000730B6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +432,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		94C33963246CBC6A00FB16B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94C3396A246CBC6A00FB16B6 /* King_of_FIFATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94C33971246CC57400FB16B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94C33978246CC57400FB16B6 /* King_of_FIFAUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F5DC862426874000730B6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +462,7 @@
 				94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */,
 				9403251D2460CE12007337B6 /* FormTextField.swift in Sources */,
 				94032516245BA7BD007337B6 /* File.swift in Sources */,
+				94C33980246CCAC400FB16B6 /* Liga.swift in Sources */,
 				94A44767242928D5009FFFAF /* OpcionesTorneoViewController.swift in Sources */,
 				94A447632427ED24009FFFAF /* Torneo.swift in Sources */,
 				94A44775242E61A7009FFFAF /* TorneosTableViewController.swift in Sources */,
@@ -337,6 +478,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94C3396D246CBC6A00FB16B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94F5DC892426874000730B6A /* King of FIFA */;
+			targetProxy = 94C3396C246CBC6A00FB16B6 /* PBXContainerItemProxy */;
+		};
+		94C3397B246CC57400FB16B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94F5DC892426874000730B6A /* King of FIFA */;
+			targetProxy = 94C3397A246CC57400FB16B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94F5DC932426874000730B6A /* Main.storyboard */ = {
@@ -358,6 +512,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		94C3396E246CBC6A00FB16B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L253DY2993;
+				INFOPLIST_FILE = "King of FIFATests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.King-of-FIFATests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/King of FIFA.app/King of FIFA";
+			};
+			name = Debug;
+		};
+		94C3396F246CBC6A00FB16B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L253DY2993;
+				INFOPLIST_FILE = "King of FIFATests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.King-of-FIFATests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/King of FIFA.app/King of FIFA";
+			};
+			name = Release;
+		};
+		94C3397D246CC57400FB16B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L253DY2993;
+				INFOPLIST_FILE = "King of FIFAUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.King-of-FIFAUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "King of FIFA";
+			};
+			name = Debug;
+		};
+		94C3397E246CC57400FB16B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L253DY2993;
+				INFOPLIST_FILE = "King of FIFAUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.King-of-FIFAUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "King of FIFA";
+			};
+			name = Release;
+		};
 		94F5DC9C2426874500730B6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -513,6 +749,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		94C33970246CBC6A00FB16B6 /* Build configuration list for PBXNativeTarget "King of FIFATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94C3396E246CBC6A00FB16B6 /* Debug */,
+				94C3396F246CBC6A00FB16B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94C3397C246CC57400FB16B6 /* Build configuration list for PBXNativeTarget "King of FIFAUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94C3397D246CC57400FB16B6 /* Debug */,
+				94C3397E246CC57400FB16B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94F5DC852426874000730B6A /* Build configuration list for PBXProject "King of FIFA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
