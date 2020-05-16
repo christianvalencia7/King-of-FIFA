@@ -7,12 +7,29 @@
 //
 
 import XCTest
+@testable import King_of_FIFA
 
 class King_of_FIFATests: XCTestCase {
-
+    var liga = Liga()
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
+        liga.numJugadores = 4
+        let jugador1 = Jugador()
+        let jugador2 = Jugador()
+        let jugador3 = Jugador()
+        let jugador4 = Jugador()
+        
+        jugador1.nombre = "A"
+        jugador2.nombre = "B"
+        jugador3.nombre = "C"
+        jugador4.nombre = "D"
+        
+        liga.jugadores.append(jugador1)
+        liga.jugadores.append(jugador2)
+        liga.jugadores.append(jugador3)
+        liga.jugadores.append(jugador4)
+        
         
     }
 
@@ -20,9 +37,15 @@ class King_of_FIFATests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLiga() throws {
+        liga.crearAllPartidos()
+        
+        while liga.allPartidos.count > 0 {
+            liga.crearPartidos()
+            liga.printPartidos()
+        }
+    
+        
     }
 
     func testPerformanceExample() throws {

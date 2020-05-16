@@ -16,6 +16,9 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var equipo: UITextField!
     
     var torneo = Torneo()
+    var liga = Liga()
+    var isLiga = false
+    
     private var count = 0
     
     override func viewDidLoad() {
@@ -49,13 +52,19 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
         let e: String = equipo.text ?? "Default"
         let j = Jugador(n: n, u: u, e: e)
         torneo.addJugador(jugador: j)
+        liga.jugadores.append(j)
+        
         count = count + 1
-        if count >= torneo.getNum() {
-            //torneo.printTorneo()
+        if count >= torneo.getNum() && !isLiga {
             torneo.crearPartidos()
-            torneo.printPartidos()
             performSegue(withIdentifier: "Next", sender: nil)
         }
+        
+        if count >= liga.numJugadores && isLiga {
+            liga.crearAllPartidos()
+            performSegue(withIdentifier: "Next", sender: nil)
+        }
+        
         updateView()
         
         
@@ -78,6 +87,8 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
         // Pass the selected object to the new view controller.
         if let viewController = segue.destination as? TorneoCreadoViewController{
             viewController.torneo = torneo
+            viewController.liga = liga
+            viewController.isLiga = isLiga
         }
     }
     

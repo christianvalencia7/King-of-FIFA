@@ -285,7 +285,7 @@
         <!--Numero de Jugadores-->
         <scene sceneID="zjH-EZ-Et1">
             <objects>
-                <viewController id="8jl-FB-Dj7" sceneMemberID="viewController">
+                <viewController id="8jl-FB-Dj7" customClass="NumJugadoresLigaViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TwB-wM-iov">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,7 +294,7 @@
                                 <rect key="frame" x="20" y="412" width="97" height="72"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="gNX-Yw-ozG"/>
+                                    <constraint firstAttribute="width" constant="97" id="aQy-9I-bqV"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
@@ -315,24 +315,63 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iK-Lw-bs6">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="M8W-cF-hoR">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="iXR-gT-XQp">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rKb-zG-Zl6">
+                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Cancelar"/>
+                                                <connections>
+                                                    <segue destination="S6M-UX-1B4" kind="unwind" unwindAction="unwindSegueToLigas:" id="cCr-L6-jDu"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <segue destination="S6M-UX-1B4" kind="unwind" unwindAction="unwindSegueToTorneo:" id="YvM-Ng-LnH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="Rsb-LT-J2X">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="96R-Nl-Cnv">
+                                                <rect key="frame" x="282" y="0.0" width="112" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Sigiuiente"/>
+                                                <connections>
+                                                    <segue destination="Y6j-aG-b0G" kind="show" id="fRh-3r-KdV"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ugx-K2-ecW" firstAttribute="top" secondItem="Jhw-gc-lfn" secondAttribute="top" id="5bT-fq-TwJ"/>
-                            <constraint firstItem="ugx-K2-ecW" firstAttribute="centerY" secondItem="TwB-wM-iov" secondAttribute="centerY" id="DT8-Eo-iCL"/>
-                            <constraint firstItem="ugx-K2-ecW" firstAttribute="top" secondItem="4mm-YH-4QT" secondAttribute="top" constant="324" id="Ssh-82-5wB"/>
-                            <constraint firstItem="ugx-K2-ecW" firstAttribute="bottom" secondItem="Jhw-gc-lfn" secondAttribute="bottom" id="g1W-iC-MEC"/>
-                            <constraint firstItem="Jhw-gc-lfn" firstAttribute="trailing" secondItem="TwB-wM-iov" secondAttribute="trailingMargin" id="iff-mH-Ofu"/>
-                            <constraint firstItem="Jhw-gc-lfn" firstAttribute="leading" secondItem="ugx-K2-ecW" secondAttribute="trailing" id="rYU-DM-DV0"/>
-                            <constraint firstItem="ugx-K2-ecW" firstAttribute="leading" secondItem="TwB-wM-iov" secondAttribute="leadingMargin" id="s8S-JQ-irF"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="top" secondItem="4mm-YH-4QT" secondAttribute="top" constant="324" id="IjE-x2-0y3"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="leading" secondItem="TwB-wM-iov" secondAttribute="leadingMargin" id="M9o-Em-xe1"/>
+                            <constraint firstItem="Jhw-gc-lfn" firstAttribute="trailing" secondItem="TwB-wM-iov" secondAttribute="trailingMargin" id="NQy-Bi-7JV"/>
+                            <constraint firstItem="6iK-Lw-bs6" firstAttribute="leading" secondItem="4mm-YH-4QT" secondAttribute="leading" id="PcK-mh-1az"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="bottom" secondItem="Jhw-gc-lfn" secondAttribute="bottom" id="Sch-3i-W2q"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="centerY" secondItem="TwB-wM-iov" secondAttribute="centerY" id="T3j-1Z-8y3"/>
+                            <constraint firstItem="6iK-Lw-bs6" firstAttribute="bottom" secondItem="4mm-YH-4QT" secondAttribute="bottom" id="TQr-Kd-01d"/>
+                            <constraint firstItem="6iK-Lw-bs6" firstAttribute="centerX" secondItem="TwB-wM-iov" secondAttribute="centerX" id="bTv-Jw-Rvu"/>
+                            <constraint firstItem="ugx-K2-ecW" firstAttribute="top" secondItem="Jhw-gc-lfn" secondAttribute="top" id="dW4-RX-Fm7"/>
+                            <constraint firstItem="Jhw-gc-lfn" firstAttribute="leading" secondItem="ugx-K2-ecW" secondAttribute="trailing" id="zOv-Eb-Cgu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4mm-YH-4QT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Numero de Jugadores" largeTitleDisplayMode="always" id="Jkj-8H-8VL"/>
+                    <connections>
+                        <outlet property="numJugadoresText" destination="ugx-K2-ecW" id="iAh-Ok-aqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50s-4I-Qbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="S6M-UX-1B4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1066.6666666666667" y="1946.6517857142856"/>
+            <point key="canvasLocation" x="2886.9565217391305" y="1946.6517857142856"/>
         </scene>
         <!--Marcador View Controller-->
         <scene sceneID="xKL-em-YuI">
@@ -1039,11 +1078,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Torneo de 4 jugadores" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-tr-suu" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="50" y="341.5" width="314" height="45"/>
+                                <rect key="frame" x="40" y="342" width="325" height="45"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="exj-co-Gd4"/>
-                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1056,7 +1092,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Online" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrU-S6-ClV" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Online" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrU-S6-ClV" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="39.5" y="425" width="324.5" height="46"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1071,11 +1107,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ida y vuelta" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-CD-UsX" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ida y vuelta" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-CD-UsX" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="39.5" y="510" width="324.5" height="47.5"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47.5" id="yqk-iU-HJ0"/>
+                                    <constraint firstAttribute="height" constant="47.5" id="FxC-G2-uZV"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -1100,12 +1136,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Listo"/>
                                                 <connections>
-                                                    <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSegueToTorneo:" id="wWc-Zx-xg3"/>
+                                                    <action selector="doneClicked:" destination="BDG-QE-f36" eventType="touchUpInside" id="cJs-0Z-68U"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <segue destination="IS7-26-BST" kind="unwind" unwindAction="unwindSeguefromTorneoCreadotoTable:" id="7Wr-QI-h5B"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1113,21 +1146,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Y9A-CD-UsX" firstAttribute="top" secondItem="lrU-S6-ClV" secondAttribute="bottom" constant="39" id="0YF-Ad-PkS"/>
-                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="49" id="5na-sT-HcN"/>
-                            <constraint firstItem="xHt-tr-suu" firstAttribute="trailing" secondItem="lrU-S6-ClV" secondAttribute="trailing" id="PUJ-aB-Z0z"/>
-                            <constraint firstItem="xHt-tr-suu" firstAttribute="centerX" secondItem="qOp-QW-PC4" secondAttribute="centerX" id="VcX-kw-ikV"/>
-                            <constraint firstItem="lrU-S6-ClV" firstAttribute="top" secondItem="xHt-tr-suu" secondAttribute="bottom" constant="38.5" id="YlU-vs-bSH"/>
-                            <constraint firstItem="xHt-tr-suu" firstAttribute="top" secondItem="1Dr-tm-I8c" secondAttribute="top" constant="341.5" id="hPX-Hr-n2Q"/>
-                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="top" secondItem="3FO-yd-3Av" secondAttribute="top" constant="68" id="jrS-od-wYZ"/>
-                            <constraint firstItem="qOp-QW-PC4" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" id="o4x-h6-zzo"/>
-                            <constraint firstItem="lrU-S6-ClV" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="39.5" id="oWH-uF-uZB"/>
-                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="xHt-tr-suu" secondAttribute="centerX" id="qZD-6l-KyE"/>
-                            <constraint firstItem="lrU-S6-ClV" firstAttribute="centerY" secondItem="1Dr-tm-I8c" secondAttribute="centerY" id="smI-Ri-XWp"/>
-                            <constraint firstItem="qOp-QW-PC4" firstAttribute="bottom" secondItem="3FO-yd-3Av" secondAttribute="bottom" id="v7V-3v-Vmy"/>
-                            <constraint firstItem="lrU-S6-ClV" firstAttribute="trailing" secondItem="Y9A-CD-UsX" secondAttribute="trailing" id="vbU-c8-IRF"/>
-                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="1Dr-tm-I8c" secondAttribute="centerX" id="wPw-ok-CmM"/>
-                            <constraint firstItem="lrU-S6-ClV" firstAttribute="leading" secondItem="Y9A-CD-UsX" secondAttribute="leading" id="xDk-QD-Ygd"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="trailing" secondItem="xHt-tr-suu" secondAttribute="trailing" id="0m9-GS-RYH"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="centerY" secondItem="1Dr-tm-I8c" secondAttribute="centerY" id="16U-B1-xQe"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="1Dr-tm-I8c" secondAttribute="centerX" id="3Im-wc-tSO"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="top" secondItem="3FO-yd-3Av" secondAttribute="top" constant="68" id="4mX-hY-dcW"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="leading" secondItem="Y9A-CD-UsX" secondAttribute="leading" id="DzH-kZ-4zL"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="39.5" id="VkI-Aq-PbR"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="trailing" secondItem="Y9A-CD-UsX" secondAttribute="trailing" id="Wkc-lX-c7r"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="centerX" secondItem="qOp-QW-PC4" secondAttribute="centerX" id="bDp-FT-hWa"/>
+                            <constraint firstItem="lrU-S6-ClV" firstAttribute="top" secondItem="xHt-tr-suu" secondAttribute="bottom" constant="38" id="cjk-ch-u9o"/>
+                            <constraint firstItem="Y9A-CD-UsX" firstAttribute="top" secondItem="lrU-S6-ClV" secondAttribute="bottom" constant="39" id="hLx-g9-6UD"/>
+                            <constraint firstItem="xHt-tr-suu" firstAttribute="centerX" secondItem="lrU-S6-ClV" secondAttribute="centerX" id="kP2-He-OVl"/>
+                            <constraint firstItem="qOp-QW-PC4" firstAttribute="bottom" secondItem="3FO-yd-3Av" secondAttribute="bottom" id="swI-Qj-10N"/>
+                            <constraint firstItem="xHt-tr-suu" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="40" id="vj0-EO-3W0"/>
+                            <constraint firstItem="ZVy-Sk-i4n" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" constant="49" id="xVl-rL-0bm"/>
+                            <constraint firstItem="qOp-QW-PC4" firstAttribute="leading" secondItem="3FO-yd-3Av" secondAttribute="leading" id="zhC-jx-4HH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3FO-yd-3Av"/>
                     </view>
@@ -1137,6 +1170,8 @@
                         <outlet property="nombreTorneo" destination="ZVy-Sk-i4n" id="5b1-5O-tIG"/>
                         <outlet property="numJugadores" destination="xHt-tr-suu" id="05D-CI-vTr"/>
                         <outlet property="online" destination="lrU-S6-ClV" id="5La-Zr-2hC"/>
+                        <segue destination="IS7-26-BST" kind="unwind" identifier="toLigas" unwindAction="unwindSegueToLigas:" id="uIz-c8-AoQ"/>
+                        <segue destination="IS7-26-BST" kind="unwind" identifier="toTorneos" unwindAction="unwindSegueToTorneo:" id="bZ4-7A-4YW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWI-Cw-V2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1166,7 +1201,7 @@
         <!--Ligas-->
         <scene sceneID="nlv-eO-YwB">
             <objects>
-                <tableViewController id="mN9-kr-BSD" sceneMemberID="viewController">
+                <tableViewController id="mN9-kr-BSD" customClass="LigasTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ARb-pt-JuV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1174,14 +1209,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="0Pd-jX-PLA" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Pd-jX-PLA" id="WfA-Q9-Hhh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nueva Liga" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-Ws-SkS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -1209,14 +1244,66 @@
                     <navigationItem key="navigationItem" title="Ligas" id="WIL-KS-2av">
                         <barButtonItem key="rightBarButtonItem" title="NewLiga" image="plus" catalog="system" id="OK2-oR-hGC">
                             <connections>
-                                <segue destination="8jl-FB-Dj7" kind="show" id="efm-oZ-gba"/>
+                                <segue destination="MaA-wc-buF" kind="presentation" modalPresentationStyle="fullScreen" id="2ix-NJ-hDg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="OZj-yr-GAX" kind="show" identifier="toPartidos" id="0Ih-Rg-TuZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8L0-o0-qeD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="238" y="2620"/>
+        </scene>
+        <!--Fecha 1-->
+        <scene sceneID="lLe-MO-Dgr">
+            <objects>
+                <tableViewController id="OZj-yr-GAX" customClass="FechasTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bjw-UR-g5e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="cWo-fk-46l" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWo-fk-46l" id="icc-k6-Ah3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A vs B" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-Ef-YEZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IVQ-Ef-YEZ" firstAttribute="leading" secondItem="icc-k6-Ah3" secondAttribute="leading" id="XBs-jT-OcC"/>
+                                        <constraint firstAttribute="bottom" secondItem="IVQ-Ef-YEZ" secondAttribute="bottom" id="Znd-QE-gDh"/>
+                                        <constraint firstItem="IVQ-Ef-YEZ" firstAttribute="top" secondItem="icc-k6-Ah3" secondAttribute="top" id="sA0-uj-od4"/>
+                                        <constraint firstAttribute="trailing" secondItem="IVQ-Ef-YEZ" secondAttribute="trailing" id="yVY-k4-4Vp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nombre" destination="IVQ-Ef-YEZ" id="5jF-Qw-jrD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OZj-yr-GAX" id="prQ-LN-Jfm"/>
+                            <outlet property="delegate" destination="OZj-yr-GAX" id="Kzd-zk-DcN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fecha 1" id="Ibw-zH-uwA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkv-1U-puI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="2976"/>
         </scene>
         <!--Ligas-->
         <scene sceneID="pEe-mG-cI5">
@@ -1274,8 +1361,28 @@
             </objects>
             <point key="canvasLocation" x="218.84057971014494" y="-587.27678571428567"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QC1-df-FQs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MaA-wc-buF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7xc-lr-6lA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ac-qp-W2t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8jl-FB-Dj7" kind="relationship" relationship="rootViewController" id="6Y0-0f-yhZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbL-Uc-aVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976.8115942028987" y="1946.6517857142856"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="fRh-3r-KdV"/>
         <segue reference="Htg-iY-gfr"/>
     </inferredMetricsTieBreakers>
     <resources>

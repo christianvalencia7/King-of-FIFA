@@ -36,9 +36,9 @@ class LigasTableViewController: UITableViewController {
     @IBAction func unwindSegueToLigas(_ sender: UIStoryboardSegue)
     {
            if let sourceViewController = sender.source as? TorneoCreadoViewController {
-                //let liga = sourceViewController.liga
+                let liga = sourceViewController.liga
                 let newIndexPath = IndexPath(row: ligas.count, section: 0)
-                //ligas.append(liga)
+                ligas.append(liga)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
     
@@ -57,7 +57,7 @@ class LigasTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          selectedLiga = indexPath.row
-         //performSegue(withIdentifier: "FaseTorneo", sender: nil)
+         performSegue(withIdentifier: "toPartidos", sender: nil)
     }
     
 

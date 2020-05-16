@@ -10,6 +10,8 @@ import UIKit
 
 class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
     var torneo = Torneo()
+    var liga = Liga()
+    var isLiga = false
     
     @IBOutlet weak var nombre: UITextField!
     
@@ -23,24 +25,17 @@ class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
         if(sender.selectedSegmentIndex == 0)
         {
             torneo.setIdaYVuelta(b: true)
+            liga.idaYVuelta = true
         }
         else
         {
             torneo.setIdaYVuelta(b: false)
+            liga.idaYVuelta = false
            
         }
     }
     
-    @IBAction func selecOnline(_ sender: UISegmentedControl) {
-        if(sender.selectedSegmentIndex == 0)
-        {
-            torneo.setOnline(b: true)
-        }
-        else
-        {
-            torneo.setOnline(b: false)
-        }
-    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
@@ -53,13 +48,17 @@ class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // Get the new view controller using segue.destination.
-    // Pass the selected object to the new view controller.
         if let viewController = segue.destination as? DatosJugadorViewController{
-            torneo.setNombre(s: nombre.text ?? "default")
-            viewController.torneo = torneo
+            if isLiga {
+                liga.nombre = nombre.text ?? "default"
+                viewController.liga = liga
+                viewController.isLiga = true
+            }
+            else{
+                torneo.setNombre(s: nombre.text ?? "default")
+                viewController.torneo = torneo
+            }
         }
     }
 

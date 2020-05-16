@@ -21,6 +21,7 @@ class Liga: NSObject, NSCoding{
     var nombre: String
     var allPartidos = [Partido]()
     var resultados = [Partido]()
+    var fechas = 1
     
     //MARK: Archiving Paths
      
@@ -36,6 +37,9 @@ class Liga: NSObject, NSCoding{
         static let online = "online"
         static let idaYVuelta = "idaYVuelta"
         static let nombre = "nombre"
+        static let allPartidos = "allPartidos"
+        static let resultados = "resultados"
+        static let fechas = "fechas"
     }
 
     init(n: Int){
@@ -44,9 +48,8 @@ class Liga: NSObject, NSCoding{
         idaYVuelta = true
         nombre = "Default"
         super.init()
-        crearAllPartidos()
     }
-    init(id: UUID, n: Int, j:[Jugador], p:[Partido], o:Bool, i: Bool, nom: String){
+    init(id: UUID, n: Int, j:[Jugador], p:[Partido], o:Bool, i: Bool, nom: String, a:[Partido], r:[Partido], f: Int){
         numJugadores = n
         online = o
         idaYVuelta = i
@@ -55,7 +58,6 @@ class Liga: NSObject, NSCoding{
         partidos = p
         self.id = id
         super.init()
-        crearAllPartidos()
     }
     override init(){
         numJugadores = -1
@@ -63,7 +65,6 @@ class Liga: NSObject, NSCoding{
         idaYVuelta = true
         nombre = "Defalt"
         super.init()
-        crearAllPartidos()
     }
 
     public func crearAllPartidos()
@@ -78,26 +79,30 @@ class Liga: NSObject, NSCoding{
         
     }
 
-    public func crearPartidos()
+    public func crearPartidos() -> Bool
     {
-        for p in partidos {
-            resultados.append(p)
-        }
-        partidos.removeAll()
-        var jugando = [Jugador]()
-        var i = 0
-        while jugando.count < numJugadores
-        {
-            let partido = allPartidos[i]
-            if !jugando.contains(partido.jugador1) && !jugando.contains(partido.jugador2){
-                jugando.append(partido.jugador1)
-                jugando.append(partido.jugador1)
-                partidos.append(partido)
-                allPartidos.remove(at: i)
-            } else {
-                i = i + 1
+        if fechas < numJugadores {
+            for p in partidos {
+                resultados.append(p)
             }
+            partidos.removeAll()
+            var jugando = [Jugador]()
+            var i = 0
+            while jugando.count < numJugadores
+            {
+                let partido = allPartidos[i]
+                if !jugando.contains(partido.jugador1) && !jugando.contains(partido.jugador2){
+                    jugando.append(partido.jugador1)
+                    jugando.append(partido.jugador1)
+                    partidos.append(partido)
+                    allPartidos.remove(at: i)
+                } else {
+                    i = i + 1
+                }
+            }
+            return true
         }
+        return true
     }
     
 
@@ -131,6 +136,9 @@ class Liga: NSObject, NSCoding{
         aCoder.encode(online, forKey: PropertyKey.online)
         aCoder.encode(idaYVuelta, forKey: PropertyKey.idaYVuelta)
         aCoder.encode(nombre, forKey: PropertyKey.nombre)
+        aCoder.encode(allPartidos, forKey: PropertyKey.allPartidos)
+        aCoder.encode(resultados, forKey: PropertyKey.resultados)
+        aCoder.encode(fechas, forKey: PropertyKey.fechas)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -150,12 +158,22 @@ class Liga: NSObject, NSCoding{
             os_log("Unable to decode the Torneo nombre.", log: OSLog.default, type: .debug)
             return nil
         }
+        guard let allPartidos = aDecoder.decodeObject(forKey: PropertyKey.allPartidos) as? [Partido] else {
+            os_log("Unable to decode the allPartidos.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let resultados = aDecoder.decodeObject(forKey: PropertyKey.resultados) as? [Partido] else {
+            os_log("Unable to decode the resultados.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        
+        let fechas = aDecoder.decodeInteger(forKey: PropertyKey.fechas)
         
         let numJugadores = aDecoder.decodeInteger(forKey: PropertyKey.numJugadores)
         let online = aDecoder.decodeBool(forKey: PropertyKey.online)
         let idaYVuelta = aDecoder.decodeBool(forKey: PropertyKey.idaYVuelta)
         
-        self.init(id: id, n: numJugadores, j:jugadores, p:partidos, o:online, i: idaYVuelta, nom: nombre)
+        self.init(id: id, n: numJugadores, j:jugadores, p:partidos, o:online, i: idaYVuelta, nom: nombre, a:allPartidos, r:resultados, f: fechas)
     }
     
 }
