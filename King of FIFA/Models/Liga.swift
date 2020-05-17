@@ -93,7 +93,7 @@ class Liga: NSObject, NSCoding{
                 let partido = allPartidos[i]
                 if !jugando.contains(partido.jugador1) && !jugando.contains(partido.jugador2){
                     jugando.append(partido.jugador1)
-                    jugando.append(partido.jugador1)
+                    jugando.append(partido.jugador2)
                     partidos.append(partido)
                     allPartidos.remove(at: i)
                 } else {

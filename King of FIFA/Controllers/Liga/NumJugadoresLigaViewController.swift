@@ -20,13 +20,31 @@ class NumJugadoresLigaViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func nextClicked(_ sender: UIButton) {
+        let num = Int(numJugadoresText.text ?? "0") ?? 0
+        
+        if num < 2 || num > 200 || num % 2 == 1 {
+            makeAlert(titleInput: "Error", messageInput: "El número de jugadores debe ser par y menor o igual a 200")
+        }
+        else {
+            liga.numJugadores = num
+            performSegue(withIdentifier: "toOpciones", sender: nil)
+        }
+         
+        
+    }
+    
+    func makeAlert(titleInput:String, messageInput:String) {
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+                    let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+                    alert.addAction(okButton)
+                    self.present(alert, animated: true, completion: nil)
+    }
 
     // MARK: - Navigation
 
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? OpcionesTorneoViewController{
-            liga.numJugadores = Int(numJugadoresText.text ?? "0") ?? 1
             viewController.liga = liga
             viewController.isLiga = true
         }

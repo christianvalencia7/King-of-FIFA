@@ -340,7 +340,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Sigiuiente"/>
                                                 <connections>
-                                                    <segue destination="Y6j-aG-b0G" kind="show" id="fRh-3r-KdV"/>
+                                                    <action selector="nextClicked:" destination="8jl-FB-Dj7" eventType="touchUpInside" id="ZpD-ng-bng"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -366,6 +366,7 @@
                     <navigationItem key="navigationItem" title="Numero de Jugadores" largeTitleDisplayMode="always" id="Jkj-8H-8VL"/>
                     <connections>
                         <outlet property="numJugadoresText" destination="ugx-K2-ecW" id="iAh-Ok-aqv"/>
+                        <segue destination="Y6j-aG-b0G" kind="show" identifier="toOpciones" id="ERK-8W-ew1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50s-4I-Qbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -431,7 +432,6 @@
                                 <state key="normal" title="Guardar"/>
                                 <connections>
                                     <action selector="guardarMarcador:" destination="6Fm-H8-hPy" eventType="touchUpInside" id="N2P-2e-Vdv"/>
-                                    <segue destination="3nA-xM-Iux" kind="unwind" unwindAction="unwindSeguefromMarcador:" id="wpk-iU-Cuc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -461,6 +461,8 @@
                         <outlet property="jugador2" destination="bAy-kt-5ZW" id="4DH-pP-TaF"/>
                         <outlet property="marcador1" destination="uXb-s1-e2X" id="cuv-68-gRV"/>
                         <outlet property="marcador2" destination="K0D-cf-phy" id="Vgo-Rn-B86"/>
+                        <segue destination="3nA-xM-Iux" kind="unwind" identifier="toFases" unwindAction="unwindSegueToFases:" id="06J-44-FMa"/>
+                        <segue destination="3nA-xM-Iux" kind="unwind" identifier="toFechas" unwindAction="unwindSegueToFechas:" id="Gvy-5z-DWZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wao-gO-gJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1249,31 +1251,41 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="OZj-yr-GAX" kind="show" identifier="toPartidos" id="0Ih-Rg-TuZ"/>
+                        <segue destination="7yD-ce-6pL" kind="show" identifier="toPartidos" id="W5D-qA-UHI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8L0-o0-qeD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="238" y="2620"/>
         </scene>
-        <!--Fecha 1-->
-        <scene sceneID="lLe-MO-Dgr">
+        <!--Fechas Table View Controller-->
+        <scene sceneID="59O-DI-3RJ">
             <objects>
-                <tableViewController id="OZj-yr-GAX" customClass="FechasTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bjw-UR-g5e">
+                <tableViewController id="7yD-ce-6pL" customClass="FechasTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oA6-1C-Gd7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EfG-1i-M8F">
+                            <rect key="frame" x="0.0" y="102.5" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <items>
+                                <barButtonItem title="Tabla de posiciones" width="409" id="c14-2h-n32">
+                                    <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="cWo-fk-46l" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="Lz7-AA-jRT" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWo-fk-46l" id="icc-k6-Ah3">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lz7-AA-jRT" id="W93-dt-GDV">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A vs B" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-Ef-YEZ">
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jugador1 vs jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-uW-6fs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -1281,29 +1293,34 @@
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="IVQ-Ef-YEZ" firstAttribute="leading" secondItem="icc-k6-Ah3" secondAttribute="leading" id="XBs-jT-OcC"/>
-                                        <constraint firstAttribute="bottom" secondItem="IVQ-Ef-YEZ" secondAttribute="bottom" id="Znd-QE-gDh"/>
-                                        <constraint firstItem="IVQ-Ef-YEZ" firstAttribute="top" secondItem="icc-k6-Ah3" secondAttribute="top" id="sA0-uj-od4"/>
-                                        <constraint firstAttribute="trailing" secondItem="IVQ-Ef-YEZ" secondAttribute="trailing" id="yVY-k4-4Vp"/>
+                                        <constraint firstItem="6UY-uW-6fs" firstAttribute="top" secondItem="W93-dt-GDV" secondAttribute="top" id="7ia-HZ-AJU"/>
+                                        <constraint firstItem="6UY-uW-6fs" firstAttribute="leading" secondItem="W93-dt-GDV" secondAttribute="leading" id="X0X-R3-X59"/>
+                                        <constraint firstAttribute="bottom" secondItem="6UY-uW-6fs" secondAttribute="bottom" id="ZbZ-aO-rGX"/>
+                                        <constraint firstAttribute="trailing" secondItem="6UY-uW-6fs" secondAttribute="trailing" id="gbR-pi-Brw"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="nombre" destination="IVQ-Ef-YEZ" id="5jF-Qw-jrD"/>
+                                    <outlet property="nombre" destination="6UY-uW-6fs" id="fgx-eV-dgq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="OZj-yr-GAX" id="prQ-LN-Jfm"/>
-                            <outlet property="delegate" destination="OZj-yr-GAX" id="Kzd-zk-DcN"/>
+                            <outlet property="dataSource" destination="7yD-ce-6pL" id="i5A-rn-JIQ"/>
+                            <outlet property="delegate" destination="7yD-ce-6pL" id="wee-kr-ZJa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fecha 1" id="Ibw-zH-uwA"/>
+                    <navigationItem key="navigationItem" id="W7Y-Xx-e4C">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente fecha" id="rb3-xy-0Qa"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="6Fm-H8-hPy" kind="show" identifier="toMarcador" id="qVh-qq-x3o"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkv-1U-puI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sv0-V0-NMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="2976"/>
+            <point key="canvasLocation" x="1960" y="2885"/>
         </scene>
         <!--Ligas-->
         <scene sceneID="pEe-mG-cI5">
@@ -1382,7 +1399,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fRh-3r-KdV"/>
+        <segue reference="ERK-8W-ew1"/>
+        <segue reference="qVh-qq-x3o"/>
         <segue reference="Htg-iY-gfr"/>
     </inferredMetricsTieBreakers>
     <resources>

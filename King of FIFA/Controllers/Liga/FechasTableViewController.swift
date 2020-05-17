@@ -18,9 +18,6 @@ class FechasTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Fecha \(liga.fechas)"
         self.navigationItem.prompt = liga.nombre
-        if !liga.crearPartidos() {
-            print("Partidos not created")
-        }
     }
 
     // MARK: - Table view data source
@@ -48,7 +45,7 @@ class FechasTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          selectedPartido = indexPath.row
-         //performSegue(withIdentifier: "CambiarMarcador", sender: nil)
+         performSegue(withIdentifier: "toMarcador", sender: nil)
     }
     
 
@@ -93,15 +90,15 @@ class FechasTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        if let viewController = segue.destination as? MarcadorViewController {
-//            viewController.torneo = torneo
-//            viewController.selectedTorneo = selectedTorneo
-//            viewController.selectedPartido = selectedPartido
-//        }
+        if let viewController = segue.destination as? MarcadorViewController {
+            viewController.liga = liga
+            viewController.isLiga = true
+            viewController.selectedPartido = selectedPartido
+        }
         
     }
     
-//    @IBAction func siguienteFase(_ sender: UIBarButtonItem) {
+    @IBAction func siguienteFecha(_ sender: UIBarButtonItem) {
 //        let partidos = torneo.partidos
 //        var empate = 0
 //        for p in partidos {
@@ -146,19 +143,19 @@ class FechasTableViewController: UITableViewController {
 //                self.present(alertController, animated: true, completion: nil)
 //            }
 //        }
-//        
-//    }
-//    
-//    @IBAction func unwindSeguefromMarcador(_ sender: UIStoryboardSegue)
-//    {
-//            //torneo = loadTorneo(torneo: torneo)!
-////          if let sourceViewController = sender.source as? TorneoCreadoViewController {
-////                let torneo = sourceViewController.torneo
-////                let newIndexPath = selectedPartido
-////                let indexPath: IndexPath = IndexPath(row: selectedPartido, section: 0)
-////                tableView.deleteRows(at: [indexPath], with: .fade)
-////                tableView.insertRows(at: [indexPath], with: .automatic)
-////          }
+        
+    }
+    
+    @IBAction func unwindSegueToFechas(_ sender: UIStoryboardSegue)
+    {
+            //torneo = loadTorneo(torneo: torneo)!
+//          if let sourceViewController = sender.source as? TorneoCreadoViewController {
+//                let torneo = sourceViewController.torneo
+//                let newIndexPath = selectedPartido
+//                let indexPath: IndexPath = IndexPath(row: selectedPartido, section: 0)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
+//                tableView.insertRows(at: [indexPath], with: .automatic)
+//          }
     
             
     }

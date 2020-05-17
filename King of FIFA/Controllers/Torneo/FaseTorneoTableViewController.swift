@@ -161,7 +161,7 @@ class FaseTorneoTableViewController: UITableViewController {
         
     }
     
-    @IBAction func unwindSeguefromMarcador(_ sender: UIStoryboardSegue)
+    @IBAction func unwindSegueToFases(_ sender: UIStoryboardSegue)
     {
             //torneo = loadTorneo(torneo: torneo)!
 //          if let sourceViewController = sender.source as? TorneoCreadoViewController {

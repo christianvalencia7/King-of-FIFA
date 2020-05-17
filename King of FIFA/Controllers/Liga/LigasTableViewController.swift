@@ -105,9 +105,9 @@ class LigasTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if let viewController = segue.destination as? FaseTorneoTableViewController {
-            //viewController.torneo = torneos[selectedTorneo]
-            //viewController.selectedTorneo = selectedTorneo
+        if let viewController = segue.destination as? FechasTableViewController {
+            viewController.liga = ligas[selectedLiga]
+            viewController.selectedLiga = selectedLiga
         }
         
     }

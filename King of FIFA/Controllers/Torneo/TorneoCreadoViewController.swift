@@ -26,14 +26,10 @@ class TorneoCreadoViewController: UIViewController {
         if isLiga{
             online.text = liga.online ? "Online" : "Offline"
             idaYVuelta.text = liga.idaYVuelta ? "Modo: ida y vuelta" : "Modo: único partido"
-            
-            saveLiga(liga: liga)
         }
         else{
             online.text = torneo.getOnline() ? "Online" : "Offline"
             idaYVuelta.text = torneo.getIdaYVuelta() ? "Modo: ida y vuelta" : "Modo: único partido"
-            
-            saveTorneo(torneo: torneo)
         }
         
         
@@ -42,12 +38,16 @@ class TorneoCreadoViewController: UIViewController {
     
     @IBAction func doneClicked(_ sender: Any) {
         if isLiga {
-            
+            liga.crearAllPartidos()
+            if !liga.crearPartidos(){
+                print("Error creating partidos")
+            }
+            saveLiga(liga: liga)
             performSegue(withIdentifier: "toLigas", sender: nil)
-            print("HELLO")
+            
         }
         else {
-            print("HELLO2")
+            saveTorneo(torneo: torneo)
             performSegue(withIdentifier: "toTorneos", sender: nil)
         }
     }
@@ -55,15 +55,14 @@ class TorneoCreadoViewController: UIViewController {
    
        
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
     
     //FILE MANAGMENT
     private func saveTorneo(torneo: Torneo) {

@@ -12,7 +12,9 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
     
     var selectedTorneo = 0
     var selectedPartido = 0
+    var isLiga = false
     var torneo = Torneo()
+    var liga = Liga()
     var partido = Partido()
     
     @IBOutlet weak var jugador1: UITextField!
@@ -24,13 +26,13 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        partido = torneo.partidos[selectedPartido]
+        partido = isLiga ? liga.partidos[selectedPartido] : torneo.partidos[selectedPartido]
         jugador1.text = partido.jugador1.nombre
         jugador2.text = partido.jugador2.nombre
         marcador1.delegate = self
         marcador2.delegate = self
-        marcador1.text = "\(torneo.partidos[selectedPartido].goles1)"
-        marcador2.text = "\(torneo.partidos[selectedPartido].goles2)"
+        marcador1.text = "\(isLiga ? liga.partidos[selectedPartido].goles1 : torneo.partidos[selectedPartido].goles1)"
+        marcador2.text = "\(isLiga ? liga.partidos[selectedPartido].goles2 : torneo.partidos[selectedPartido].goles2)"
        
     }
     
@@ -45,7 +47,8 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
         {
             partido.goles1 = Int(marcador1.text ?? "1") ?? 1
             partido.goles2 = Int(marcador2.text ?? "0") ?? 0
-            saveTorneo(torneo: torneo)
+            isLiga ? saveLiga(liga: liga) : saveTorneo(torneo: torneo)
+            isLiga ? performSegue(withIdentifier: "toFechas", sender: nil) : performSegue(withIdentifier: "toFases", sender: nil)
         }
     }
     
@@ -83,15 +86,23 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    private func saveLiga(liga: Liga) {
+
+        if(!saveObject(fileName: "\(liga.id)", object: liga))
+        {
+                print("LIGA NOT SAVED")
+        }
+    }
+    
     func saveObject(fileName: String, object: Any) -> Bool {
         do{
-            if !FileManager.default.fileExists(atPath: getDirectoryPath().appendingPathComponent("torneos", isDirectory: true).path) {
-                try FileManager.default.createDirectory(at: self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+            if !FileManager.default.fileExists(atPath: getDirectoryPath().appendingPathComponent(isLiga ? "ligas":"torneos", isDirectory: true).path) {
+                try FileManager.default.createDirectory(at: self.getDirectoryPath().appendingPathComponent(isLiga ? "ligas":"torneos", isDirectory: true), withIntermediateDirectories: true, attributes: nil)
                 print("\(try FileManager.default.contentsOfDirectory(atPath: self.getDirectoryPath().path))")
             }
         }
         catch{print("CATCH")}
-        let f = self.getDirectoryPath().appendingPathComponent("torneos", isDirectory: true)
+        let f = self.getDirectoryPath().appendingPathComponent(isLiga ? "ligas":"torneos", isDirectory: true)
         let filePath = f.appendingPathComponent(fileName)//1
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)//2
