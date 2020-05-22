@@ -1,5 +1,5 @@
 //
-//  King_of_FIFATests.swift
+//  liga.swift
 //  King of FIFATests
 //
 //  Created by Christian Valencia on 5/19/20.
@@ -7,8 +7,9 @@
 //
 
 import XCTest
-@testable import King_of_FIFA
-class King_of_FIFATests: XCTestCase {
+
+
+class liga: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -25,7 +26,7 @@ class King_of_FIFATests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

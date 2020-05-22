@@ -41,6 +41,16 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
+    @IBAction func cancelClicked(_ sender: Any) {
+        if(isLiga)
+        {
+            performSegue(withIdentifier: "toLigas", sender: nil)
+        }
+        else{
+            performSegue(withIdentifier: "toTorneos", sender: nil)
+        }
+    }
+    
     @IBAction func endEdit(_ sender: UITextField) {
            sender.resignFirstResponder()
        }
@@ -61,7 +71,6 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
         }
         
         if count >= liga.numJugadores && isLiga {
-            liga.crearAllPartidos()
             performSegue(withIdentifier: "Next", sender: nil)
         }
         

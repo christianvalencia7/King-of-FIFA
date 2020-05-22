@@ -1,6 +1,6 @@
 //
-//  King_of_FIFATests.swift
-//  King of FIFATests
+//  King_of_FIFATests1.swift
+//  King of FIFATests1
 //
 //  Created by Christian Valencia on 5/19/20.
 //  Copyright © 2020 Christian Valencia. All rights reserved.
@@ -8,7 +8,9 @@
 
 import XCTest
 @testable import King_of_FIFA
-class King_of_FIFATests: XCTestCase {
+
+
+class King_of_FIFATests1: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

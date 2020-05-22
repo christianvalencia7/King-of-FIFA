@@ -44,8 +44,8 @@ class Liga: NSObject, NSCoding{
 
     init(n: Int){
         numJugadores = n
-        online = true
-        idaYVuelta = true
+        online = false
+        idaYVuelta = false
         nombre = "Default"
         super.init()
     }
@@ -56,36 +56,84 @@ class Liga: NSObject, NSCoding{
         nombre = nom
         jugadores = j
         partidos = p
+        resultados = r
+        allPartidos = a
+        fechas = f
         self.id = id
         super.init()
     }
     override init(){
         numJugadores = -1
-        online = true
-        idaYVuelta = true
+        online = false
+        idaYVuelta = false
         nombre = "Defalt"
         super.init()
     }
 
+    
+    
     public func crearAllPartidos()
     {
         jugadores.shuffle()
-        for i in 0..<numJugadores - 1 {
-            for j in i + 1 ..< numJugadores {
-                let partido = Partido(j1: jugadores[i], j2: jugadores[j])
-                allPartidos.append(partido)
-            }
+        if numJugadores % 2 == 1 {
+            numJugadores = numJugadores + 1
+            let jugadorBye = Jugador()
+            jugadorBye.nombre = "BYE"
+            jugadores.append(jugadorBye)
         }
         
+        let mid = numJugadores / 2
+            let fechasTotal = numJugadores - 1
+            // Split list into two
+
+            var l1 = [Jugador]();
+        
+            for i in 0 ..< mid {
+                let temp = jugadores[i]
+                l1.append(temp)
+            }
+
+            var l2 = [Jugador]();
+            // We need to reverse the other list
+           
+            for i in stride(from: numJugadores - 1, through: mid, by: -1){
+                let temp = jugadores[i]
+                l2.append(temp)
+            }
+            
+            var count = 0
+            while count < fechasTotal{
+                //Create partidos
+                for i in 0..<mid
+                {
+                    let p = Partido()
+                    p.jugador1 = l1[i]
+                    p.jugador2 = l2[i]
+                    allPartidos.append(p)
+                }
+                
+                //Move jugadores around
+                l2.append(l1[mid-1])
+                l1.insert(l2[0], at: 1)
+                l2.remove(at: 0)
+                count = count + 1
+            }
+        
+    }
+    
+    public func getFecha() -> Int{
+        let partidosPorFecha = numJugadores / 2
+        return resultados.count / partidosPorFecha + 1
     }
 
     public func crearPartidos() -> Bool
     {
-        if fechas < numJugadores {
+        
             for p in partidos {
                 resultados.append(p)
             }
             partidos.removeAll()
+        if allPartidos.count > 0 {
             var jugando = [Jugador]()
             var i = 0
             while jugando.count < numJugadores
@@ -96,13 +144,15 @@ class Liga: NSObject, NSCoding{
                     jugando.append(partido.jugador2)
                     partidos.append(partido)
                     allPartidos.remove(at: i)
+                    
                 } else {
                     i = i + 1
                 }
             }
+            fechas = fechas + 1
             return true
         }
-        return true
+        return false
     }
     
 

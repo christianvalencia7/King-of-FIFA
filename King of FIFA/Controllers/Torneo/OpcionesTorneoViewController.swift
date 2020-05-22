@@ -18,11 +18,14 @@ class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre.delegate = self
+        if(isLiga){
+            nombre.placeholder = "Nombre Liga"
+        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func selecIdaYVuelta(_ sender: UISegmentedControl) {
-        if(sender.selectedSegmentIndex == 0)
+        if(sender.selectedSegmentIndex == 1)
         {
             torneo.setIdaYVuelta(b: true)
             liga.idaYVuelta = true
@@ -46,6 +49,15 @@ class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
+    @IBAction func cancelClicked(_ sender: Any) {
+        if(isLiga)
+        {
+            performSegue(withIdentifier: "toLigas", sender: nil)
+        }
+        else{
+            performSegue(withIdentifier: "toTorneo", sender: nil)
+        }
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

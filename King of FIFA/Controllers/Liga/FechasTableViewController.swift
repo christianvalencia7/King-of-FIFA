@@ -13,10 +13,11 @@ class FechasTableViewController: UITableViewController {
     var liga = Liga()
     var selectedLiga = 0
     var selectedPartido = 0
+    var fin = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Fecha \(liga.fechas)"
+        self.navigationItem.title = "Fecha \(liga.getFecha())"
         self.navigationItem.prompt = liga.nombre
     }
 
@@ -45,7 +46,9 @@ class FechasTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          selectedPartido = indexPath.row
-         performSegue(withIdentifier: "toMarcador", sender: nil)
+        if !fin {
+            performSegue(withIdentifier: "toMarcador", sender: nil)
+        }
     }
     
 
@@ -95,54 +98,28 @@ class FechasTableViewController: UITableViewController {
             viewController.isLiga = true
             viewController.selectedPartido = selectedPartido
         }
+        if let viewController = segue.destination as? PosicionesTableViewController {
+            viewController.liga = liga
+            viewController.fin = fin
+        }
         
     }
     
     @IBAction func siguienteFecha(_ sender: UIBarButtonItem) {
-//        let partidos = torneo.partidos
-//        var empate = 0
-//        for p in partidos {
-//            if p.goles1 == p.goles2{
-//                empate = empate + 1
-//            }
-//        }
-//        //Check if there is a draw
-//        if empate > 0 {
-//            let alertController = UIAlertController(title: "No puede haber empate", message: "En caso de empate jugar tiempos extra, penales u otro partido de desempate", preferredStyle: .alert)
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//            self.present(alertController, animated: true, completion: nil)
-//        }
-//            
-//        //If there isn't a draw continue to next stage
-//        else {
-//            for p in partidos{
-//                torneo.jugadores.append(p.getGanador())
-//                torneo.partidos.remove(at: 0)
-//                //let indexPath = IndexPath(row: 0, section: 0)
-//               // tableView.deleteRows(at: [indexPath], with: .fade)
-//                //print("HELLO")
-//            }
-//            torneo.crearPartidos()
-//            tableView.reloadData()
-//            self.refreshControl?.endRefreshing()
-//            
-//            var fase = ""
-//            let numPartidos = torneo.partidos.count
-//            if numPartidos == 1 { fase = "Final"}
-//            if numPartidos == 2 { fase = "Semifinal"}
-//            if numPartidos == 4 { fase = "Cuartos de final"}
-//            if numPartidos == 8 { fase = "Octavos de final"}
-//            if numPartidos == 16 { fase = "16avos de final"}
-//            if numPartidos == 32 { fase = "32avos de final"}
-//            self.navigationItem.title = fase
-//            
-//            if numPartidos == 0
-//            {
-//                let alertController = UIAlertController(title: "FIN DEL TORNEO", message: "El ganador es \(torneo.jugadores[0].nombre)", preferredStyle: .alert)
-//                alertController.addAction(UIAlertAction(title: "OK", style: .default))
-//                self.present(alertController, animated: true, completion: nil)
-//            }
-//        }
+        if liga.crearPartidos(){
+            saveLiga(liga: liga)
+            tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+            self.navigationItem.title = "Fecha \(liga.getFecha())"
+        }
+            
+        else{
+            saveLiga(liga: liga)
+            
+            fin = true
+            performSegue(withIdentifier: "toPosiciones", sender: nil)
+        }
+        
         
     }
     
@@ -183,6 +160,34 @@ class FechasTableViewController: UITableViewController {
         }
         catch {print("1error is: \(error.localizedDescription)")}
         return nil
+    }
+    
+    private func saveLiga(liga: Liga) {
+
+        if(!saveObject(fileName: "\(liga.id)", object: liga))
+        {
+                print("LIGA NOT SAVED")
+        }
+    }
+    
+    func saveObject(fileName: String, object: Any) -> Bool {
+        do{
+            if !FileManager.default.fileExists(atPath: getDirectoryPath().appendingPathComponent("ligas", isDirectory: true).path) {
+                try FileManager.default.createDirectory(at: self.getDirectoryPath().appendingPathComponent("ligas", isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+                print("\(try FileManager.default.contentsOfDirectory(atPath: self.getDirectoryPath().path))")
+            }
+        }
+        catch{print("CATCH")}
+        let f = self.getDirectoryPath().appendingPathComponent("ligas", isDirectory: true)
+        let filePath = f.appendingPathComponent(fileName)//1
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)//2
+            try data.write(to: filePath)//3
+            return true
+        } catch {
+            print("2error is: \(error.localizedDescription)")//4
+        }
+        return false
     }
     
     func getDirectoryPath() -> URL {

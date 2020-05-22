@@ -36,8 +36,8 @@ class Torneo: NSObject, NSCoding{
     
     init(n: Int){
         numJugadores = n
-        online = true
-        idaYVuelta = true
+        online = false
+        idaYVuelta = false
         nombre = "Defalt"
     }
     init(id: UUID, n: Int, j:[Jugador], p:[Partido], o:Bool, i: Bool, nom: String){
@@ -51,8 +51,8 @@ class Torneo: NSObject, NSCoding{
     }
     override init(){
         numJugadores = -1
-        online = true
-        idaYVuelta = true
+        online = false
+        idaYVuelta = false
         nombre = "Defalt"
     }
     

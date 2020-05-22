@@ -38,7 +38,7 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func guardarMarcador(_ sender: UIButton) {
         
-        if marcador1.text == marcador2.text {
+        if marcador1.text == marcador2.text && !isLiga {
             let alertController = UIAlertController(title: "No puede haber empate", message: "En caso de empate jugar tiempos extra, penales u otro partido de desempate", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
@@ -73,6 +73,10 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
             viewController.torneo = torneo
             viewController.selectedTorneo = selectedTorneo
             viewController.selectedPartido = selectedPartido
+        }
+        
+        if let viewController = segue.destination as? FechasTableViewController {
+            viewController.liga = liga
         }
     }
     
