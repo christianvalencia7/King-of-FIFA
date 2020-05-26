@@ -12,6 +12,7 @@ class NumJugadoresViewController: UIViewController {
     var torneo = Torneo()
     var selectedNum: Int = 0
     var online: Bool = false
+    var email = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class NumJugadoresViewController: UIViewController {
         selectedNum = sender.tag
         torneo.setNum(num: selectedNum)
         torneo.online = online
+        torneo.creadoPor = email
+        torneo.dateCreated = Date()
         performSegue(withIdentifier: "MasOpciones", sender: nil)
     }
     
@@ -34,6 +37,7 @@ class NumJugadoresViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let viewController = segue.destination as? OpcionesTorneoViewController{
             viewController.torneo = torneo
+            viewController.online = online
         }
     }
     

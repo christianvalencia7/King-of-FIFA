@@ -10,10 +10,20 @@ import UIKit
 
 class NewOnlineViewController: UIViewController {
 
+    var isLiga = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func nuevoTorneo(_ sender: Any) {
+        isLiga = false
+        performSegue(withIdentifier: "toOptionsOnline", sender: nil)
+    }
+    
+    @IBAction func nuevaLiga(_ sender: Any) {
+        isLiga = true
+        performSegue(withIdentifier: "toOptionsOnline", sender: nil)
     }
     
 
@@ -22,8 +32,8 @@ class NewOnlineViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? NumJugadoresViewController{
-            viewController.online = true
+        if let viewController = segue.destination as? OptionsOnlineViewController{
+            viewController.isLiga = isLiga
         }
     }
     

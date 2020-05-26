@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TorneoCreadoViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class TorneoCreadoViewController: UIViewController {
     var torneo = Torneo()
     var liga = Liga()
     var isLiga = false
+    var isOnline: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,18 +39,40 @@ class TorneoCreadoViewController: UIViewController {
     }
     
     @IBAction func doneClicked(_ sender: Any) {
+        //Liga
         if isLiga {
             liga.crearAllPartidos()
             if !liga.crearPartidos(){
                 print("Error creating partidos")
             }
-            saveLiga(liga: liga)
-            performSegue(withIdentifier: "toLigas", sender: nil)
+            //Local
+            if !isOnline {
+                saveLiga(liga: liga)
+                performSegue(withIdentifier: "toLigas", sender: nil)
+            }
+                
+            //Online
+            else{
+                
+            }
             
         }
+            
+        //Torneo
         else {
-            saveTorneo(torneo: torneo)
-            performSegue(withIdentifier: "toTorneos", sender: nil)
+            
+            //Local
+            if !isOnline {
+                saveTorneo(torneo: torneo)
+                performSegue(withIdentifier: "toTorneos", sender: nil)
+            }
+            
+            //Online
+            else {
+                uploadTorneo(torneo: torneo)
+                print("SUCCESS")
+            }
+            
         }
     }
     
@@ -64,7 +88,22 @@ class TorneoCreadoViewController: UIViewController {
     }
     
     
-    //FILE MANAGMENT
+    //MARK: - ONLINE DATABASE MANAGMENT
+    private func uploadTorneo(torneo: Torneo) {
+        let firestoreDatabase = Firestore.firestore()
+        
+        let firestoreTorneo = ["torneo" : torneo] as [String : Any]
+
+        firestoreDatabase.collection(torneo.creadoPor).document("Competencias").collection("Torneos").addDocument(data: firestoreTorneo)
+        
+    }
+    
+    private func upLoadLiga(liga: Liga) {
+        
+    }
+    
+    
+    //MARK: - FILE MANAGMENT
     private func saveTorneo(torneo: Torneo) {
 
         if(!saveObject(fileName: "\(torneo.id)", object: torneo))
@@ -106,5 +145,14 @@ class TorneoCreadoViewController: UIViewController {
            let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
            return arrayPaths[0]
        }
+    
+    
+    
+    func makeAlert(titleInput: String, messageInput: String) {
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

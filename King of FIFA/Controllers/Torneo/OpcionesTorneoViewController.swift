@@ -12,6 +12,7 @@ class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
     var torneo = Torneo()
     var liga = Liga()
     var isLiga = false
+    var online: Bool = false
     
     @IBOutlet weak var nombre: UITextField!
     
@@ -66,10 +67,12 @@ class OpcionesTorneoViewController: UIViewController,UITextFieldDelegate {
                 liga.nombre = nombre.text ?? "default"
                 viewController.liga = liga
                 viewController.isLiga = true
+                viewController.online = online
             }
             else{
                 torneo.setNombre(s: nombre.text ?? "default")
                 viewController.torneo = torneo
+                viewController.online = online
             }
         }
     }

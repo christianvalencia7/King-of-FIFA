@@ -18,6 +18,7 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
     var torneo = Torneo()
     var liga = Liga()
     var isLiga = false
+    var online: Bool = false
     
     private var count = 0
     
@@ -98,6 +99,7 @@ class DatosJugadorViewController: UIViewController, UITextFieldDelegate{
             viewController.torneo = torneo
             viewController.liga = liga
             viewController.isLiga = isLiga
+            viewController.isOnline = online
         }
     }
     
