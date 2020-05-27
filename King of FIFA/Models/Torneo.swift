@@ -9,7 +9,7 @@
 import Foundation
 import os.log
 
-class Torneo: NSObject, NSCoding{
+class Torneo: NSObject, NSCoding, Codable{
     var id = UUID()
     var numJugadores: Int
     var jugadores = [Jugador]()
@@ -37,6 +37,8 @@ class Torneo: NSObject, NSCoding{
         static let dateCreated = "dateCreated"
         static let creadoPor = "creadoPor"
     }
+    
+    
     
     init(n: Int){
         numJugadores = n

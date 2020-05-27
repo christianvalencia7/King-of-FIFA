@@ -10,7 +10,7 @@ import Foundation
 import os.log
 
 
-class Partido: NSObject, NSCoding{
+class Partido: NSObject, NSCoding, Codable{
     var id = UUID()
     var jugador1: Jugador
     var jugador2: Jugador

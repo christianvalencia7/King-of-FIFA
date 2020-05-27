@@ -91,10 +91,19 @@ class TorneoCreadoViewController: UIViewController {
     //MARK: - ONLINE DATABASE MANAGMENT
     private func uploadTorneo(torneo: Torneo) {
         let firestoreDatabase = Firestore.firestore()
-        
-        let firestoreTorneo = ["torneo" : torneo] as [String : Any]
+        do {
+            let jsonData = try JSONEncoder().encode(torneo)
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            let firestoreTorneo = [torneo.nombre : jsonObject] as [String : Any]
 
-        firestoreDatabase.collection(torneo.creadoPor).document("Competencias").collection("Torneos").addDocument(data: firestoreTorneo)
+            firestoreDatabase.collection(torneo.creadoPor).document("Competencias").collection("Torneos").document(torneo.id.uuidString).setData(firestoreTorneo)
+        }
+        catch {
+            print("ERROR!!! \(error.localizedDescription)")
+        }
+        
+        
+        
         
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 import os.log
 
-class Jugador: NSObject, NSCoding{
+class Jugador: NSObject, NSCoding, Codable{
     var nombre: String
     var userID: String
     var equipo: String
@@ -26,6 +26,12 @@ class Jugador: NSObject, NSCoding{
         nombre = n
         userID = u
         equipo = e
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case nombre
+        case userID
+        case equipo
     }
     
     //MARK: Types
