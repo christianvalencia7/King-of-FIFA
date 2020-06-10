@@ -588,6 +588,62 @@
             </objects>
             <point key="canvasLocation" x="-807.24637681159425" y="-587.27678571428567"/>
         </scene>
+        <!--Torneos Online Table View Controller-->
+        <scene sceneID="dnA-uh-nbm">
+            <objects>
+                <tableViewController id="quh-TP-DHW" customClass="TorneosOnlineTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e8A-L0-HkP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hpY-dR-eAq">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hpY-dR-eAq" id="pcP-SF-iOs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="NCx-Hd-A5a" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="46.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NCx-Hd-A5a" id="hPu-h8-Oa8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="V5h-II-nsQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="V5h-II-nsQ" firstAttribute="leading" secondItem="hPu-h8-Oa8" secondAttribute="leading" id="0qY-uA-36q"/>
+                                        <constraint firstAttribute="bottom" secondItem="V5h-II-nsQ" secondAttribute="bottom" id="6Oy-BQ-thT"/>
+                                        <constraint firstItem="V5h-II-nsQ" firstAttribute="top" secondItem="hPu-h8-Oa8" secondAttribute="top" id="Ly2-ZJ-Ivx"/>
+                                        <constraint firstAttribute="trailing" secondItem="V5h-II-nsQ" secondAttribute="trailing" id="PFM-aU-IE7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nombre" destination="V5h-II-nsQ" id="OHU-jp-ur3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="quh-TP-DHW" id="Lky-ny-aZf"/>
+                            <outlet property="delegate" destination="quh-TP-DHW" id="uex-A4-e1H"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1EZ-CE-Jtg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47A-Ed-BXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="-1384"/>
+        </scene>
         <!--Online View Controller-->
         <scene sceneID="L7n-89-Mwr">
             <objects>
@@ -619,6 +675,9 @@
                                 <state key="normal" title="Mis Torneos Online">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="quh-TP-DHW" kind="show" id="Vju-8b-NrL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-tu-NOj">
                                 <rect key="frame" x="21" y="472" width="373" height="161"/>
@@ -1593,7 +1652,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="LMa-Cm-tNJ"/>
         <segue reference="atj-h8-Rdm"/>
-        <segue reference="qVh-qq-x3o"/>
+        <segue reference="hSc-aR-qx6"/>
         <segue reference="Htg-iY-gfr"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -14,6 +14,7 @@
 		9403251F2464623D007337B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9403251E2464623D007337B6 /* GoogleService-Info.plist */; };
 		948668D7247DAA210003F3A5 /* TorneoOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948668D6247DAA210003F3A5 /* TorneoOnline.swift */; };
 		948668D9247DBE2B0003F3A5 /* OptionsOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948668D8247DBE2B0003F3A5 /* OptionsOnlineViewController.swift */; };
+		948668DB2480136F0003F3A5 /* TorneosOnlineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948668DA2480136E0003F3A5 /* TorneosOnlineTableViewController.swift */; };
 		94A447602427E909009FFFAF /* NumJugadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */; };
 		94A447632427ED24009FFFAF /* Torneo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447622427ED24009FFFAF /* Torneo.swift */; };
 		94A447652427EE56009FFFAF /* Jugador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A447642427EE56009FFFAF /* Jugador.swift */; };
@@ -51,6 +52,7 @@
 		9403251E2464623D007337B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		948668D6247DAA210003F3A5 /* TorneoOnline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneoOnline.swift; sourceTree = "<group>"; };
 		948668D8247DBE2B0003F3A5 /* OptionsOnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsOnlineViewController.swift; sourceTree = "<group>"; };
+		948668DA2480136E0003F3A5 /* TorneosOnlineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneosOnlineTableViewController.swift; sourceTree = "<group>"; };
 		94A4475F2427E908009FFFAF /* NumJugadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumJugadoresViewController.swift; sourceTree = "<group>"; };
 		94A447622427ED24009FFFAF /* Torneo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torneo.swift; sourceTree = "<group>"; };
 		94A447642427EE56009FFFAF /* Jugador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jugador.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				94C3395B24676E6F00FB16B6 /* LogInViewController.swift */,
 				94C33961246C44AC00FB16B6 /* NewOnlineViewController.swift */,
 				948668D8247DBE2B0003F3A5 /* OptionsOnlineViewController.swift */,
+				948668DA2480136E0003F3A5 /* TorneosOnlineTableViewController.swift */,
 			);
 			path = Online;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				94A4476A242AE5DB009FFFAF /* DatosJugadorViewController.swift in Sources */,
 				94C3398424708BEC00FB16B6 /* FechasTableViewController.swift in Sources */,
 				94C3395C24676E6F00FB16B6 /* LogInViewController.swift in Sources */,
+				948668DB2480136F0003F3A5 /* TorneosOnlineTableViewController.swift in Sources */,
 				94C339602469C2C000FB16B6 /* CustomSegmentedControl.swift in Sources */,
 				94A44773242D91F5009FFFAF /* Partido.swift in Sources */,
 				94A447652427EE56009FFFAF /* Jugador.swift in Sources */,
