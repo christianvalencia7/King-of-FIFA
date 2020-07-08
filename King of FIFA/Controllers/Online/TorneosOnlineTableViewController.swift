@@ -14,6 +14,7 @@ class TorneosOnlineTableViewController: UITableViewController {
     var torneos = [Torneo]()
     var selectedTorneo = 0
     var newTorneo = false
+    var torneosIds = [String]()
     override func viewDidLoad() {
        super.viewDidLoad()
 
@@ -58,7 +59,7 @@ class TorneosOnlineTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTorneo = indexPath.row
-        performSegue(withIdentifier: "FaseTorneo", sender: nil)
+        performSegue(withIdentifier: "toFaseOnline", sender: nil)
     }
 
 
@@ -106,9 +107,10 @@ class TorneosOnlineTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        // Get the new view controller using segue.destination.
        // Pass the selected object to the new view controller.
-       if let viewController = segue.destination as? FaseTorneoTableViewController {
-           viewController.torneo = torneos[selectedTorneo]
-           viewController.selectedTorneo = selectedTorneo
+       if let viewController = segue.destination as? FasesOnlineTableViewController {
+        viewController.torneo = torneos[selectedTorneo]
+        viewController.selectedTorneo = selectedTorneo
+        viewController.torneoid = torneosIds[selectedTorneo]
        }
        
     }
@@ -122,9 +124,11 @@ class TorneosOnlineTableViewController: UITableViewController {
             if error != nil {
                 print(error?.localizedDescription ?? "ERROR")
             } else {
+                self.torneosIds = [String]()
                 if snapshot?.isEmpty != true && snapshot != nil {
                     for document in snapshot!.documents {
                         let data = document.data()
+                        self.torneosIds.append(document.documentID)
                         for (_, j) in data {
                             do{
                                 let data = try? JSONSerialization.data(withJSONObject: j as Any, options: [])
