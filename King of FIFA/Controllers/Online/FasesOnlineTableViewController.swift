@@ -62,7 +62,7 @@ class FasesOnlineTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          selectedPartido = indexPath.row
-         performSegue(withIdentifier: "CambiarMarcador", sender: nil)
+         performSegue(withIdentifier: "toMarcador", sender: nil)
     }
     
 
@@ -112,6 +112,7 @@ class FasesOnlineTableViewController: UITableViewController {
             viewController.torneo = torneo
             viewController.selectedTorneo = selectedTorneo
             viewController.selectedPartido = selectedPartido
+            viewController.isOnline = true
         }
         
     }
@@ -136,9 +137,6 @@ class FasesOnlineTableViewController: UITableViewController {
             for p in partidos{
                 torneo.jugadores.append(p.getGanador())
                 torneo.partidos.remove(at: 0)
-                //let indexPath = IndexPath(row: 0, section: 0)
-               // tableView.deleteRows(at: [indexPath], with: .fade)
-                //print("HELLO")
             }
             torneo.crearPartidos()
             tableView.reloadData()
@@ -153,7 +151,7 @@ class FasesOnlineTableViewController: UITableViewController {
             if numPartidos == 16 { fase = "16avos de final"}
             if numPartidos == 32 { fase = "32avos de final"}
             self.navigationItem.title = fase
-            
+            uploadTorneo(torneo: torneo)
             if numPartidos == 0
             {
                 let alertController = UIAlertController(title: "FIN DEL TORNEO", message: "El ganador es \(torneo.jugadores[0].nombre)", preferredStyle: .alert)
@@ -166,16 +164,7 @@ class FasesOnlineTableViewController: UITableViewController {
     
     @IBAction func unwindSegueToFasesOnline(_ sender: UIStoryboardSegue)
     {
-            //torneo = loadTorneo(torneo: torneo)!
-//          if let sourceViewController = sender.source as? TorneoCreadoViewController {
-//                let torneo = sourceViewController.torneo
-//                let newIndexPath = selectedPartido
-//                let indexPath: IndexPath = IndexPath(row: selectedPartido, section: 0)
-//                tableView.deleteRows(at: [indexPath], with: .fade)
-//                tableView.insertRows(at: [indexPath], with: .automatic)
-//          }
-    
-            
+
     }
     
     //FILE MANAGMENT
@@ -203,6 +192,21 @@ class FasesOnlineTableViewController: UITableViewController {
             }
             
         }
+    }
+    
+    private func uploadTorneo(torneo: Torneo) {
+        let firestoreDatabase = Firestore.firestore()
+        do {
+            let jsonData = try JSONEncoder().encode(torneo)
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            let firestoreTorneo = [torneo.nombre : jsonObject] as [String : Any]
+
+            firestoreDatabase.collection(torneo.creadoPor).document("Competencias").collection("Torneos").document(torneo.id.uuidString).setData(firestoreTorneo)
+        }
+        catch {
+            print("ERROR!!! \(error.localizedDescription)")
+        }
+        
     }
     
 

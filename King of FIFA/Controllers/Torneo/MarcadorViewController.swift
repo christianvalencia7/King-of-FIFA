@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class MarcadorViewController: UIViewController, UITextFieldDelegate {
     
     var selectedTorneo = 0
     var selectedPartido = 0
     var isLiga = false
+    var isOnline = false
     var torneo = Torneo()
     var liga = Liga()
     var partido = Partido()
@@ -47,8 +49,15 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
         {
             partido.goles1 = Int(marcador1.text ?? "1") ?? 1
             partido.goles2 = Int(marcador2.text ?? "0") ?? 0
-            isLiga ? saveLiga(liga: liga) : saveTorneo(torneo: torneo)
-            isLiga ? performSegue(withIdentifier: "toFechas", sender: nil) : performSegue(withIdentifier: "toFases", sender: nil)
+            if !isOnline {
+                isLiga ? saveLiga(liga: liga) : saveTorneo(torneo: torneo)
+                isLiga ? performSegue(withIdentifier: "toFechas", sender: nil) : performSegue(withIdentifier: "toFases", sender: nil)
+            }
+            else {
+                isLiga ? saveLiga(liga: liga) : uploadTorneo(torneo: torneo)
+                isLiga ? performSegue(withIdentifier: "toFechasOnline", sender: nil) : performSegue(withIdentifier: "toFasesOnline", sender: nil)
+            }
+            
         }
     }
     
@@ -122,6 +131,20 @@ class MarcadorViewController: UIViewController, UITextFieldDelegate {
     func getDirectoryPath() -> URL {
         let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return arrayPaths[0]
+    }
+    
+    private func uploadTorneo(torneo: Torneo) {
+        let firestoreDatabase = Firestore.firestore()
+        do {
+            let jsonData = try JSONEncoder().encode(torneo)
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            let firestoreTorneo = [torneo.nombre : jsonObject] as [String : Any]
+
+            firestoreDatabase.collection(torneo.creadoPor).document("Competencias").collection("Torneos").document(torneo.id.uuidString).setData(firestoreTorneo)
+        }
+        catch {
+            print("ERROR!!! \(error.localizedDescription)")
+        }
     }
         
     

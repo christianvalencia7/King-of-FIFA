@@ -463,6 +463,7 @@
                         <outlet property="marcador2" destination="K0D-cf-phy" id="Vgo-Rn-B86"/>
                         <segue destination="3nA-xM-Iux" kind="unwind" identifier="toFases" unwindAction="unwindSegueToFases:" id="06J-44-FMa"/>
                         <segue destination="3nA-xM-Iux" kind="unwind" identifier="toFechas" unwindAction="unwindSegueToFechas:" id="Gvy-5z-DWZ"/>
+                        <segue destination="3nA-xM-Iux" kind="unwind" identifier="toFasesOnline" unwindAction="unwindSegueToFasesOnline:" id="oMl-mv-hZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wao-gO-gJE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -689,7 +690,18 @@
                             <outlet property="delegate" destination="Uge-Cq-1p7" id="TFn-5C-iQ1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5WR-k1-j7s"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5WR-k1-j7s">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente Fase" id="Mew-ad-bBw">
+                            <connections>
+                                <action selector="siguienteFase:" destination="Uge-Cq-1p7" id="uNV-oT-oBP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="6Fm-H8-hPy" kind="show" identifier="toMarcador" id="f3f-db-rB6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pk-no-JRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1703,7 +1715,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="LMa-Cm-tNJ"/>
         <segue reference="atj-h8-Rdm"/>
-        <segue reference="hSc-aR-qx6"/>
+        <segue reference="f3f-db-rB6"/>
         <segue reference="Htg-iY-gfr"/>
     </inferredMetricsTieBreakers>
     <resources>
