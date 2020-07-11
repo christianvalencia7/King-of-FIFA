@@ -76,7 +76,7 @@ class TorneosOnlineTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
        
        if editingStyle == .delete {
-           //deleteTorneo(torneo: torneos[indexPath.row])
+           deleteTorneo(torneo: torneos[indexPath.row])
            torneos.remove(at: indexPath.row)
            tableView.deleteRows(at: [indexPath], with: .fade)
        } else if editingStyle == .insert {
@@ -150,9 +150,16 @@ class TorneosOnlineTableViewController: UITableViewController {
         }
     }
 
-//    private func deleteTorneo(torneo: Torneo) {
-//
-//    }
+    private func deleteTorneo(torneo: Torneo) {
+        let fireStoreDatabase = Firestore.firestore()
+        fireStoreDatabase.collection(Auth.auth().currentUser!.email!).document("Competencias").collection("Torneos").document(torneo.id.uuidString).delete {err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            }
+    }
 
 
 }
