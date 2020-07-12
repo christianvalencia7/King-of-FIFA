@@ -11,6 +11,8 @@ import UIKit
 class NumJugadoresLigaViewController: UIViewController, UITextFieldDelegate {
 
     var liga = Liga()
+    var online = false
+    var email = ""
     @IBOutlet weak var numJugadoresText: FormTextField!
     
     override func viewDidLoad() {
@@ -28,6 +30,9 @@ class NumJugadoresLigaViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             liga.numJugadores = num
+            liga.online = online
+            liga.creadoPor = email
+            liga.dateCreated = Date()
             performSegue(withIdentifier: "toOpciones", sender: nil)
         }
          
@@ -47,6 +52,7 @@ class NumJugadoresLigaViewController: UIViewController, UITextFieldDelegate {
         if let viewController = segue.destination as? OpcionesTorneoViewController{
             viewController.liga = liga
             viewController.isLiga = true
+            viewController.online = online
         }
     }
 

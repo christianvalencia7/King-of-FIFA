@@ -752,6 +752,9 @@
                                 <state key="normal" title="Mis Ligas Online">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mN9-kr-BSD" kind="show" identifier="toLigas" id="2TJ-1N-KmA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -953,6 +956,7 @@
                     <navigationItem key="navigationItem" id="d6Q-2h-JXy"/>
                     <connections>
                         <segue destination="618-Ir-LUq" kind="show" identifier="toCreateTorneo" id="Htg-iY-gfr"/>
+                        <segue destination="8jl-FB-Dj7" kind="show" identifier="toCreateLiga" id="AAQ-sH-84O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTW-eH-o6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1315,6 +1319,7 @@
                         <outlet property="online" destination="lrU-S6-ClV" id="5La-Zr-2hC"/>
                         <segue destination="IS7-26-BST" kind="unwind" identifier="toLigas" unwindAction="unwindSegueToLigas:" id="uIz-c8-AoQ"/>
                         <segue destination="IS7-26-BST" kind="unwind" identifier="toTorneos" unwindAction="unwindSegueToTorneo:" id="bZ4-7A-4YW"/>
+                        <segue destination="IS7-26-BST" kind="unwind" identifier="toOnline" unwindAction="unwindSegueToOnline:" id="oFl-3t-gyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWI-Cw-V2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1352,14 +1357,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="0Pd-jX-PLA" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Pd-jX-PLA" id="WfA-Q9-Hhh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nueva Liga" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-Ws-SkS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -1409,7 +1414,7 @@
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EfG-1i-M8F">
-                            <rect key="frame" x="0.0" y="102.5" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="102" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <items>
@@ -1423,14 +1428,14 @@
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="Lz7-AA-jRT" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lz7-AA-jRT" id="W93-dt-GDV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jugador1 vs jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-uW-6fs">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -1714,8 +1719,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="LMa-Cm-tNJ"/>
+        <segue reference="2TJ-1N-KmA"/>
         <segue reference="atj-h8-Rdm"/>
         <segue reference="f3f-db-rB6"/>
+        <segue reference="AAQ-sH-84O"/>
         <segue reference="Htg-iY-gfr"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -53,7 +53,8 @@ class TorneoCreadoViewController: UIViewController {
                 
             //Online
             else{
-                
+                uploadLiga(liga: liga)
+                performSegue(withIdentifier: "toOnline", sender: nil)
             }
             
         }
@@ -70,7 +71,7 @@ class TorneoCreadoViewController: UIViewController {
             //Online
             else {
                 uploadTorneo(torneo: torneo)
-                print("SUCCESS")
+                performSegue(withIdentifier: "toOnline", sender: nil)
             }
             
         }
@@ -107,8 +108,18 @@ class TorneoCreadoViewController: UIViewController {
         
     }
     
-    private func upLoadLiga(liga: Liga) {
-        
+    private func uploadLiga(liga: Liga) {
+        let firestoreDatabase = Firestore.firestore()
+        do {
+            let jsonData = try JSONEncoder().encode(liga)
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            let firestoreTorneo = [liga.nombre : jsonObject] as [String : Any]
+
+            firestoreDatabase.collection(liga.creadoPor).document("Competencias").collection("Ligas").document(liga.id.uuidString).setData(firestoreTorneo)
+        }
+        catch {
+            print("ERROR!!! \(error.localizedDescription)")
+        }
     }
     
     

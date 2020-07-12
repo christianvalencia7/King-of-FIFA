@@ -23,6 +23,10 @@ class OptionsOnlineViewController: UIViewController {
         if(!isLiga) {
             performSegue(withIdentifier: "toCreateTorneo", sender: nil)
         }
+        
+        if(isLiga) {
+            performSegue(withIdentifier: "toCreateLiga", sender: nil)
+        }
     }
     
     // MARK: - Navigation
@@ -33,6 +37,13 @@ class OptionsOnlineViewController: UIViewController {
             viewController.online = true
             viewController.email = Auth.auth().currentUser!.email!
         }
+        
+        if let viewController = segue.destination as? NumJugadoresLigaViewController{
+            viewController.online = true
+            viewController.email = Auth.auth().currentUser!.email!
+        }
+        
+        
     }
 
 }

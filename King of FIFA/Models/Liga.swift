@@ -11,7 +11,7 @@ import Foundation
 import Foundation
 import os.log
 
-class Liga: NSObject, NSCoding{
+class Liga: NSObject, NSCoding, Codable{
     var id = UUID()
     var numJugadores: Int
     var jugadores = [Jugador]()
@@ -22,6 +22,9 @@ class Liga: NSObject, NSCoding{
     var allPartidos = [Partido]()
     var resultados = [Partido]()
     var fechas = 1
+    var dateCreated: Date
+    var creadoPor: String
+    
     
     //MARK: Archiving Paths
      
@@ -40,6 +43,8 @@ class Liga: NSObject, NSCoding{
         static let allPartidos = "allPartidos"
         static let resultados = "resultados"
         static let fechas = "fechas"
+        static let dateCreated = "dateCreated"
+        static let creadoPor = "creadoPor"
     }
 
     init(n: Int){
@@ -47,9 +52,11 @@ class Liga: NSObject, NSCoding{
         online = false
         idaYVuelta = false
         nombre = "Default"
+        dateCreated = Date()
+        creadoPor = "Offline"
         super.init()
     }
-    init(id: UUID, n: Int, j:[Jugador], p:[Partido], o:Bool, i: Bool, nom: String, a:[Partido], r:[Partido], f: Int){
+    init(id: UUID, n: Int, j:[Jugador], p:[Partido], o:Bool, i: Bool, nom: String, a:[Partido], r:[Partido], f: Int, date: Date, cp: String){
         numJugadores = n
         online = o
         idaYVuelta = i
@@ -60,6 +67,8 @@ class Liga: NSObject, NSCoding{
         allPartidos = a
         fechas = f
         self.id = id
+        dateCreated = date
+        creadoPor = cp
         super.init()
     }
     override init(){
@@ -67,6 +76,8 @@ class Liga: NSObject, NSCoding{
         online = false
         idaYVuelta = false
         nombre = "Defalt"
+        dateCreated = Date()
+        creadoPor = "Offline"
         super.init()
     }
 
@@ -189,6 +200,8 @@ class Liga: NSObject, NSCoding{
         aCoder.encode(allPartidos, forKey: PropertyKey.allPartidos)
         aCoder.encode(resultados, forKey: PropertyKey.resultados)
         aCoder.encode(fechas, forKey: PropertyKey.fechas)
+        aCoder.encode(dateCreated, forKey: PropertyKey.dateCreated)
+        aCoder.encode(creadoPor, forKey: PropertyKey.creadoPor)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -216,6 +229,15 @@ class Liga: NSObject, NSCoding{
             os_log("Unable to decode the resultados.", log: OSLog.default, type: .debug)
             return nil
         }
+        guard let dateCreated = aDecoder.decodeObject(forKey: PropertyKey.dateCreated) as? Date else {
+            os_log("Unable to decode the dateCreated.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        
+        guard let creadoPor = aDecoder.decodeObject(forKey: PropertyKey.creadoPor) as? String else {
+            os_log("Unable to decode the Torneo nombre.", log: OSLog.default, type: .debug)
+            return nil
+        }
         
         let fechas = aDecoder.decodeInteger(forKey: PropertyKey.fechas)
         
@@ -223,7 +245,7 @@ class Liga: NSObject, NSCoding{
         let online = aDecoder.decodeBool(forKey: PropertyKey.online)
         let idaYVuelta = aDecoder.decodeBool(forKey: PropertyKey.idaYVuelta)
         
-        self.init(id: id, n: numJugadores, j:jugadores, p:partidos, o:online, i: idaYVuelta, nom: nombre, a:allPartidos, r:resultados, f: fechas)
+        self.init(id: id, n: numJugadores, j:jugadores, p:partidos, o:online, i: idaYVuelta, nom: nombre, a:allPartidos, r:resultados, f: fechas, date: dateCreated, cp: creadoPor)
     }
     
 }
