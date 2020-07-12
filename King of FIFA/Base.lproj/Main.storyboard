@@ -753,7 +753,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mN9-kr-BSD" kind="show" identifier="toLigas" id="2TJ-1N-KmA"/>
+                                    <segue destination="mN9-kr-BSD" kind="show" id="4bd-6C-BQ2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1647,6 +1647,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mY3-4Y-R1J" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Ligas" image="calendar" catalog="system" id="R6r-l8-h0f"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EJp-Pb-StO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zh9-nK-B4X">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1719,7 +1720,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="LMa-Cm-tNJ"/>
-        <segue reference="2TJ-1N-KmA"/>
+        <segue reference="4bd-6C-BQ2"/>
         <segue reference="atj-h8-Rdm"/>
         <segue reference="f3f-db-rB6"/>
         <segue reference="AAQ-sH-84O"/>

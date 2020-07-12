@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import Firebase
 
 class LigasTableViewController: UITableViewController {
     
     var ligas = [Liga]()
     var selectedLiga = 0
+    var online = false
+    var ligasIds = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
         //self.navigationItem.rightBarButtonItem = self.
-        ligas = loadLigas() ?? [Liga]()
+        
+        if(!online) {ligas = loadLigas() ?? [Liga]()}
+        
+        else {
+            loadOnlineLigas()
+        }
     }
     
     // MARK: - Table view data source
@@ -74,7 +81,12 @@ class LigasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            deleteLiga(liga: ligas[indexPath.row])
+            if online {
+                deleteOnlineLiga(liga: ligas[indexPath.row])
+                
+            } else {
+                deleteLiga(liga: ligas[indexPath.row])
+            }
             ligas.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -108,11 +120,12 @@ class LigasTableViewController: UITableViewController {
         if let viewController = segue.destination as? FechasTableViewController {
             viewController.liga = ligas[selectedLiga]
             viewController.selectedLiga = selectedLiga
+            viewController.online = online
         }
         
     }
     
-    //FILE MANAGMENT
+      //MARK: - FILE MANAGMENT
     
     private func loadLigas() -> [Liga]?  {
            if let ligas = getObject(fileName: "ligas") as? [Liga]{
@@ -177,5 +190,50 @@ class LigasTableViewController: UITableViewController {
         let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return arrayPaths[0]
     }
+
+    private func loadOnlineLigas()  {
+        let fireStoreDatabase = Firestore.firestore()
+        
+        fireStoreDatabase.collection(Auth.auth().currentUser!.email!).document("Competencias").collection("Ligas").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "ERROR")
+            } else {
+                self.ligasIds = [String]()
+                if snapshot?.isEmpty != true && snapshot != nil {
+                    for document in snapshot!.documents {
+                        let data = document.data()
+                        self.ligasIds.append(document.documentID)
+                        for (_, j) in data {
+                            do{
+                                let data = try? JSONSerialization.data(withJSONObject: j as Any, options: [])
+                                let liga = try JSONDecoder().decode(Liga.self, from: data!)
+                                liga.printTorneo()
+                                self.ligas.append(liga)
+                            }
+                            catch {
+                                print(error.localizedDescription)
+                            }
+
+                        }
+                        self.tableView.reloadData()
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+    private func deleteOnlineLiga(liga: Liga) {
+        let fireStoreDatabase = Firestore.firestore()
+        fireStoreDatabase.collection(Auth.auth().currentUser!.email!).document("Competencias").collection("Liga").document(liga.id.uuidString).delete {err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            }
+    }
+
 
 }

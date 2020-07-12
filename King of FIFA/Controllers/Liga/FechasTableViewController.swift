@@ -13,6 +13,7 @@ class FechasTableViewController: UITableViewController {
     var liga = Liga()
     var selectedLiga = 0
     var selectedPartido = 0
+    var online = false
     var fin = false
     
     override func viewDidLoad() {
