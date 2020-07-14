@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class PosicionesTableViewController: UITableViewController {
     
     var fin = false
     var liga = Liga()
     var datos = [[Any]]()
+    var online = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        liga = loadLiga(liga: liga)!
+        if online {
+            
+        }
+        else {
+            liga = loadLiga(liga: liga)!
+        }
+        
+        
         for j in liga.jugadores {
             var temp = [j,0,0] as [Any]
             for p in liga.resultados {
@@ -163,6 +172,36 @@ class PosicionesTableViewController: UITableViewController {
     func getDirectoryPath() -> URL {
         let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return arrayPaths[0]
+    }
+    
+    private func loadOnlineLiga()  {
+        let fireStoreDatabase = Firestore.firestore()
+        
+        fireStoreDatabase.collection(Auth.auth().currentUser!.email!).document("Competencias").collection("Ligas").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "ERROR")
+            } else {
+                
+                if snapshot?.isEmpty != true && snapshot != nil {
+                    for document in snapshot!.documents {
+                        if document.documentID.elementsEqual(self.liga.id.uuidString){
+                            let data = document.data()
+                                 do{
+                                     let data = try? JSONSerialization.data(withJSONObject: data[self.liga.nombre] as Any, options: [])
+                                     let liga = try JSONDecoder().decode(Liga.self, from: data!)
+                                     self.liga = liga
+                                 }
+                                 catch {
+                                     print(error.localizedDescription)
+                                 }
+                             self.tableView.reloadData()
+                        }
+                    }
+                }
+                
+            }
+            
+        }
     }
 
 }

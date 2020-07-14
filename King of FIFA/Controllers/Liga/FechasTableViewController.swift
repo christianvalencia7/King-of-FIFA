@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FechasTableViewController: UITableViewController {
 
@@ -102,21 +103,34 @@ class FechasTableViewController: UITableViewController {
         if let viewController = segue.destination as? PosicionesTableViewController {
             viewController.liga = liga
             viewController.fin = fin
+            viewController.online = online
         }
         
     }
     
     @IBAction func siguienteFecha(_ sender: UIBarButtonItem) {
         if liga.crearPartidos(){
-            saveLiga(liga: liga)
+            if online {
+                uploadLiga(liga: liga)
+            }
+            
+            else {
+                saveLiga(liga: liga)
+            }
+            
             tableView.reloadData()
             self.refreshControl?.endRefreshing()
             self.navigationItem.title = "Fecha \(liga.getFecha())"
         }
             
         else{
-            saveLiga(liga: liga)
+            if online {
+                uploadLiga(liga: liga)
+            }
             
+            else {
+                saveLiga(liga: liga)
+            }
             fin = true
             performSegue(withIdentifier: "toPosiciones", sender: nil)
         }
@@ -194,6 +208,20 @@ class FechasTableViewController: UITableViewController {
     func getDirectoryPath() -> URL {
         let arrayPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return arrayPaths[0]
+    }
+    
+    private func uploadLiga(liga: Liga) {
+        let firestoreDatabase = Firestore.firestore()
+        do {
+            let jsonData = try JSONEncoder().encode(liga)
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            let firestoreTorneo = [liga.nombre : jsonObject] as [String : Any]
+
+            firestoreDatabase.collection(liga.creadoPor).document("Competencias").collection("Ligas").document(liga.id.uuidString).setData(firestoreTorneo)
+        }
+        catch {
+            print("ERROR!!! \(error.localizedDescription)")
+        }
     }
 
 }
