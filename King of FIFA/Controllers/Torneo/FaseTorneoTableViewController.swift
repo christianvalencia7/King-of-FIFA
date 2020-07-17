@@ -144,16 +144,16 @@ class FaseTorneoTableViewController: UITableViewController {
             var fase = ""
             let numPartidos = torneo.partidos.count
             if numPartidos == 1 { fase = "Final"}
-            if numPartidos == 2 { fase = "Semifinal"}
-            if numPartidos == 4 { fase = "Cuartos de final"}
-            if numPartidos == 8 { fase = "Octavos de final"}
-            if numPartidos == 16 { fase = "16avos de final"}
-            if numPartidos == 32 { fase = "32avos de final"}
+            if numPartidos == 2 { fase = "Semi finals"}
+            if numPartidos == 4 { fase = "Quarter finals"}
+            if numPartidos == 8 { fase = "Round of 16"}
+            if numPartidos == 16 { fase = "Round of 32"}
+            if numPartidos == 32 { fase = "Round of 64"}
             self.navigationItem.title = fase
             
             if numPartidos == 0
             {
-                let alertController = UIAlertController(title: "FIN DEL TORNEO", message: "El ganador es \(torneo.jugadores[0].nombre)", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "END OF TOURNAMENR", message: "The winner is \(torneo.jugadores[0].nombre)", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
             }

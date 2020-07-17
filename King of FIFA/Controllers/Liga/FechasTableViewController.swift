@@ -19,7 +19,7 @@ class FechasTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Fecha \(liga.getFecha())"
+        self.navigationItem.title = "Game \(liga.getFecha())"
         self.navigationItem.prompt = liga.nombre
     }
 
@@ -120,7 +120,7 @@ class FechasTableViewController: UITableViewController {
             
             tableView.reloadData()
             self.refreshControl?.endRefreshing()
-            self.navigationItem.title = "Fecha \(liga.getFecha())"
+            self.navigationItem.title = "Game \(liga.getFecha())"
         }
             
         else{

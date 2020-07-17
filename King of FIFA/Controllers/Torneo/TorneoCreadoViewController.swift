@@ -24,14 +24,14 @@ class TorneoCreadoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nombreTorneo.text = isLiga ? liga.nombre : torneo.getNombre()
-        numJugadores.text = isLiga ? "Liga de \(liga.numJugadores) jugadores" : "Torneo de \(torneo.getNum()) jugadores"
+        numJugadores.text = isLiga ? "\(liga.numJugadores) player league" : "\(torneo.getNum()) player league"
         if isLiga{
             online.text = liga.online ? "Online" : "Offline"
-            idaYVuelta.text = liga.idaYVuelta ? "Modo: ida y vuelta" : "Modo: único partido"
+            idaYVuelta.text = liga.idaYVuelta ? "Mode: Two Leg" : "Mode: one game"
         }
         else{
             online.text = torneo.getOnline() ? "Online" : "Offline"
-            idaYVuelta.text = torneo.getIdaYVuelta() ? "Modo: ida y vuelta" : "Modo: único partido"
+            idaYVuelta.text = torneo.getIdaYVuelta() ? "Mode: Two Leg" : "Mode: one game"
         }
         
         

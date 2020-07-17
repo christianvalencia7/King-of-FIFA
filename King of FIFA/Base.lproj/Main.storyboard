@@ -26,7 +26,7 @@
                                             <constraint firstAttribute="width" constant="298" id="2DE-SU-XeS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="4 jugadores">
+                                        <state key="normal" title="4 players">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -41,7 +41,7 @@
                                             <constraint firstAttribute="height" constant="70" id="DSh-kc-hBa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="8 jugadores">
+                                        <state key="normal" title="8 players">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -56,7 +56,7 @@
                                             <constraint firstAttribute="width" constant="298" id="lNC-2x-FRA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="16 jugadores">
+                                        <state key="normal" title="16 players">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -71,7 +71,7 @@
                                             <constraint firstAttribute="height" constant="70" id="Qde-Yw-BGs"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="32 jugadores">
+                                        <state key="normal" title="32 players">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -86,7 +86,7 @@
                                             <constraint firstAttribute="width" constant="298" id="shg-ww-rAo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="64 jugadores">
+                                        <state key="normal" title="64 players">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -101,7 +101,7 @@
                                             <constraint firstAttribute="height" constant="70" id="BxQ-xY-4S3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="128 jugadores">
+                                        <state key="normal" title="128 players">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -117,10 +117,10 @@
                                     <navigationItem id="VFh-zn-6b9">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="bmy-Iu-SBe">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4yR-Us-5Ku">
-                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <rect key="frame" x="20" y="1" width="76" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Cancelar"/>
+                                                <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <segue destination="5uv-I0-Ktj" kind="unwind" unwindAction="unwindSegueToTorneo:" id="Qfx-Rv-pso"/>
                                                 </connections>
@@ -178,14 +178,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="tjk-Ww-Toh" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tjk-Ww-Toh" id="zH8-VN-Mae">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="y1h-Ay-Qnr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Tournament" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="y1h-Ay-Qnr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -210,7 +210,7 @@
                             <outlet property="delegate" destination="KpW-2O-LCx" id="G9B-Ls-Ugz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Torneos" id="kfd-5q-70R">
+                    <navigationItem key="navigationItem" title="Tournaments" id="kfd-5q-70R">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="caf-Qj-eYk">
                             <connections>
                                 <segue destination="Qye-yb-qnJ" kind="presentation" modalPresentationStyle="fullScreen" id="c3H-nJ-21a"/>
@@ -241,7 +241,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador1 vs Jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-qR-sXH">
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player1 vs Player2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="NOn-qR-sXH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -268,7 +268,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bVd-eg-BHc">
-                        <barButtonItem key="rightBarButtonItem" title="Siguiente Fase" id="e9k-jc-Dd8">
+                        <barButtonItem key="rightBarButtonItem" title="Next Round" id="e9k-jc-Dd8">
                             <connections>
                                 <action selector="siguienteFase:" destination="yW1-kS-gxZ" id="HpL-ME-h8u"/>
                             </connections>
@@ -308,7 +308,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugadores" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-gc-lfn">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Players" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-gc-lfn">
                                 <rect key="frame" x="117" y="412" width="277" height="72"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -321,10 +321,10 @@
                                     <navigationItem id="M8W-cF-hoR">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="iXR-gT-XQp">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rKb-zG-Zl6">
-                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <rect key="frame" x="20" y="1" width="76" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Cancelar"/>
+                                                <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <segue destination="S6M-UX-1B4" kind="unwind" unwindAction="unwindSegueToLigas:" id="cCr-L6-jDu"/>
                                                 </connections>
@@ -338,7 +338,7 @@
                                                 <rect key="frame" x="282" y="0.0" width="112" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Sigiuiente"/>
+                                                <state key="normal" title="Next"/>
                                                 <connections>
                                                     <action selector="nextClicked:" destination="8jl-FB-Dj7" eventType="touchUpInside" id="ZpD-ng-bng"/>
                                                 </connections>
@@ -382,7 +382,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMe-GD-Oob">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMe-GD-Oob">
                                 <rect key="frame" x="20" y="165" width="374" height="95"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -392,7 +392,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-kt-5ZW">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-kt-5ZW">
                                 <rect key="frame" x="20" y="494" width="374" height="95"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -429,7 +429,7 @@
                                     <constraint firstAttribute="width" constant="125" id="Eqz-aW-xnm"/>
                                     <constraint firstAttribute="height" constant="48" id="nw4-TM-Lvy"/>
                                 </constraints>
-                                <state key="normal" title="Guardar"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="guardarMarcador:" destination="6Fm-H8-hPy" eventType="touchUpInside" id="N2P-2e-Vdv"/>
                                 </connections>
@@ -482,7 +482,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="AgY-qo-p2p">
                                 <rect key="frame" x="20" y="79" width="374" height="166"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-Jb-tKH" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-Jb-tKH" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="20" y="299" width="374" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -504,7 +504,7 @@
                                     <action selector="endEdit:" destination="37o-c3-Ill" eventType="editingDidEnd" id="rxK-p7-q2b"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y91-9o-Ht2" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y91-9o-Ht2" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="20" y="392" width="374" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -535,7 +535,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Accesar">
+                                <state key="normal" title="Log in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -550,7 +550,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Registrarse">
+                                <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -613,7 +613,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nuevo Torneo" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="V5h-II-nsQ">
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Tournament " borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="V5h-II-nsQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -658,14 +658,14 @@
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Red" id="o1y-z5-OGc" customClass="NombreTorneoTableViewCell" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o1y-z5-OGc" id="t5m-SJ-uM8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador1 vs Jugador2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="x9P-If-Azn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player1 vs Player2" borderStyle="line" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="x9P-If-Azn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -692,7 +692,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5WR-k1-j7s">
-                        <barButtonItem key="rightBarButtonItem" title="Siguiente Fase" id="Mew-ad-bBw">
+                        <barButtonItem key="rightBarButtonItem" title="Next Round" id="Mew-ad-bBw">
                             <connections>
                                 <action selector="siguienteFase:" destination="Uge-Cq-1p7" id="uNV-oT-oBP"/>
                             </connections>
@@ -719,7 +719,7 @@
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="eZz-f4-k1Z">
-                                        <barButtonItem key="leftBarButtonItem" title="Cerrar Sesion" id="Qig-ea-vDi">
+                                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Qig-ea-vDi">
                                             <connections>
                                                 <action selector="logOut:" destination="HsK-F3-rLp" id="GHb-jv-RkQ"/>
                                                 <segue destination="D1i-yb-eKK" kind="unwind" unwindAction="unwindSeguetoLogIn:" id="0XR-yh-tpX"/>
@@ -735,7 +735,7 @@
                                     <constraint firstAttribute="height" constant="161" id="6t6-1C-b3e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="Mis Torneos Online">
+                                <state key="normal" title="Online Tournaments">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -749,7 +749,7 @@
                                     <constraint firstAttribute="height" constant="161" id="ATr-De-DKh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="Mis Ligas Online">
+                                <state key="normal" title="Online Leagues">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -796,7 +796,7 @@
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="fAP-PS-H01">
-                                        <barButtonItem key="leftBarButtonItem" title="Cerrar Sesion" id="6XI-Ng-HTI">
+                                        <barButtonItem key="leftBarButtonItem" title="Log out" id="6XI-Ng-HTI">
                                             <connections>
                                                 <action selector="logOut:" destination="HsK-F3-rLp" id="5rr-a4-lwA"/>
                                             </connections>
@@ -805,15 +805,15 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qRL-mm-KUo">
-                                <rect key="frame" x="33" y="453" width="170" height="170"/>
+                                <rect key="frame" x="20" y="453" width="183" height="170"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="MVJ-Mn-W4P"/>
-                                    <constraint firstAttribute="width" constant="170" id="q8c-a5-kTc"/>
+                                    <constraint firstAttribute="width" constant="183" id="5sJ-ZF-phX"/>
+                                    <constraint firstAttribute="height" constant="170" id="Ceg-WM-vC2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    Crear        Torneo">
+                                <state key="normal" title="     Create     Tournament">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -821,14 +821,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-9x-ofd">
-                                <rect key="frame" x="211" y="452" width="170" height="170"/>
+                                <rect key="frame" x="211" y="452" width="183" height="170"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="vPW-i7-apB"/>
+                                    <constraint firstAttribute="height" constant="170" id="MYy-Da-pmh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    Crear          Liga">
+                                <state key="normal" title="    Create         League">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -839,15 +839,15 @@
                                 <rect key="frame" x="82" y="255" width="251" height="61"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="9Pi-34-V1n"/>
+                                    <constraint firstAttribute="height" constant="61" id="60l-tc-HKF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Validar Código">
+                                <state key="normal" title="Validate Code">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Código" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCO-ef-Aiq" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCO-ef-Aiq" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="20" y="192" width="374" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -869,20 +869,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="c3J-fA-0gv" firstAttribute="centerX" secondItem="KPo-GP-zy6" secondAttribute="centerX" id="3ik-7G-DMk"/>
-                            <constraint firstAttribute="bottom" secondItem="NmT-9x-ofd" secondAttribute="bottom" constant="274" id="BWU-ru-CP2"/>
-                            <constraint firstItem="KPo-GP-zy6" firstAttribute="bottom" secondItem="aKE-jz-d30" secondAttribute="bottom" id="Eqp-Li-n1A"/>
-                            <constraint firstItem="aKE-jz-d30" firstAttribute="trailing" secondItem="NmT-9x-ofd" secondAttribute="trailing" constant="33" id="GvM-a2-lR9"/>
-                            <constraint firstItem="c3J-fA-0gv" firstAttribute="leading" secondItem="aKE-jz-d30" secondAttribute="leading" constant="82" id="PY3-Vm-kQX"/>
-                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="centerX" secondItem="c3J-fA-0gv" secondAttribute="centerX" id="Stn-Ni-Pca"/>
-                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="leading" secondItem="Rf9-Hs-YeJ" secondAttribute="leadingMargin" id="VSv-Bl-aIv"/>
-                            <constraint firstItem="KPo-GP-zy6" firstAttribute="leading" secondItem="aKE-jz-d30" secondAttribute="leading" id="WBr-48-M8g"/>
-                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="top" secondItem="aKE-jz-d30" secondAttribute="top" constant="104" id="Yxj-NK-wLJ"/>
-                            <constraint firstItem="NmT-9x-ofd" firstAttribute="leading" secondItem="qRL-mm-KUo" secondAttribute="trailing" constant="8" id="gEa-LR-oty"/>
-                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="trailing" secondItem="Rf9-Hs-YeJ" secondAttribute="trailingMargin" id="ghr-Se-eDW"/>
-                            <constraint firstItem="c3J-fA-0gv" firstAttribute="top" secondItem="YCO-ef-Aiq" secondAttribute="bottom" constant="8" id="js8-4D-sU5"/>
-                            <constraint firstAttribute="bottom" secondItem="qRL-mm-KUo" secondAttribute="bottom" constant="273" id="kSM-iI-fQA"/>
-                            <constraint firstItem="qRL-mm-KUo" firstAttribute="leading" secondItem="aKE-jz-d30" secondAttribute="leading" constant="33" id="sWH-aC-G3J"/>
+                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="top" secondItem="aKE-jz-d30" secondAttribute="top" constant="104" id="Chp-cX-eqC"/>
+                            <constraint firstAttribute="bottom" secondItem="NmT-9x-ofd" secondAttribute="bottom" constant="274" id="DHU-0x-t3W"/>
+                            <constraint firstItem="c3J-fA-0gv" firstAttribute="leading" secondItem="aKE-jz-d30" secondAttribute="leading" constant="82" id="Fw3-sV-E8r"/>
+                            <constraint firstItem="c3J-fA-0gv" firstAttribute="top" secondItem="YCO-ef-Aiq" secondAttribute="bottom" constant="8" id="HC3-7b-ntY"/>
+                            <constraint firstItem="KPo-GP-zy6" firstAttribute="leading" secondItem="aKE-jz-d30" secondAttribute="leading" id="Ihx-C8-vNN"/>
+                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="centerX" secondItem="c3J-fA-0gv" secondAttribute="centerX" id="Mla-mE-GUW"/>
+                            <constraint firstAttribute="bottom" secondItem="qRL-mm-KUo" secondAttribute="bottom" constant="273" id="Okf-Ll-bj1"/>
+                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="leading" secondItem="Rf9-Hs-YeJ" secondAttribute="leadingMargin" id="dal-IK-ome"/>
+                            <constraint firstItem="NmT-9x-ofd" firstAttribute="leading" secondItem="qRL-mm-KUo" secondAttribute="trailing" constant="8" id="kfM-AG-cQv"/>
+                            <constraint firstItem="KPo-GP-zy6" firstAttribute="bottom" secondItem="aKE-jz-d30" secondAttribute="bottom" id="lla-sm-3cV"/>
+                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="trailing" secondItem="NmT-9x-ofd" secondAttribute="trailing" id="m1z-UY-1cy"/>
+                            <constraint firstItem="c3J-fA-0gv" firstAttribute="centerX" secondItem="KPo-GP-zy6" secondAttribute="centerX" id="ryv-tZ-xki"/>
+                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="leading" secondItem="qRL-mm-KUo" secondAttribute="leading" id="seF-Fk-ohI"/>
+                            <constraint firstItem="YCO-ef-Aiq" firstAttribute="trailing" secondItem="Rf9-Hs-YeJ" secondAttribute="trailingMargin" id="yw4-Ff-nCu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aKE-jz-d30"/>
                     </view>
@@ -910,7 +910,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Ingresar datos manualmente">
+                                        <fragment content="Input data manually">
                                             <attributes>
                                                 <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <font key="NSFont" size="38" name="HelveticaNeue"/>
@@ -929,7 +929,7 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Usar código">
+                                <state key="normal" title="Use code">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -940,10 +940,10 @@
                                     <navigationItem id="Fex-iF-0HB">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="RfN-SA-2s1">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q9w-Wy-sdb">
-                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <rect key="frame" x="20" y="1" width="76" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Cancelar"/>
+                                                <state key="normal" title="Cancel"/>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -971,7 +971,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Torneo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-4V-8bo" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tournament Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-4V-8bo" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="56" y="258" width="302" height="55"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -994,8 +994,8 @@
                                 <rect key="frame" x="20" y="432.5" width="374" height="32"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
-                                    <segment title="Unico Partido"/>
-                                    <segment title="Ida y Vuelta"/>
+                                    <segment title="One game"/>
+                                    <segment title="Two legs"/>
                                 </segments>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="selectedSegmentTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1010,10 +1010,10 @@
                                     <navigationItem id="oP9-ye-fbk">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="oLi-T3-m2d">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iIm-ZR-OQT">
-                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <rect key="frame" x="20" y="1" width="76" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Cancelar"/>
+                                                <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <action selector="cancelClicked:" destination="Y6j-aG-b0G" eventType="touchUpInside" id="AoN-uo-1l2"/>
                                                 </connections>
@@ -1027,7 +1027,7 @@
                                                 <rect key="frame" x="282" y="0.0" width="112" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Sigiuiente"/>
+                                                <state key="normal" title="Next"/>
                                                 <connections>
                                                     <segue destination="37o-c3-Ill" kind="show" id="5Pk-LE-6rf"/>
                                                 </connections>
@@ -1070,7 +1070,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jugador 1" borderStyle="roundedRect" placeholder="Jugador 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RO7-4M-WGN" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 1" borderStyle="roundedRect" placeholder="Jugador 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RO7-4M-WGN" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="33" y="123" width="337" height="44"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1089,7 +1089,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-te-Ivn" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-te-Ivn" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="33" y="232" width="337" height="54"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1125,7 +1125,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Equipo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1H-pg-3AE" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1H-pg-3AE" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="33" y="421" width="337" height="54"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1149,10 +1149,10 @@
                                     <navigationItem id="xOy-RQ-9SA">
                                         <barButtonItem key="leftBarButtonItem" id="cXO-1A-WhU">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Al9-Fv-deY">
-                                                <rect key="frame" x="20" y="1" width="97" height="42"/>
+                                                <rect key="frame" x="20" y="1" width="76" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Cancelar"/>
+                                                <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <action selector="cancelClicked:" destination="37o-c3-Ill" eventType="touchUpInside" id="8QG-T0-XfV"/>
                                                 </connections>
@@ -1160,10 +1160,10 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="zge-Fj-PQy">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yij-fF-vWy">
-                                                <rect key="frame" x="287" y="1" width="107" height="42"/>
+                                                <rect key="frame" x="343" y="1" width="51" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Sigiuiente"/>
+                                                <state key="normal" title="Next"/>
                                                 <connections>
                                                     <action selector="siguiente:" destination="37o-c3-Ill" eventType="touchUpInside" id="TVt-f9-1ak"/>
                                                 </connections>
@@ -1217,15 +1217,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre Torneo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVy-Sk-i4n">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Tournament" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVy-Sk-i4n">
                                 <rect key="frame" x="49" y="156" width="316" height="46"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Torneo de 4 jugadores" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-tr-suu" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
-                                <rect key="frame" x="40" y="342" width="325" height="45"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4 player tournament " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-tr-suu" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                                <rect key="frame" x="40" y="341" width="325" height="46"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -1254,7 +1254,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ida y vuelta" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-CD-UsX" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Two legs" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-CD-UsX" customClass="FormTextField" customModule="King_of_FIFA" customModuleProvider="target">
                                 <rect key="frame" x="39.5" y="510" width="324.5" height="47.5"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1278,10 +1278,10 @@
                                     <navigationItem id="Biy-Kg-9kt">
                                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="SL5-Wu-dIc">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x24-CF-BfJ">
-                                                <rect key="frame" x="341" y="1" width="53" height="42"/>
+                                                <rect key="frame" x="336" y="1" width="58" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Listo"/>
+                                                <state key="normal" title="Done"/>
                                                 <connections>
                                                     <action selector="doneClicked:" destination="BDG-QE-f36" eventType="touchUpInside" id="cJs-0Z-68U"/>
                                                 </connections>
@@ -1327,11 +1327,11 @@
             </objects>
             <point key="canvasLocation" x="4784.057971014493" y="178.79464285714286"/>
         </scene>
-        <!--Torneos-->
+        <!--Tournaments-->
         <scene sceneID="Sjc-3w-7Wv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gn2-4N-Fdq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Torneos" image="rectangle.3.offgrid" catalog="system" id="OvS-uj-SPg"/>
+                    <tabBarItem key="tabBarItem" title="Tournaments" image="rectangle.3.offgrid" catalog="system" id="OvS-uj-SPg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4MJ-jM-xWi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1346,7 +1346,7 @@
             </objects>
             <point key="canvasLocation" x="-752.17391304347836" y="988.39285714285711"/>
         </scene>
-        <!--Ligas-->
+        <!--Leagues-->
         <scene sceneID="nlv-eO-YwB">
             <objects>
                 <tableViewController id="mN9-kr-BSD" customClass="LigasTableViewController" customModule="King_of_FIFA" customModuleProvider="target" sceneMemberID="viewController">
@@ -1389,7 +1389,7 @@
                             <outlet property="delegate" destination="mN9-kr-BSD" id="LEt-ju-0P0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ligas" id="WIL-KS-2av">
+                    <navigationItem key="navigationItem" title="Leagues" id="WIL-KS-2av">
                         <barButtonItem key="rightBarButtonItem" title="NewLiga" image="plus" catalog="system" id="OK2-oR-hGC">
                             <connections>
                                 <segue destination="MaA-wc-buF" kind="presentation" modalPresentationStyle="fullScreen" id="2ix-NJ-hDg"/>
@@ -1418,7 +1418,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <items>
-                                <barButtonItem title="Tabla de posiciones" width="409" id="c14-2h-n32">
+                                <barButtonItem title="League Table" width="409" id="c14-2h-n32">
                                     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <segue destination="w61-1P-CXA" kind="show" id="tqC-2o-4E9"/>
@@ -1461,7 +1461,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="W7Y-Xx-e4C">
-                        <barButtonItem key="rightBarButtonItem" title="Siguiente fecha" id="rb3-xy-0Qa">
+                        <barButtonItem key="rightBarButtonItem" title="Next Games" id="rb3-xy-0Qa">
                             <connections>
                                 <action selector="siguienteFecha:" destination="7yD-ce-6pL" id="Zpr-zp-qcP"/>
                             </connections>
@@ -1488,7 +1488,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-5x-zYq" customClass="CustomLabel" customModule="King_of_FIFA" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-5x-zYq" customClass="CustomLabel" customModule="King_of_FIFA" customModuleProvider="target">
                                     <rect key="frame" x="50" y="0.0" width="157" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1518,7 +1518,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puntos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-4u-Zn5" customClass="CustomLabel" customModule="King_of_FIFA" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isz-4u-Zn5" customClass="CustomLabel" customModule="King_of_FIFA" customModuleProvider="target">
                                     <rect key="frame" x="310" y="0.0" width="103.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1641,11 +1641,11 @@
             </objects>
             <point key="canvasLocation" x="3060.8695652173915" y="2884.8214285714284"/>
         </scene>
-        <!--Ligas-->
+        <!--Leagues-->
         <scene sceneID="pEe-mG-cI5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mY3-4Y-R1J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ligas" image="calendar" catalog="system" id="R6r-l8-h0f"/>
+                    <tabBarItem key="tabBarItem" title="Leagues" image="calendar" catalog="system" id="R6r-l8-h0f"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="EJp-Pb-StO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zh9-nK-B4X">
@@ -1721,7 +1721,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="LMa-Cm-tNJ"/>
         <segue reference="4bd-6C-BQ2"/>
-        <segue reference="atj-h8-Rdm"/>
+        <segue reference="ERK-8W-ew1"/>
         <segue reference="f3f-db-rB6"/>
         <segue reference="AAQ-sH-84O"/>
         <segue reference="Htg-iY-gfr"/>

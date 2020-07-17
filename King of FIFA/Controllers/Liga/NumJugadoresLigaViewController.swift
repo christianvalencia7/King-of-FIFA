@@ -26,7 +26,7 @@ class NumJugadoresLigaViewController: UIViewController, UITextFieldDelegate {
         let num = Int(numJugadoresText.text ?? "0") ?? 0
         
         if num < 2 || num > 200 || num % 2 == 1 {
-            makeAlert(titleInput: "Error", messageInput: "El número de jugadores debe ser par y menor o igual a 200")
+            makeAlert(titleInput: "Error", messageInput: "The amount of players has to be even and less than 200")
         }
         else {
             liga.numJugadores = num
